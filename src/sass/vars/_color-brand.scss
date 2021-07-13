@@ -1,0 +1,10 @@
+:root {
+  --color-primary: #1068eb;
+  --color-secondary: #303d60;
+  --color-primary-hover: #295fd6;
+  --color-primary-selected: rgba(20, 110, 245, .12);
+  --color-primary-lightest: linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, .9));
+
+  --color-focus-outer: #FFD337;
+  --color-focus-inner: var(--color-neutral-10);
+}

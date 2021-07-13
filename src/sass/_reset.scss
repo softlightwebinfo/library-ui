@@ -1,0 +1,20 @@
+@import "reset/basic";
+@import "reset/href";
+@import "reset/input";
+@import "reset/images";
+@import "reset/headings";
+
+:focus {
+  outline: 0;
+}
+
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+
+div[onclick] {
+  cursor: pointer;
+}

@@ -1,0 +1,56 @@
+@import "../mixins/text";
+
+.AccordionItem {
+  $then: &;
+  background-color: var(--color-neutral-0);
+  border: var(--border-size-s) solid var(--color-neutral-4);
+  border-bottom-width: var(--border-size-none);
+
+  &:first-child {
+    border-radius: var(--border-radius-soft) var(--border-radius-soft) var(--border-radius-none) var(--border-radius-none);
+  }
+
+  &:last-child {
+    border-bottom-width: var(--border-size-s);
+    border-radius: var(--border-radius-none) var(--border-radius-none) var(--border-radius-soft) var(--border-radius-soft);
+  }
+
+  &--open {
+    border-top: var(--border-size-m) solid var(--color-primary);
+  }
+
+  &__header {
+    align-items: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: var(--font-size-h6);
+    line-height: 1;
+    padding: var(--space-m);
+    width: 100%;
+
+    span {
+      @include TextEllipsis();
+      width: 100%;
+    }
+
+    #{$then}--open & {
+      font-weight: var(--font-semi-bold);
+    }
+  }
+
+  &__section {
+    height: 0;
+    padding: var(--space-none) var(--space-m);
+    visibility: hidden;
+
+    #{$then}--open & {
+      height: auto;
+      padding: var(--space-none) var(--space-m) var(--space-m);
+      visibility: visible;
+    }
+  }
+}

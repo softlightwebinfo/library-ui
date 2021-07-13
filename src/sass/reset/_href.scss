@@ -1,0 +1,19 @@
+a {
+  text-decoration: none;
+
+  &:visited {
+    color: var(--color-primary);
+    -webkit-transition: all 180ms linear;
+    transition: all 180ms linear;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--color-primary-hover);
+    text-decoration: underline;
+  }
+}
+
+a[disabled] {
+  color: var(--color-neutral-6);
+}
