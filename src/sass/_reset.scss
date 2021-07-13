@@ -1,8 +1,8 @@
-@import "reset/basic";
-@import "reset/href";
-@import "reset/input";
-@import "reset/images";
-@import "reset/headings";
+@import "./reset/basic";
+@import "./reset/href";
+@import "./reset/input";
+@import "./reset/images";
+@import "./reset/headings";
 
 :focus {
   outline: 0;
