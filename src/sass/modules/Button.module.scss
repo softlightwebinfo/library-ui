@@ -114,4 +114,14 @@
   &--circle {
     border-radius: var(--border-radius-rounded);
   }
+
+  &--block {
+    width: 100%;
+    justify-content: center;
+  }
+
+  &--disabled {
+    opacity: .2;
+    cursor: not-allowed;
+  }
 }

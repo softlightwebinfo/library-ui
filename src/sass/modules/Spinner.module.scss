@@ -1,0 +1,38 @@
+@import "../animations/index";
+
+.Spinner {
+  color: transparent;
+  position: relative;
+  cursor: default;
+  pointer-events: none;
+  height: 18px;
+  width: 18px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    border: 3px solid #e9ebf0;
+    opacity: .3;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #fff;
+    -webkit-animation: buttonSpin .6s linear infinite;
+    animation: buttonSpin .6s linear infinite;
+  }
+}

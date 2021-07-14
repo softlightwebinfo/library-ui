@@ -33,5 +33,25 @@ Circle.args = {
 export const Icon = Template.bind({});
 Icon.args = {
     icon: <FontAwesomeIcon icon={faHome}/>,
-    children:"HOLA"
+    children: "HOLA"
+};
+
+export const Block = Template.bind({});
+Block.args = {
+    children: "HOLA",
+    block: true,
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+    children: "HOLA",
+    disabled: true,
+    appearance: "primary"
+};
+
+export const Loading = Template.bind({});
+Loading.args = {
+    children: "HOLA",
+    loading: true,
+    appearance: "primary"
 };

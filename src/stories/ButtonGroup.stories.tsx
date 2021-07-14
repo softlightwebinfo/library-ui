@@ -19,3 +19,7 @@ const Template: ComponentStory<typeof ButtonGroup> = (args) => (
 );
 
 export const Default = Template.bind({});
+export const Vertical = Template.bind({});
+Vertical.args = {
+    vertical: true,
+};
