@@ -14,7 +14,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build": "rollup -c",
-    "deploy-storybook": "gh-pages -d storybook-static"
+    "deploy-storybook": "yarn build-storybook && gh-pages -d storybook-static"
   },
   "devDependencies": {
     "@ampproject/rollup-plugin-closure-compiler": "^0.26.0",
