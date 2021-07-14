@@ -1,34 +1,37 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
-
-import {Accordion} from '../components';
+import {Button} from "../components/Button";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faHome} from "@fortawesome/free-solid-svg-icons";
 
 export default {
-    title: 'Base/Accordion',
-    component: Accordion,
+    title: 'Base/Button',
+    component: Button,
     argTypes: {},
-    args: {
-        data: [
-            {
-                title: "I noticed some erratic behavior from screen",
-                content: "Screens are great assets for anyone working in an office set up. They allow you to have more programs open, multitask and be more productive. Hopefully"
-            },
-            {
-                title: "Some of my keyboard keys are not working properly",
-                content: "After a while, it’s common for keyboards to start malfunctioning. We have the habit of pressing the same keys which causes stress on their mechanics leading to problems."
-            },
-            {
-                title: "I need a new mouse, the left-click is not working",
-                content: "Mice are incredible accelerators that ease navigation and access. They easily become overused, with all the clicking, dragging and scrolling, which means their life can be short."
-            }
-        ]
-    }
-} as ComponentMeta<typeof Accordion>;
+    args: {}
+} as ComponentMeta<typeof Button>;
 
-const Template: ComponentStory<typeof Accordion> = (args) => <Accordion {...args} />;
+const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const Default = Template.bind({});
-export const IsMultipleItems = Template.bind({});
-IsMultipleItems.args = {
-    isMultipleItems: true,
+Default.args = {
+    children: "Default"
 }
+
+export const Size = Template.bind({});
+Size.args = {
+    size: "sm",
+    children: "Default"
+};
+
+export const Circle = Template.bind({});
+Circle.args = {
+    circle: true,
+    children: "Default"
+};
+
+export const Icon = Template.bind({});
+Icon.args = {
+    icon: <FontAwesomeIcon icon={faHome}/>,
+    children:"HOLA"
+};

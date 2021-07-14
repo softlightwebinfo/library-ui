@@ -1,37 +1,24 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
 import {Button} from "../components/Button";
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faHome} from "@fortawesome/free-solid-svg-icons";
+import {ButtonToolbar} from "../components/ButtonToolbar";
 
 export default {
-    title: 'Base/Button',
-    component: Button,
+    title: 'Base/ButtonToolbar',
+    component: ButtonToolbar,
     argTypes: {},
     args: {}
-} as ComponentMeta<typeof Button>;
+} as ComponentMeta<typeof ButtonToolbar>;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const Template: ComponentStory<typeof ButtonToolbar> = (args) => (
+    <ButtonToolbar {...args}>
+        <Button>Default</Button>
+        <Button>Largue</Button>
+        <Button>Small</Button>
+    </ButtonToolbar>
+);
 
 export const Default = Template.bind({});
 Default.args = {
     children: "Default"
 }
-
-export const Size = Template.bind({});
-Size.args = {
-    size: "sm",
-    children: "Default"
-};
-
-export const Circle = Template.bind({});
-Circle.args = {
-    circle: true,
-    children: "Default"
-};
-
-export const Icon = Template.bind({});
-Icon.args = {
-    icon: <FontAwesomeIcon icon={faHome}/>,
-    children:"HOLA"
-};

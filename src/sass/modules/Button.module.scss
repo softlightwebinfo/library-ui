@@ -1,0 +1,117 @@
+.Button {
+  $then: &;
+  display: inline-flex;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+  white-space: nowrap;
+  border: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: var(--border-radius-soft);
+  position: relative;
+  transition: color .2s linear, background-color .3s linear;
+
+  &__icon {
+    padding: 0;
+    margin-right: 5px;
+
+    #{$then}--icon & {
+      margin-right: 0;
+    }
+  }
+
+  &--default {
+    color: #e9ebf0;
+    background: #292d33;
+
+    &:active,
+    &:focus {
+      color: #e9ebf0;
+      background-color: #6a6f76;
+    }
+
+    &:hover {
+      color: #e9ebf0;
+      background-color: #3c3f43;
+    }
+  }
+
+  &--primary {
+    color: #fff;
+    background-color: #169de0;
+
+    &:hover {
+      background-color: #25b3f5;
+    }
+  }
+
+  &--link {
+    -webkit-transition: color .2s linear;
+    transition: color .2s linear;
+    color: #34c3ff;
+    font-weight: 400;
+    background-color: transparent;
+    border-radius: 0;
+
+    &:hover {
+      color: #59d0ff;
+      text-decoration: underline;
+      background-color: transparent;
+    }
+  }
+
+  &--subtle {
+    transition: color .2s linear, background-color .3s linear;
+    color: #a4a9b3;
+    background-color: transparent;
+
+    &:hover {
+      background: #292d33;
+      color: #e9ebf0;
+    }
+  }
+
+  &--ghost {
+    transition: color .2s linear, background-color .3s linear;
+    color: #34c3ff;
+    border: 1px solid #34c3ff;
+    background-color: transparent;
+
+    &:hover {
+      color: #59d0ff;
+      border-color: #59d0ff;
+    }
+  }
+
+  &--lg {
+    padding: 10px 16px;
+    font-size: 16px;
+    line-height: 1.375;
+    border-radius: 6px;
+  }
+
+  &--sm {
+    padding: 5px 10px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 6px;
+  }
+
+  &--xs {
+    padding: 2px 8px;
+    font-size: 12px;
+    line-height: 1.66666667;
+    border-radius: 6px;
+  }
+
+  &--circle {
+    border-radius: var(--border-radius-rounded);
+  }
+}
