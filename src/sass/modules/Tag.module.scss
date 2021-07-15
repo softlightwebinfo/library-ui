@@ -1,0 +1,33 @@
+$colors: red orange yellow green cyan blue violet;
+
+.Tag {
+  display: inline-flex;
+  padding: 2px 8px;
+  background-color: #f7f7fa;
+  color: #575757;
+  border-radius: 6px;
+  font-size: 12px;
+  align-items: center;
+}
+
+.TagCloseable {
+  padding-right: 25px;
+  position: relative;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 8px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+@each $color in $colors {
+  .#{$color} {
+    color: white;
+    background: var(--color-#{$color});
+  }
+}

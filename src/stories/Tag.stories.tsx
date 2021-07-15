@@ -1,34 +1,22 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
-
-import {Accordion} from '../components';
+import {Tag} from "../components/Tag";
 
 export default {
-    title: 'Base/Accordion/Multiple',
-    component: Accordion,
+    title: 'Base/Tag/Default',
+    component: Tag,
     argTypes: {},
-    args: {
-        data: [
-            {
-                title: "I noticed some erratic behavior from screen",
-                content: "Screens are great assets for anyone working in an office set up. They allow you to have more programs open, multitask and be more productive. Hopefully"
-            },
-            {
-                title: "Some of my keyboard keys are not working properly",
-                content: "After a while, it’s common for keyboards to start malfunctioning. We have the habit of pressing the same keys which causes stress on their mechanics leading to problems."
-            },
-            {
-                title: "I need a new mouse, the left-click is not working",
-                content: "Mice are incredible accelerators that ease navigation and access. They easily become overused, with all the clicking, dragging and scrolling, which means their life can be short."
-            }
-        ]
-    }
-} as ComponentMeta<typeof Accordion>;
+    args: {}
+} as ComponentMeta<typeof Tag>;
 
-const Template: ComponentStory<typeof Accordion> = (args) => <Accordion {...args} />;
+const Template: ComponentStory<typeof Tag> = (args) => <Tag {...args} />;
 
 export const Default = Template.bind({});
-export const IsMultipleItems = Template.bind({});
-IsMultipleItems.args = {
-    isMultipleItems: true,
+Default.args = {
+    children: "Text"
+}
+export const Closeable = Template.bind({});
+Closeable.args = {
+    children: "Closeable",
+    closeable: true,
 }

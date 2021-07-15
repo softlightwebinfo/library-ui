@@ -1,25 +1,31 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
-import {ButtonGroup} from "../components/Button/ButtonGroup";
-import {Button} from "../components/Button";
+import {TagGroup} from "../components/Tag/TagGroup";
+import {Tag} from "../components/Tag";
 
 export default {
-    title: 'Base/Button/Group',
-    component: ButtonGroup,
+    title: 'Base/Tag/Group',
+    component: TagGroup,
     argTypes: {},
     args: {}
-} as ComponentMeta<typeof ButtonGroup>;
+} as ComponentMeta<typeof TagGroup>;
 
-const Template: ComponentStory<typeof ButtonGroup> = (args) => (
-    <ButtonGroup {...args} >
-        <Button>Default</Button>
-        <Button>Largue</Button>
-        <Button>Small</Button>
-    </ButtonGroup>
-);
+const Template: ComponentStory<typeof TagGroup> = (args) => {
+    const [state, setState] = useState(["Tag", "Tag2", "Tag3"]);
+    return (
+        <TagGroup {...args} >
+            {state.map((item, index) => (
+                <Tag
+                    key={index}
+                    closeable
+                    color={"orange"}
+                    onClose={() => setState(e => e.filter(i => i != item))}
+                >
+                    {item}
+                </Tag>
+            ))}
+        </TagGroup>
+    );
+}
 
 export const Default = Template.bind({});
-export const Vertical = Template.bind({});
-Vertical.args = {
-    vertical: true,
-};

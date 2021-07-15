@@ -1,0 +1,1 @@
+export type TSimpleColor = "orange" | "yellow" | "green" | "cyan" | "blue" | "violet";
