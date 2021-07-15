@@ -31,3 +31,23 @@ export const Icon = Template.bind({});
 Icon.args = {
     showIcon: true,
 };
+export const Full = Template.bind({});
+Full.args = {
+    showIcon: true,
+    full: true,
+};
+export const Closable = Template.bind({});
+Closable.args = {
+    showIcon: true,
+    closable: true,
+    type: "success",
+    show: true,
+    title: "Success",
+    description: (
+        <p>
+            Additional description and informations about copywriting.
+            <br/>
+            <a href="#">This is a Link.</a>
+        </p>
+    )
+};
