@@ -1,0 +1,55 @@
+@import "../animations/animations";
+@import "../mixins/text";
+
+$colors: info success warning error;
+
+.Message {
+  border-radius: var(--border-radius-soft);
+  font-size: var(--font-size-s);
+  position: relative;
+  background-color: #e9f5fe;
+  color: #575757;
+  line-height: 1.42857143;
+}
+
+.Container {
+  padding: 20px;
+}
+
+.Content {
+
+}
+
+.IconWrapper {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  line-height: 1;
+}
+
+.Header {
+  @include TextEllipsis;
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 100%;
+  color: #272c36;
+}
+
+.ShowIcon {
+  .Container {
+    padding-left: 54px;
+  }
+}
+
+svg {
+  font-size: 24px;
+  line-height: 1;
+}
+
+@each $color in $colors {
+  .#{$color} {
+    background-color: var(--color-#{$color});
+    color: #575757;
+  }
+}

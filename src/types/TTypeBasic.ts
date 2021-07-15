@@ -1,0 +1,1 @@
+export type TTypeBasic = "info" | "success" | "warning" | "error";
