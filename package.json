@@ -1,6 +1,6 @@
 {
   "name": "@codeunic/library-react",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "The project was developer for anyone people need the  react components.",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
@@ -19,6 +19,7 @@
   "devDependencies": {
     "@ampproject/rollup-plugin-closure-compiler": "^0.26.0",
     "@babel/core": "^7.14.6",
+    "@codeunic/library-hooks": "^0.4.2",
     "@rollup/plugin-commonjs": "^19.0.0",
     "@rollup/plugin-node-resolve": "^13.0.0",
     "@storybook/addon-actions": "^6.3.4",

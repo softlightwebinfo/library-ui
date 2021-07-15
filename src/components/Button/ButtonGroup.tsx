@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
-import {IButtonGroupProps} from "../props/IButtonGroupProps";
-import styles from "../sass/modules/ButtonGroup.module.scss";
+import {IButtonGroupProps} from "../../props/IButtonGroupProps";
+import styles from "../../sass/modules/ButtonGroup.module.scss";
 
 export const ButtonGroup = ({vertical = false, ...props}: IButtonGroupProps) => {
     const classes = classNames(styles.ButtonGroup, props.className, {

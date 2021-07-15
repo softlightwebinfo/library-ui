@@ -1,10 +1,10 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
 import {Button} from "../components/Button";
-import {ButtonToolbar} from "../components/ButtonToolbar";
+import {ButtonToolbar} from "../components/Button/ButtonToolbar";
 
 export default {
-    title: 'Base/ButtonToolbar',
+    title: 'Base/Button/Toolbar',
     component: ButtonToolbar,
     argTypes: {},
     args: {}

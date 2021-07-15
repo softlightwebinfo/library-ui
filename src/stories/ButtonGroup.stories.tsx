@@ -1,10 +1,10 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
-import {ButtonGroup} from "../components/ButtonGroup";
+import {ButtonGroup} from "../components/Button/ButtonGroup";
 import {Button} from "../components/Button";
 
 export default {
-    title: 'Base/ButtonGroup',
+    title: 'Base/Button/Group',
     component: ButtonGroup,
     argTypes: {},
     args: {}

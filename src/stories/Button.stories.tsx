@@ -5,7 +5,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faHome} from "@fortawesome/free-solid-svg-icons";
 
 export default {
-    title: 'Base/Button',
+    title: 'Base/Button/Default',
     component: Button,
     argTypes: {},
     args: {}

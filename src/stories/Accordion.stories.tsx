@@ -4,7 +4,7 @@ import {ComponentMeta, ComponentStory} from '@storybook/react';
 import {Accordion} from '../components';
 
 export default {
-    title: 'Base/Accordion',
+    title: 'Base/Accordion/Multiple',
     component: Accordion,
     argTypes: {},
     args: {
