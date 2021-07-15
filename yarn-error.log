@@ -1,5 +1,5 @@
 Arguments: 
-  /home/codeunic/.nvm/versions/node/v16.0.0/bin/node /usr/local/bin/yarn add classnames
+  /home/codeunic/.nvm/versions/node/v16.0.0/bin/node /usr/local/bin/yarn install --registy http://musicosdelmundo.com:4873
 
 PATH: 
   /home/codeunic/sdk/go1.17beta1/bin:/home/codeunic/IdeaProjects/bin:/home/codeunic/.nvm/versions/node/v16.0.0/bin:/home/codeunic/IdeaProjects/library-ui/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: http://musicosdelmundo.com:4873/@fortawesome%2ffontawesome-common-types/-/fontawesome-common-types-0.2.35.tgz: Request failed "401 Unauthorized"
+  Error: http://musicosdelmundo.com:4873/@fortawesome%2ffontawesome-svg-core/-/fontawesome-svg-core-1.2.35.tgz: Request failed "401 Unauthorized"
       at ResponseError.ExtendableBuiltin (/usr/local/lib/node_modules/yarn/lib/cli.js:696:66)
       at new ResponseError (/usr/local/lib/node_modules/yarn/lib/cli.js:802:124)
       at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:67058:16)
