@@ -1,0 +1,99 @@
+@import "../animations/animations";
+@import "../mixins/text";
+
+$colors: info success warning error;
+
+.Message {
+  border-radius: var(--border-radius-soft);
+  font-size: var(--font-size-s);
+  position: relative;
+  background-color: #e9f5fe;
+  color: #575757;
+  line-height: 1.42857143;
+}
+
+.Container {
+  padding: 20px;
+}
+
+.Content {
+
+}
+
+.IconWrapper {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 15px;
+  top: 20px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  text-align: center;
+
+  svg {
+    font-size: 24px;
+    line-height: 1;
+    position: relative;
+    right: initial;
+  }
+}
+
+.Header {
+  @include TextEllipsis;
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 100%;
+  color: #272c36;
+}
+
+.ShowIcon {
+  .Container {
+    padding-left: 54px;
+  }
+}
+
+.NotTitle {
+  .IconWrapper {
+    margin: auto;
+    bottom: 0;
+    top: 0;
+  }
+
+  svg {
+    font-size: 15px;
+  }
+}
+
+.Full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 0;
+}
+
+.Close {
+  background: transparent;
+  position: absolute;
+  top: 7px;
+  right: 0;
+  padding: 8px 8px 0;
+  font-size: 12px;
+  border: none;
+  outline: none !important;
+  font-family: rsuite-icon-font, serif;
+  font-style: normal;
+  line-height: 1;
+  color: black;
+}
+
+@each $color in $colors {
+  .#{$color} {
+    background-color: var(--color-#{$color});
+    color: #575757;
+  }
+}
