@@ -1,0 +1,35 @@
+.Nav {
+  ul {
+    display: flex;
+  }
+}
+
+.tabs {
+  position: relative;
+}
+
+.subtle {
+
+}
+
+.Vertical {
+  ul {
+    display: inline-flex;
+    flex-direction: column;
+  }
+}
+
+.Block {
+  ul {
+    display: flex;
+    width: 100%;
+  }
+}
+
+.PullRight {
+  margin-left: auto;
+}
+
+.PullLeft {
+  margin-right: auto;
+}

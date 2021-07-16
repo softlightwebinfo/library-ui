@@ -1,0 +1,18 @@
+.Icon {
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  display: inline-block;
+  text-transform: none;
+  font-size: 14px;
+  line-height: 1;
+  width: 1.125em;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  svg {
+    right: 0;
+  }
+}
