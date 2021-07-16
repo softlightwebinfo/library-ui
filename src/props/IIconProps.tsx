@@ -4,4 +4,5 @@ import {IconProp} from "@fortawesome/fontawesome-svg-core";
 
 export interface IIconProps extends IProps {
     icon: ReactNode | IconProp | string | any;
+    onClick?: (evt: any) => void
 }

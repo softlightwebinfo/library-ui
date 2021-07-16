@@ -1,10 +1,10 @@
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import React, {useCallback} from "react"
 import {IAccordionItemProps} from "../props/IAccordionItemProps";
 import style from '../sass/modules/AccordionItem.module.scss';
 import {faChevronDown, faChevronUp} from "@fortawesome/free-solid-svg-icons";
 import {useToggle} from "@codeunic/library-hooks";
 import classNames from "classnames";
+import {Icon} from "./Icon";
 
 export const AccordionItem = (props: IAccordionItemProps) => {
     let [openToggle, {toggle}] = useToggle(props.open);
@@ -27,7 +27,7 @@ export const AccordionItem = (props: IAccordionItemProps) => {
         <div className={cls}>
             <header onClick={onClick} className={style.AccordionItem__header}>
                 <span>{props.title}</span>
-                <FontAwesomeIcon icon={open ? faChevronUp : faChevronDown}/>
+                <Icon icon={open ? faChevronUp : faChevronDown}/>
             </header>
             <section className={style.AccordionItem__section}>
                 {props.content}

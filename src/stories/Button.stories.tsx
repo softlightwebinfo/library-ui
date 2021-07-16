@@ -1,7 +1,6 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
-import {Button} from "../components/Button";
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {Button, Icon as Icons} from "../components";
 import {faHome} from "@fortawesome/free-solid-svg-icons";
 
 export default {
@@ -32,7 +31,7 @@ Circle.args = {
 
 export const Icon = Template.bind({});
 Icon.args = {
-    icon: <FontAwesomeIcon icon={faHome}/>,
+    icon: <Icons icon={faHome}/>,
     children: "HOLA"
 };
 
