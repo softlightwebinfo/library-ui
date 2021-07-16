@@ -15,3 +15,5 @@ export * from './Nav';
 export * from './Nav/NavItem';
 export * from './Icon';
 export * from './Waterline';
+export * from './Sidenav';
+export * from './Sidenav/SidenavBody';

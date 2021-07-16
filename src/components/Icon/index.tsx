@@ -5,8 +5,8 @@ import classNames from "classnames";
 import styles from '../../sass/modules/Icon.module.scss';
 
 export const Icon = ({className, style, icon, ...props}: IIconProps) => {
-    const cs = classNames(styles.Icon, className, {});
+    const cs = classNames(styles.Icon, className);
     return (
-        <FontAwesomeIcon className={cs} style={style} icon={icon} {...props}/>
+        <FontAwesomeIcon {...props} className={cs} style={style} icon={icon}/>
     )
 };

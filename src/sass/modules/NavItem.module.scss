@@ -4,6 +4,12 @@
   transition: color .3s linear, background-color .3s linear;
   display: inline-block;
 
+  &.Active {
+    .Content {
+      color: #1675e0;
+    }
+  }
+
   &:hover {
     background: #e5e5ea;
   }

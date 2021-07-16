@@ -15,6 +15,7 @@ export const NavItem = ({className, eventKey = "", style, ...props}: INavItemPro
         [styles.Vertical]: ctx.vertical,
         [styles.Navbar]: ctxNavbar.navbar,
     });
+
     const onChange = useCallback((evt) => {
         props.onSelect?.(eventKey, evt);
         ctx?.onSelect?.(eventKey, evt);
