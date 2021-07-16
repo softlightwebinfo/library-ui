@@ -1,18 +1,59 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
 
-import {AccordionItem} from '../components';
+import {ButtonToolbar, Dropdown, DropdownItem, DropdownMenu} from '../components';
 
 export default {
-    title: 'Base/Accordion/Item',
-    component: AccordionItem,
+    title: 'Base/Dropdown/Default',
+    component: Dropdown,
     argTypes: {},
     args: {
-        title: "I noticed some erratic behavior from screen",
-        content: "Screens are great assets for anyone working in an office set up. They allow you to have more programs open, multitask and be more productive. Hopefully"
+        title: "Default"
     }
-} as ComponentMeta<typeof AccordionItem>;
+} as ComponentMeta<typeof Dropdown>;
 
-const Template: ComponentStory<typeof AccordionItem> = (args) => <AccordionItem {...args} />;
+const Template: ComponentStory<typeof Dropdown> = (args) => (
+    <Dropdown {...args} >
+        <DropdownItem>New File</DropdownItem>
+        <DropdownItem>New File with Current Profile</DropdownItem>
+        <DropdownItem>Download As...</DropdownItem>
+        <DropdownItem>Export PDF</DropdownItem>
+        <DropdownItem>Export HTML</DropdownItem>
+        <DropdownItem>Settings</DropdownItem>
+        <DropdownItem>About</DropdownItem>
+    </Dropdown>
+);
+
+const Template2: ComponentStory<typeof Dropdown> = (args) => (
+    <ButtonToolbar>
+        <Dropdown activeKey="a" {...args}>
+            <DropdownItem eventKey="a">Active Item</DropdownItem>
+            <DropdownItem eventKey="b">Item B</DropdownItem>
+            <DropdownItem eventKey="c">Item C</DropdownItem>
+            <DropdownItem eventKey="d">Item D</DropdownItem>
+        </Dropdown>
+
+        <Dropdown activeKey="e-2" {...args}>
+            <DropdownItem eventKey="a">Item A</DropdownItem>
+            <DropdownItem eventKey="b">Item B</DropdownItem>
+            <DropdownItem eventKey="c">Item C</DropdownItem>
+            <DropdownItem eventKey="d">Item D</DropdownItem>
+            <DropdownMenu title="Active Menu">
+                <DropdownItem eventKey="e-1">Item E-1</DropdownItem>
+                <DropdownItem eventKey="e-2">Active Item</DropdownItem>
+            </DropdownMenu>
+        </Dropdown>
+    </ButtonToolbar>
+);
 
 export const Default = Template.bind({});
+Default.args = {}
+export const Trigger = Template.bind({});
+Trigger.args = {
+    trigger: "hover"
+}
+
+export const ActiveState = Template2.bind({});
+ActiveState.args = {
+
+}

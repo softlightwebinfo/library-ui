@@ -1,0 +1,1 @@
+export type TDropdownTrigger = "click" | "hover" | "contextMenu";

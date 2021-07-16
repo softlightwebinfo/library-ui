@@ -1,10 +1,10 @@
-import React from "react";
+import React, {ForwardedRef, forwardRef} from "react";
 import {IButtonProps} from "../../props/IButtonProps";
 import classNames from "classnames";
 import styles from '../../sass/modules/Button.module.scss';
 import {Spinner} from "../Spinner";
 
-export const Button = (
+export const Button = forwardRef((
     {
         disabled = false,
         loading = false,
@@ -14,7 +14,8 @@ export const Button = (
         circle,
         block,
         ...props
-    }: IButtonProps
+    }: IButtonProps,
+    ref: ForwardedRef<HTMLButtonElement>
 ) => {
     const {} = props;
 
@@ -29,6 +30,7 @@ export const Button = (
 
     return (
         <button
+            ref={ref}
             disabled={disabled || loading}
             className={classes}
             style={style}
@@ -39,4 +41,4 @@ export const Button = (
             {!loading && props.children}
         </button>
     )
-};
+});

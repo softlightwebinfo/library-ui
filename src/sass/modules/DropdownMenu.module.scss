@@ -1,0 +1,35 @@
+.DropdownMenu {
+  margin: 0;
+  list-style: none;
+  font-size: 14px;
+  text-align: left;
+  background-color: #292d33;
+  border-radius: 6px;
+  padding: 6px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.IsMenu {
+  position: absolute;
+  z-index: 6;
+  display: none;
+  float: left;
+  -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, .2), 0 4px 4px 3px rgba(0, 0, 0, .24);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, .2), 0 4px 4px 3px rgba(0, 0, 0, .24);
+}
+
+.top-start {
+  bottom: 100%;
+  left: 0;
+}
+
+.bottom-start {
+  left: 0;
+  top: 100%;
+}
+
+.top-right {
+  left: 100%;
+  top: 0;
+}

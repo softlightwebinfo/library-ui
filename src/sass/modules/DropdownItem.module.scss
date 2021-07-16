@@ -1,0 +1,36 @@
+.DropdownItem {
+  display: list-item;
+  text-align: -webkit-match-parent;
+
+  &:hover {
+    text-decoration: none;
+    color: #e9ebf0;
+    background-color: #3c3f43;
+  }
+}
+
+.Content {
+  display: block;
+  padding: 8px 12px;
+  clear: both;
+  font-weight: 400;
+  line-height: 1.42857143;
+  color: #e9ebf0;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-transition: color .3s linear, background-color .3s linear;
+  transition: color .3s linear, background-color .3s linear;
+
+  &,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.Active {
+  .Content {
+    color: #34c3ff;
+    text-decoration: none;
+    background-color: rgba(0, 97, 153, .2);
+  }
+}

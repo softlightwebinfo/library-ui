@@ -1,13 +1,8 @@
-import {createContext, SyntheticEvent, useContext} from "react";
-import {TNavAppearance} from "../types/TNavAppearance";
+import {createContext, useContext} from "react";
 
-export interface IUseNav {
-    reversed?: boolean;
-    vertical?: boolean;
-    appearance?: TNavAppearance,
-    activeKey?: any,
-    onSelect?: (eventKey: any, event: SyntheticEvent<any>) => void,
+export interface IUseDropdown {
+    activeKey?: string;
 }
 
-export const ContextNav = createContext<IUseNav>({})
-export const useNav = () => useContext(ContextNav);
+export const ContextDropdown = createContext<IUseDropdown>({})
+export const useDropdown = () => useContext(ContextDropdown);

@@ -17,3 +17,6 @@ export * from './Icon';
 export * from './Waterline';
 export * from './Sidenav';
 export * from './Sidenav/SidenavBody';
+export * from './Dropdown';
+export * from './Dropdown/DropdownItem';
+export * from './Dropdown/DropdownMenu';
