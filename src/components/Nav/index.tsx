@@ -4,11 +4,13 @@ import {INavProps} from "../../props/INavProps";
 import styles from '../../sass/modules/Nav.module.scss';
 import {ContextNav, IUseNav} from "../../context/useNav";
 
-export const Nav = ({className, vertical = false, block, appearance = "default", style, ...props}: INavProps) => {
+export const Nav = ({className, vertical = false, block, appearance, style, ...props}: INavProps) => {
     const cs = classNames(styles.Nav, className, {
-        [styles[appearance]]: appearance,
+        [styles[appearance ?? '']]: appearance,
         [styles.Vertical]: vertical,
-        [styles.Block]: block
+        [styles.Block]: block,
+        [styles.PullRight]: props.pullRight,
+        [styles.PullLeft]: props.pullLeft
     });
     const value: IUseNav = {
         appearance,

@@ -13,7 +13,7 @@ export default {
 const Template: ComponentStory<typeof Navbar> = (args) => (
     <Navbar {...args}>
         <NavbarHeader>
-            <a href="#" className="navbar-brand logo">RSUITE</a>
+            <a href="#" className="navbar-brand">RSUITE</a>
         </NavbarHeader>
         <NavbarBody>
             <Nav>
@@ -26,5 +26,26 @@ const Template: ComponentStory<typeof Navbar> = (args) => (
         </NavbarBody>
     </Navbar>
 );
+const Template2: ComponentStory<typeof Navbar> = (args) => (
+    <Navbar {...args}>
+        <NavbarHeader>
+            <a href="#" className="navbar-brand">RSUITE</a>
+        </NavbarHeader>
+        <NavbarBody>
+            <Nav>
+                <NavItem icon={<Icon icon={faHome}/>}>Home</NavItem>
+                <NavItem>News</NavItem>
+                <NavItem>Solutions</NavItem>
+                <NavItem>Products</NavItem>
+                <NavItem>About</NavItem>
+            </Nav>
+            <Nav pullRight>
+                <NavItem>Login</NavItem>
+                <NavItem>Register</NavItem>
+            </Nav>
+        </NavbarBody>
+    </Navbar>
+);
 
 export const Default = Template.bind({});
+export const PullRight = Template2.bind({});

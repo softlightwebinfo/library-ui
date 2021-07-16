@@ -10,6 +10,7 @@ export interface INavProps extends IProps {
     onSelect?: (eventKey: any, event: SyntheticEvent<any>) => void,
     pills?: boolean;
     pullRight?: boolean;
+    pullLeft?: boolean;
     stacked?: boolean;
     reversed?: boolean;
     activeKey?: any;
