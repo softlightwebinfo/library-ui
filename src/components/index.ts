@@ -20,3 +20,5 @@ export * from './Sidenav/SidenavBody';
 export * from './Dropdown';
 export * from './Dropdown/DropdownItem';
 export * from './Dropdown/DropdownMenu';
+export * from './Steps';
+export * from './Steps/StepsItem';

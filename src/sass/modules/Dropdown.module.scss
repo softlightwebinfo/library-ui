@@ -13,3 +13,10 @@
 .Content {
   display: inline-flex;
 }
+
+.Disabled {
+  opacity: .3;
+  user-select: none;
+  pointer-events: none;
+  cursor: not-allowed;
+}

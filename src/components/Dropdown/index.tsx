@@ -13,15 +13,17 @@ export const Dropdown = ({className, trigger = "click", appearance = "subtle", s
     const ref = useRef(null);
     const [show, {toggle, off, on}] = useToggle();
     useOnClickOutside(ref, off);
-    const cs = classNames(styles.Dropdown, className);
+    const cs = classNames(styles.Dropdown, className, {
+        [styles.Disabled]: props.isDisabled
+    });
 
     const onClick = useCallback(() => {
-        if (trigger !== "click" || !trigger?.includes("click")) return;
+        if (props.isDisabled || trigger !== "click" || !trigger?.includes("click")) return;
         toggle();
     }, [trigger]);
 
     const setIsShown = useCallback((show: boolean) => {
-        if (trigger != "hover" || !trigger?.includes("hover")) return;
+        if (props.isDisabled || trigger != "hover" || !trigger?.includes("hover")) return;
         show && on();
         !show && off();
     }, [trigger]);
@@ -42,7 +44,8 @@ export const Dropdown = ({className, trigger = "click", appearance = "subtle", s
                         {props.title}
                         <Icon className={styles.Icon} icon={show ? faChevronUp : faChevronDown}/>
                     </Button>
-                    <DropdownMenu placement={props.placementMenu} className={classNames({[styles.Show]: show})} isMenu>{props.children}</DropdownMenu>
+                    <DropdownMenu placement={props.placementMenu} className={classNames({[styles.Show]: show})}
+                                  isMenu>{props.children}</DropdownMenu>
                 </div>
             </Component>
         </ContextDropdown.Provider>

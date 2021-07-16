@@ -6,6 +6,7 @@ import {TDropdownPlacement} from "../types/TDropdownPlacement";
 export interface IDropdownProps extends IProps {
     placementMenu?: TDropdownPlacement;
     isItem?: boolean;
+    isDisabled?: boolean;
     activeKey?: string;
     title: string;
     appearance?: TAppearance;

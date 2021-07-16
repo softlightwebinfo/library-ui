@@ -54,6 +54,8 @@ Trigger.args = {
 }
 
 export const ActiveState = Template2.bind({});
-ActiveState.args = {
-
+ActiveState.args = {}
+export const Disabled = Template2.bind({});
+Disabled.args = {
+    isDisabled: true
 }
