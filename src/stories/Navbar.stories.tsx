@@ -1,6 +1,7 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
-import {Navbar, NavbarBody, NavbarHeader} from "../components";
+import {Icon, Nav, Navbar, NavbarBody, NavbarHeader, NavItem} from "../components";
+import {faHome} from "@fortawesome/free-solid-svg-icons";
 
 export default {
     title: 'Base/Navbar/Default',
@@ -15,7 +16,13 @@ const Template: ComponentStory<typeof Navbar> = (args) => (
             <a href="#" className="navbar-brand logo">RSUITE</a>
         </NavbarHeader>
         <NavbarBody>
-
+            <Nav>
+                <NavItem icon={<Icon icon={faHome}/>}>Home</NavItem>
+                <NavItem>News</NavItem>
+                <NavItem>Solutions</NavItem>
+                <NavItem>Products</NavItem>
+                <NavItem>About</NavItem>
+            </Nav>
         </NavbarBody>
     </Navbar>
 );

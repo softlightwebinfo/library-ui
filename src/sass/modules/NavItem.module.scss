@@ -1,0 +1,190 @@
+@import "../mixins/text";
+
+.NavItem {
+  transition: color .3s linear, background-color .3s linear;
+  display: inline-block;
+
+  &:hover {
+    background: #e5e5ea;
+  }
+}
+
+.Content {
+  @include TextEllipsis;
+  padding: 8px 12px;
+  font-size: var(--font-size-s);
+  line-height: 1.42857143;
+  display: block;
+  cursor: pointer;
+  color: #8e8e93;
+  -webkit-transition: color .3s linear, background-color .3s linear;
+  text-decoration: none;
+  transition: color .3s linear, background-color .3s linear;
+  border-radius: 6px;
+}
+
+.Icon {
+  margin-right: var(--space-xs);
+}
+
+.tabs, .subtle {
+  .Content {
+    border-radius: 6px 6px 0 0;
+    border-bottom: 1px solid #d9d9d9;
+  }
+}
+
+.Active {
+  position: relative;
+  $then: &;
+
+  &.default {
+    background: #e5e5ea;
+    border-radius: var(--border-radius-soft);
+  }
+
+  &.subtle {
+    .Content {
+      color: #1675e0;
+
+      &::before {
+        content: "";
+        position: absolute;
+
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: #1675e0;
+        -webkit-transition: left .3s ease-out, right .3s ease-out;
+        transition: left .3s ease-out, right .3s ease-out;
+      }
+    }
+  }
+
+  &.tabs {
+    .Content {
+      border: 1px solid #d9d9d9;
+      border-bottom: none;
+    }
+  }
+}
+
+.Reversed {
+  .Content {
+    border-top: 1px solid #d9d9d9;
+    border-radius: var(--border-radius-none);
+    border-bottom: none;
+  }
+
+  &.Active {
+    &.subtle {
+      .Content {
+        &::before {
+          top: 0;
+          bottom: initial;
+        }
+      }
+    }
+
+    &.tabs {
+      .Content {
+        border: 1px solid #d9d9d9;
+        border-top: none;
+        border-radius: 0 0 6px 6px;
+      }
+    }
+  }
+}
+
+.Vertical {
+  &.tabs {
+    .Content {
+      border: 0;
+      border-right: 1px solid #d9d9d9;
+      border-radius: 0;
+    }
+
+    &.Active {
+      .Content {
+        color: #1675e0;
+        border: 1px solid #d9d9d9;
+        border-right: none;
+        border-top-left-radius: var(--border-radius-soft);
+        border-bottom-left-radius: var(--border-radius-soft);
+      }
+    }
+
+    &.Reversed {
+      .Content {
+        border: 0;
+        border-left: 1px solid #d9d9d9;
+      }
+
+      &.Active {
+        .Content {
+          color: #1675e0;
+          border: 1px solid #d9d9d9;
+          border-left: none;
+          border-radius: 0 var(--border-radius-soft) var(--border-radius-soft) 0;
+        }
+      }
+    }
+  }
+
+  &.subtle {
+    .Content {
+      border: 0;
+      border-right: 1px solid #d9d9d9;
+      border-radius: 0;
+    }
+
+    &.Active {
+      .Content {
+        color: #1675e0;
+        border: none;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          width: 1px;
+          height: initial;
+          left: initial;
+          background-color: #1675e0;
+          -webkit-transition: left .3s ease-out, right .3s ease-out;
+          transition: left .3s ease-out, right .3s ease-out;
+        }
+      }
+    }
+
+    &.Reversed {
+      .Content {
+        border: 0;
+        border-left: 1px solid #d9d9d9;
+      }
+
+      &.Active {
+        .Content {
+          color: #1675e0;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: initial;
+            width: 1px;
+            height: initial;
+            left: 0;
+            background-color: #1675e0;
+            -webkit-transition: left .3s ease-out, right .3s ease-out;
+            transition: left .3s ease-out, right .3s ease-out;
+          }
+        }
+      }
+    }
+  }
+}

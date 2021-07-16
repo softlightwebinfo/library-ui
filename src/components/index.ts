@@ -11,3 +11,7 @@ export * from './Divider';
 export * from './Navbar';
 export * from './Navbar/NavbarHeader';
 export * from './Navbar/NavbarBody';
+export * from './Nav';
+export * from './Nav/NavItem';
+export * from './Icon';
+export * from './Waterline';
