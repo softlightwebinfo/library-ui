@@ -8,6 +8,7 @@ export * from './IDropdownItemProps';
 export * from './IDropdownMenuProps';
 export * from './IDropdownProps';
 export * from './IIconProps';
+export * from './ILineProps';
 export * from './IMessageProps';
 export * from './INavItemProps';
 export * from './INavProps';

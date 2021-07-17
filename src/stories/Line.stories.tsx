@@ -1,18 +1,27 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
-
-import {AccordionItem} from '../components';
+import {Line} from "../components/Line/Line";
 
 export default {
-    title: 'Base/Accordion/Item',
-    component: AccordionItem,
+    title: 'Base/Line/Default',
+    component: Line,
     argTypes: {},
-    args: {
-        title: "I noticed some erratic behavior from screen",
-        content: "Screens are great assets for anyone working in an office set up. They allow you to have more programs open, multitask and be more productive. Hopefully"
-    }
-} as ComponentMeta<typeof AccordionItem>;
+    args: {}
+} as ComponentMeta<typeof Line>;
 
-const Template: ComponentStory<typeof AccordionItem> = (args) => <AccordionItem {...args} />;
+const Template: ComponentStory<typeof Line> = (args) => <Line {...args} />;
 
 export const Default = Template.bind({});
+Default.args = {
+    percent: 30,
+};
+export const Color = Template.bind({});
+Color.args = {
+    percent: 10,
+    strokeColor: "#ffc107"
+};
+export const Status = Template.bind({});
+Status.args = {
+    percent: 10,
+    status: "fail"
+};

@@ -1,0 +1,62 @@
+$h: 10px;
+$fail: #f04f43;
+$success: #58b15b;
+.Line {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px 12px;
+}
+
+.Outer {
+  flex: 1 1 auto;
+  border-radius: var(--border-radius-soft);
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.Info {
+  width: 50px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50px;
+  flex: 0 0 50px;
+  height: 20px;
+  padding-left: 12px;
+
+  span {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.Inner {
+  border-radius: var(--border-radius-soft);
+  background: #292d33;
+  height: $h;
+}
+
+.Bg {
+  background-color: #34c3ff;
+  border-radius: var(--border-radius-soft);
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  -webkit-transition-property: width, color;
+  transition-property: width, color;
+  height: $h;
+}
+
+.Fail {
+  color: $fail;
+
+  .Bg {
+    background-color: $fail;
+  }
+}
+
+.Success {
+  color: $success;
+
+  .Bg {
+    background-color: $success;
+  }
+}

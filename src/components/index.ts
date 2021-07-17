@@ -3,6 +3,7 @@ export * from './Button';
 export * from './Divider';
 export * from './Dropdown';
 export * from './Icon';
+export * from './Line';
 export * from './Message';
 export * from './Nav';
 export * from './Navbar';
