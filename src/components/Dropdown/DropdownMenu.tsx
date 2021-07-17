@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import styles from '../../sass/modules/DropdownMenu.module.scss';
 import {IDropdownMenuProps} from "../../props/IDropdownMenuProps";
-import {Dropdown} from "./index";
+import {Dropdown} from "./Dropdown";
 import {useDropdown} from "../../context/useDropdown";
 
 export const DropdownMenu = (

@@ -1,6 +1,6 @@
 import React from "react";
-import {IWaterlineProps} from "../props/IWaterlineProps";
-import styles from '../sass/modules/Waterline.module.scss';
+import {IWaterlineProps} from "../../props/IWaterlineProps";
+import styles from '../../sass/modules/Waterline.module.scss';
 
 export const Waterline = ({style, className, ...props}: IWaterlineProps) => {
     return (

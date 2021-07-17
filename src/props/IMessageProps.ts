@@ -5,7 +5,7 @@ import {ReactNode} from "react";
 export interface IMessageProps extends IProps {
     closable?: boolean;
     show?: boolean;
-    onClose?: (evt:) => void;
+    onClose?: (evt: any) => void;
     description: string | ReactNode;
     title?: string | ReactNode;
     type?: TTypeBasic;

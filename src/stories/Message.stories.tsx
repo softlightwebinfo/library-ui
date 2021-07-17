@@ -1,6 +1,6 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
-import {Message} from "../components/Message";
+import {Message} from "../components/Message/Message";
 
 export default {
     title: 'Base/Message/Default',

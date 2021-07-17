@@ -2,7 +2,7 @@ import React, {ForwardedRef, forwardRef} from "react";
 import {IButtonProps} from "../../props/IButtonProps";
 import classNames from "classnames";
 import styles from '../../sass/modules/Button.module.scss';
-import {Spinner} from "../Spinner";
+import {Spinner} from "../Spinner/Spinner";
 
 export const Button = forwardRef((
     {

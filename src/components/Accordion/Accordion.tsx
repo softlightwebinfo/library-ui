@@ -1,8 +1,8 @@
 import React, {useCallback, useState} from "react";
-import {IAccordionProps} from "../props/IAccordionProps";
+import {IAccordionProps} from "../../props/IAccordionProps";
 import {AccordionItem} from "./AccordionItem";
-import st from "../sass/modules/Accordion.module.scss";
-import {IAccordionData} from "../interfaces/IAccordionData";
+import st from "../../sass/modules/Accordion.module.scss";
+import {IAccordionData} from "../../interfaces/IAccordionData";
 
 export const Accordion = (props: IAccordionProps) => {
     const [active, setActive] = useState<number[]>([]);

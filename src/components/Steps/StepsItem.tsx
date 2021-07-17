@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import styles from '../../sass/modules/StepsItem.module.scss';
 import {IStepsItemProps} from "../../props/IStepsItemProps";
-import {Icon} from "../Icon";
+import {Icon} from "../Icon/Icon";
 import {faCheck} from "@fortawesome/free-solid-svg-icons";
 
 export const StepsItem = ({className, isBorder = true, style, ...props}: IStepsItemProps) => {

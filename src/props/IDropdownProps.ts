@@ -1,5 +1,5 @@
 import {IProps} from "../interfaces/IProps";
-import {TAppearance} from "../types/ TAppearance";
+import {TAppearance} from "../types/TAppearance";
 import {TDropdownTrigger} from "../types/TDropdownTrigger";
 import {TDropdownPlacement} from "../types/TDropdownPlacement";
 
