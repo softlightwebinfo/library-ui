@@ -9,7 +9,7 @@ import copy from 'rollup-plugin-copy'
 const packageJson = require("./package.json");
 
 export default {
-    input: "src/index.js",
+    input: "src/index.ts",
     output: [
         {
             file: packageJson.main,

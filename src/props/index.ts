@@ -7,7 +7,7 @@ export * from './IDividerProps';
 export * from './IDropdownItemProps';
 export * from './IDropdownMenuProps';
 export * from './IDropdownProps';
-export * from './IIconPropsx';
+export * from './IIconProps';
 export * from './IMessageProps';
 export * from './INavItemProps';
 export * from './INavProps';

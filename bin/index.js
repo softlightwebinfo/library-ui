@@ -1,20 +1,21 @@
 #!/usr/bin/env node
 
-import {lstatSync, readdir} from "fs";
+import {readdir, writeFile} from "fs";
 
 function template(name) {
-    return `export * from './${name.replace(/\b(?:.tsx|.ts)\b/gi, "")}';`;
+    return `export * from './${name.replace(".tsx", "").replace(".ts", "")}';`;
 }
 
-const mapFilter = route => async name => {
+const mapFilter = (route, dir = false) => name => {
     const directory = `${route}/${name}`;
-    const stat = await lstatSync(directory);
-    console.log(directory,name)
-    if (!stat.isFile()) return generate(directory);
-    return template(name);
+    if (name.indexOf(".ts") !== -1 || name.indexOf(".tsx") !== -1) {
+        return template(name);
+    }
+    generate(directory);
+    return dir && template(name);
 };
 
-function generate(route) {
+function generate(route, dir = false) {
     const index = "index.ts";
     const fileIndex = `${route}/${index}`;
     readdir(route, function (err, files) {
@@ -23,17 +24,14 @@ function generate(route) {
             return console.log('Unable to scan directory: ' + err);
         }
         //listing all files using forEach
-
-        Promise.all(files.filter(i => i !== "index.ts").map(mapFilter(route))).then(rs => {
-            console.log(rs)
-        });
-        //writeFile(fileIndex, data.join("\n"), () => console.log(`Save ${route}`));
+        const data = files.filter(i => i !== "index.ts").map(mapFilter(route, dir)).filter(i => i);
+        writeFile(fileIndex, data.join("\n"), () => console.log(`Save ${route}`));
     });
 }
 
-// generate("./src/types");
-// generate("./src/interfaces");
-// generate("./src/props");
-// generate("./src/functions");
-generate("./src/components");
-// generate("./src/context");
+generate("./src/types");
+generate("./src/interfaces");
+generate("./src/props");
+generate("./src/functions");
+generate("./src/components", true);
+generate("./src/context");
