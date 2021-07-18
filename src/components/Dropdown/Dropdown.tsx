@@ -8,13 +8,16 @@ import {Icon} from "../Icon/Icon";
 import {faChevronDown, faChevronUp} from "@fortawesome/free-solid-svg-icons";
 import {useOnClickOutside, useToggle} from "@codeunic/library-hooks";
 import {ContextDropdown, IUseDropdown} from "../../context/useDropdown";
+import {useNav} from "../../context";
 
 export const Dropdown = ({className, trigger = "click", appearance = "subtle", style, ...props}: IDropdownProps) => {
+    const ctxNav = useNav()
     const ref = useRef(null);
     const [show, {toggle, off, on}] = useToggle();
     useOnClickOutside(ref, off);
     const cs = classNames(styles.Dropdown, className, {
-        [styles.Disabled]: props.isDisabled
+        [styles.Disabled]: props.isDisabled,
+        [styles.NavVertical]: ctxNav.vertical,
     });
 
     const onClick = useCallback(() => {
@@ -30,6 +33,7 @@ export const Dropdown = ({className, trigger = "click", appearance = "subtle", s
 
     const value: IUseDropdown = {
         activeKey: props.activeKey,
+        vertical: ctxNav.vertical,
     };
     const Component = props.isItem ? "li" : "div";
     return (
@@ -40,12 +44,18 @@ export const Dropdown = ({className, trigger = "click", appearance = "subtle", s
                     onMouseLeave={() => setIsShown(false)}
                     ref={ref} className={styles.Content}
                 >
-                    <Button appearance={appearance} onClick={onClick}>
-                        {props.title}
+                    <Button className={styles.Button} appearance={appearance} onClick={onClick}>
+                        {props.icon}
+                        <span>{props?.renderTitle?.(props.children, props) ?? props.title}</span>
                         <Icon className={styles.Icon} icon={show ? faChevronUp : faChevronDown}/>
                     </Button>
-                    <DropdownMenu placement={props.placementMenu} className={classNames({[styles.Show]: show})}
-                                  isMenu>{props.children}</DropdownMenu>
+                    <DropdownMenu
+                        placement={props.placementMenu}
+                        className={classNames({[styles.Show]: show})}
+                        isMenu
+                    >
+                        {props.children}
+                    </DropdownMenu>
                 </div>
             </Component>
         </ContextDropdown.Provider>

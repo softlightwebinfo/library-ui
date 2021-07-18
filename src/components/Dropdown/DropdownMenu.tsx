@@ -17,6 +17,7 @@ export const DropdownMenu = (
     const cs = classNames(styles.DropdownMenu, className, {
         [styles.IsMenu]: props.isMenu,
         [styles[placement]]: !!placement,
+        [styles.DropdownVertical]: ctx.vertical,
     });
 
     const Component = (
@@ -28,7 +29,7 @@ export const DropdownMenu = (
     if (props.title) {
         return (
             <Dropdown
-                placementMenu={"top-right"}
+                placementMenu={placement}
                 isItem
                 title={props.title}
                 activeKey={ctx.activeKey}

@@ -8,6 +8,7 @@ export const DropdownItem = ({className, style, ...props}: IDropdownItemProps) =
     const ctx = useDropdown();
     const cs = classNames(styles.DropdownItem, className, {
         [styles.Active]: props.eventKey === ctx.activeKey,
+        [styles.NavVertical]: ctx.vertical,
     });
     return (
         <li className={cs} style={style}>

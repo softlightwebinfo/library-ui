@@ -6,9 +6,6 @@
   margin-left: 10px;
 }
 
-.Dropdown .Show {
-  display: flex;
-}
 
 .Content {
   display: inline-flex;
@@ -19,4 +16,35 @@
   user-select: none;
   pointer-events: none;
   cursor: not-allowed;
+}
+
+.NavVertical {
+  width: 100%;
+
+  .Button {
+    width: 100%;
+    text-align: left;
+    z-index: 0;
+
+    svg {
+      &:first-child {
+        margin: 0 var(--space-s) 0 0;
+      }
+
+      &:last-child {
+        margin: 0 0 0 auto;
+      }
+    }
+  }
+
+  .Content {
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    position: initial;
+  }
+}
+
+.Dropdown .Show {
+  display: flex;
 }
