@@ -36,7 +36,7 @@ export const NavToggle = ({className, expand, onChange, style, ...props}: INavTo
                 </Nav>
 
                 <Nav pullRight>
-                    <NavItem onClick={onChange} style={{width: 56, textAlign: 'center'}}>
+                    <NavItem onSelect={onChange} style={{width: 56, textAlign: 'center'}}>
                         <Icon icon={expand ? faAngleLeft : faAngleRight}/>
                     </NavItem>
                 </Nav>
