@@ -3,12 +3,24 @@ import {ComponentMeta, ComponentStory} from '@storybook/react';
 import {Container} from "../components/Container/Container";
 import {Content} from "../components/Content/Content";
 import {Sidebar} from "../components/Sidebar/Sidebar";
-import {Dropdown, DropdownItem, Icon, Nav, NavItem, Sidenav, SidenavBody} from "../components";
+import {
+    Dropdown,
+    DropdownItem,
+    Icon,
+    Nav,
+    Navbar,
+    NavbarBody,
+    NavbarHeader,
+    NavItem,
+    Sidenav,
+    SidenavBody
+} from "../components";
 import {SidenavHeader} from "../components/Sidenav/SidenavHeader";
 import {Header} from "../components/Header/Header";
 import {SidebarPage} from "../components/Sidebar/SidebarPage";
 import {faAppleAlt, faLayerGroup, faLifeRing, faMagic, faTachometerAlt} from "@fortawesome/free-solid-svg-icons";
 import {NavToggle} from "../components/Nav/NavToggle";
+import {Footer} from "../components/Footer/Footer";
 
 export default {
     title: 'Layouts/Dashboard',
@@ -29,7 +41,7 @@ const Template: ComponentStory<typeof Container> = (args) => {
         }));
     }, []);
     return (
-        <SidebarPage>
+        <SidebarPage full>
             <Container hasSidebar>
                 <Sidebar
                     style={{display: 'flex', flexDirection: 'column'}}
@@ -37,9 +49,11 @@ const Template: ComponentStory<typeof Container> = (args) => {
                     collapsible
                 >
                     <Sidenav expanded={expand} defaultOpenKeys={['3']} appearance="subtle">
-                        <SidenavHeader>
+                        <SidenavHeader
+                            style={!expand ? {display: "flex", alignItems: "center", justifyContent: "center"} : {}}
+                        >
                             <Icon icon={faAppleAlt} style={{verticalAlign: 0}}/>
-                            <span style={{marginLeft: 12}}> BRAND</span>
+                            {expand && <span style={{marginLeft: 12}}> BRAND</span>}
                         </SidenavHeader>
                         <SidenavBody>
                             <Nav>
@@ -83,9 +97,87 @@ const Template: ComponentStory<typeof Container> = (args) => {
                 </Sidebar>
                 <Container>
                     <Header>
-                        <h2>Page Title</h2>
+                        <Navbar>
+                            <NavbarHeader>
+                                <a className="navbar-brand logo">BRAND</a>
+                            </NavbarHeader>
+                            <NavbarBody>
+                                <Nav>
+                                    <NavItem icon={<Icon icon="home" />}>Home</NavItem>
+                                    <NavItem>News</NavItem>
+                                    <NavItem>Products</NavItem>
+                                    <Dropdown title="About">
+                                        <DropdownItem>Company</DropdownItem>
+                                        <DropdownItem>Team</DropdownItem>
+                                        <DropdownItem>Contact</DropdownItem>
+                                    </Dropdown>
+                                </Nav>
+                                <Nav pullRight>
+                                    <NavItem icon={<Icon icon="cog" />}>Settings</NavItem>
+                                </Nav>
+                            </NavbarBody>
+                        </Navbar>
                     </Header>
-                    <Content>Content</Content>
+                    <Content>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                        <p>Content</p>
+                    </Content>
+                    <Footer page>Footer</Footer>
                 </Container>
             </Container>
         </SidebarPage>

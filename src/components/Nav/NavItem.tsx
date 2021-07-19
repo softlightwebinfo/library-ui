@@ -17,6 +17,7 @@ export const NavItem = ({className, eventKey = "", style, ...props}: INavItemPro
         [styles.Vertical]: ctx.vertical,
         [styles.Navbar]: ctxNavbar.navbar,
         [styles.Sidenav]: ctxSidenav.sidenav,
+        [styles.NoExpanded]: ctxSidenav.expanded === false,
     });
 
     const onChange = useCallback((evt) => {
@@ -27,7 +28,7 @@ export const NavItem = ({className, eventKey = "", style, ...props}: INavItemPro
         <li className={cs} style={style} onClick={onChange}>
             <div className={styles.Content}>
                 {props.icon && <span className={styles.Icon}>{props.icon}</span>}
-                {props.children}
+                {ctxSidenav.expanded != false && props.children}
             </div>
         </li>
     )

@@ -1,6 +1,7 @@
 import {createContext, useContext} from "react";
 
 export interface IUseSidenav {
+    expanded?: boolean;
     sidenav?: boolean;
     activeKey?: string;
     defaultOpenKeys?: string[];

@@ -2,6 +2,7 @@
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  overflow: auto;
 }
 
 .Preview {
@@ -9,4 +10,14 @@
   background: #80ddff;
   color: #fff;
   text-align: center;
+}
+
+.SidebarPage {
+  margin: 20px;
+  background: #1a1d24;
+  color: #fff;
+}
+
+.Container{
+  padding: 20px;
 }

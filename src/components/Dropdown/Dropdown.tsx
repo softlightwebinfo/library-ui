@@ -8,16 +8,23 @@ import {Icon} from "../Icon/Icon";
 import {faChevronDown, faChevronUp} from "@fortawesome/free-solid-svg-icons";
 import {useOnClickOutside, useToggle} from "@codeunic/library-hooks";
 import {ContextDropdown, IUseDropdown} from "../../context/useDropdown";
-import {useNav} from "../../context";
+import {useNav, useSidenav} from "../../context";
 
 export const Dropdown = ({className, trigger = "click", appearance = "subtle", style, ...props}: IDropdownProps) => {
     const ctxNav = useNav()
+    const ctx = useSidenav();
     const ref = useRef(null);
-    const [show, {toggle, off, on}] = useToggle();
-    useOnClickOutside(ref, off);
+    const [show, {toggle, off, on}] = useToggle(ctx?.defaultOpenKeys?.includes(props?.eventKey ?? ''));
+    const noExpanded = ctx.sidenav && ctx.expanded === false;
+    useOnClickOutside(ref, () => {
+        if (ctx.sidenav && ctx.expanded) return;
+        off();
+    });
     const cs = classNames(styles.Dropdown, className, {
         [styles.Disabled]: props.isDisabled,
         [styles.NavVertical]: ctxNav.vertical,
+        [styles.Navbar]: ctxNav.navbar && !ctxNav.vertical,
+        [styles.NoExpanded]: noExpanded,
     });
 
     const onClick = useCallback(() => {
@@ -36,6 +43,13 @@ export const Dropdown = ({className, trigger = "click", appearance = "subtle", s
         vertical: ctxNav.vertical,
     };
     const Component = props.isItem ? "li" : "div";
+    const childrenComponentTitle = (
+        <>
+            {props.icon}
+            <span>{props.title}</span>
+            <Icon className={styles.Icon} icon={show ? faChevronUp : faChevronDown}/>
+        </>
+    );
     return (
         <ContextDropdown.Provider value={value}>
             <Component className={cs} style={style}>
@@ -44,15 +58,15 @@ export const Dropdown = ({className, trigger = "click", appearance = "subtle", s
                     onMouseLeave={() => setIsShown(false)}
                     ref={ref} className={styles.Content}
                 >
-                    <Button className={styles.Button} appearance={appearance} onClick={onClick}>
-                        {props.icon}
-                        <span>{props?.renderTitle?.(props.children, props) ?? props.title}</span>
-                        <Icon className={styles.Icon} icon={show ? faChevronUp : faChevronDown}/>
+                    <Button title={props.title} className={styles.Button} appearance={appearance} onClick={onClick}>
+                        {props?.renderTitle?.(childrenComponentTitle, props)}
+                        {!props.renderTitle && childrenComponentTitle}
                     </Button>
                     <DropdownMenu
                         placement={props.placementMenu}
                         className={classNames({[styles.Show]: show})}
                         isMenu
+                        expandedMobile={noExpanded}
                     >
                         {props.children}
                     </DropdownMenu>

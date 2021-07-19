@@ -1,5 +1,6 @@
 .Sidebar {
-
+  border-right: 1px solid #3c3f42;
+  height: 700px;
 }
 
 .Preview {
@@ -20,9 +21,9 @@
 }
 
 .SidebarPage {
-  height: 700px;
-  -webkit-box-shadow: 0 4px 4px rgba(0,0,0,.12),0 0 10px rgba(0,0,0,.06);
-  box-shadow: 0 4px 4px rgba(0,0,0,.12),0 0 10px rgba(0,0,0,.06);
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, .12), 0 0 10px rgba(0, 0, 0, .06);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .12), 0 0 10px rgba(0, 0, 0, .06);
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
