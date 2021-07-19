@@ -33,3 +33,17 @@
   left: 100%;
   top: 0;
 }
+
+.right-start {
+  right: 0;
+}
+
+.DropdownVertical {
+  position: relative;
+  box-shadow: none;
+  background-color: transparent;
+
+  svg {
+    margin: 0;
+  }
+}

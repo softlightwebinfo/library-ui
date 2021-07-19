@@ -1,6 +1,7 @@
 import {createContext, useContext} from "react";
 
 export interface IUseDropdown {
+    vertical?: boolean;
     activeKey?: string;
 }
 

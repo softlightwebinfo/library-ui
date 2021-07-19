@@ -1,0 +1,28 @@
+.Sidebar {
+
+}
+
+.Preview {
+  background: #34c3ff;
+  color: #fff;
+  text-align: center;
+  line-height: 120px;
+  flex: 0 0 260px;
+  width: 260px;
+}
+
+.Collapsible {
+  -webkit-transition: width .2s ease-in, -webkit-box-flex .2s ease-in;
+  transition: width .2s ease-in, -webkit-box-flex .2s ease-in;
+  transition: flex .2s ease-in, width .2s ease-in;
+  transition: flex .2s ease-in, width .2s ease-in, -webkit-box-flex .2s ease-in, -ms-flex .2s ease-in;
+  min-width: 0;
+}
+
+.SidebarPage {
+  height: 700px;
+  -webkit-box-shadow: 0 4px 4px rgba(0,0,0,.12),0 0 10px rgba(0,0,0,.06);
+  box-shadow: 0 4px 4px rgba(0,0,0,.12),0 0 10px rgba(0,0,0,.06);
+  display: flex;
+  flex-direction: column;
+}

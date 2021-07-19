@@ -30,7 +30,7 @@
 }
 
 .Icon {
-  margin-right: var(--space-xs);
+  margin-right: var(--space-s);
 }
 
 .tabs, .subtle {
@@ -199,5 +199,16 @@
   .Content {
     padding: 18px 16px;
     height: 56px;
+  }
+}
+
+.Sidenav {
+  &:hover {
+    color: white;
+    background-color: #3c3f43;
+
+    .Content {
+      color: white;
+    }
   }
 }

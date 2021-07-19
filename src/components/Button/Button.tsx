@@ -19,7 +19,7 @@ export const Button = forwardRef((
 ) => {
     const {} = props;
 
-    const classes = classNames(styles.Button, {
+    const classes = classNames(styles.Button, props.className, {
         [styles[`Button--${appearance}`]]: !!styles[`Button--${appearance}`],
         [styles[`Button--${size}`]]: !!styles[`Button--${size}`],
         [styles[`Button--circle`]]: circle,

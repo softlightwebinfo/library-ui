@@ -27,6 +27,10 @@
   }
 }
 
+.NavVertical {
+  padding-left: var(--space-m);
+}
+
 .Active {
   .Content {
     color: #34c3ff;
