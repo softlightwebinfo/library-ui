@@ -18,6 +18,7 @@ export const Sidenav = ({className, style, ...props}: ISidenavProps) => {
         sidenav: true,
         activeKey: props.activeKey,
         defaultOpenKeys: props.defaultOpenKeys,
+        expanded: props.expanded,
     }
     return (
         <ContextSidenav.Provider value={value}>

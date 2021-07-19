@@ -11,6 +11,10 @@
   display: inline-flex;
 }
 
+.Button {
+  min-height: 36px;
+}
+
 .Disabled {
   opacity: .3;
   user-select: none;
@@ -47,4 +51,30 @@
 
 .Dropdown .Show {
   display: flex;
+}
+
+.Navbar {
+  .Button {
+    padding: 18px 16px;
+    height: 56px;
+    min-width: 56px;
+  }
+}
+
+.NoExpanded {
+  .Button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+
+    & svg[role="img"] {
+      margin-right: 0;
+    }
+
+    svg:last-child,
+    span {
+      display: none;
+    }
+  }
 }

@@ -18,13 +18,8 @@ export const DropdownMenu = (
         [styles.IsMenu]: props.isMenu,
         [styles[placement]]: !!placement,
         [styles.DropdownVertical]: ctx.vertical,
+        [styles.ExpandedMobile]: props.expandedMobile,
     });
-
-    const Component = (
-        <ul className={cs} style={style}>
-            {props.children}
-        </ul>
-    );
 
     if (props.title) {
         return (
@@ -38,5 +33,10 @@ export const DropdownMenu = (
             </Dropdown>
         );
     }
-    return (Component);
+
+    return (
+        <nav className={cs} style={style}>
+            {props.children}
+        </nav>
+    );
 };

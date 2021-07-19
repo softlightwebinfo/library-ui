@@ -5,9 +5,12 @@ import {ISidebarPageProps} from "../../props/ISidebarPageProps";
 import {ContextSidebarPage} from "../../context/useContextSidebarPage";
 
 export const SidebarPage = ({className, style, ...props}: ISidebarPageProps) => {
-    const cs = classNames(styles.SidebarPage, className);
+    const cs = classNames(styles.SidebarPage, className, {
+        [styles.Full]: props.full,
+    });
     const value = {
-        sidebarPage: true
+        sidebarPage: true,
+        full: props.full,
     };
     return (
         <ContextSidebarPage.Provider value={value}>

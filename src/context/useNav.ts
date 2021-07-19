@@ -2,6 +2,7 @@ import {createContext, SyntheticEvent, useContext} from "react";
 import {TNavAppearance} from "../types/TNavAppearance";
 
 export interface IUseNav {
+    navbar?: boolean;
     reversed?: boolean;
     vertical?: boolean;
     appearance?: TNavAppearance,

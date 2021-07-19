@@ -202,7 +202,8 @@
   }
 }
 
-.Sidenav {
+.Sidenav,
+.Navbar {
   &:hover {
     color: white;
     background-color: #3c3f43;
@@ -210,5 +211,15 @@
     .Content {
       color: white;
     }
+  }
+}
+
+.NoExpanded {
+  .Icon {
+    height: 32px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

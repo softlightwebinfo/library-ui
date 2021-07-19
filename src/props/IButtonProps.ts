@@ -5,6 +5,7 @@ import {ReactNode} from "react";
 
 export interface IButtonProps extends IProps {
     loading?: boolean;
+    title?: string;
     onClick?: (evt: any) => void;
     appearance?: TAppearance;
     size?: TSize;

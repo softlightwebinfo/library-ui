@@ -22,6 +22,7 @@ export const Nav = ({className, vertical, block, appearance, style, ...props}: I
         reversed: props.reversed,
         onSelect: props.onSelect,
         vertical,
+        navbar: true,
     };
 
     return (

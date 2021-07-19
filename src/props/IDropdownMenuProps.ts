@@ -5,4 +5,5 @@ export interface IDropdownMenuProps extends IProps {
     title?: string;
     placement?: TDropdownPlacement;
     isMenu?: boolean;
+    expandedMobile?: boolean;
 }

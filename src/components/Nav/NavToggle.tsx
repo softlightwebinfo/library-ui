@@ -10,9 +10,6 @@ import {faAngleLeft, faAngleRight, faCog} from "@fortawesome/free-solid-svg-icon
 import {NavItem} from "./NavItem";
 
 const iconStyles: CSSProperties = {
-    width: 56,
-    height: 56,
-    lineHeight: 56,
     textAlign: 'center'
 };
 
@@ -20,10 +17,11 @@ export const NavToggle = ({className, expand, onChange, style, ...props}: INavTo
     const cs = classNames(styles.NavToggle, className);
     return (
         <Navbar appearance="subtle" className={cs} style={style}>
-            <NavbarBody>
+            <NavbarBody expand={expand}>
                 <Nav>
                     <Dropdown
-                        placementMenu="top-start"
+                        isItem
+                        placementMenu={expand ? "top-start" : "right-start"}
                         trigger="click"
                         renderTitle={children => {
                             return <Icon style={iconStyles} icon={faCog}/>;
@@ -34,7 +32,6 @@ export const NavToggle = ({className, expand, onChange, style, ...props}: INavTo
                         <DropdownItem>Sign out</DropdownItem>
                     </Dropdown>
                 </Nav>
-
                 <Nav pullRight>
                     <NavItem onSelect={onChange} style={{width: 56, textAlign: 'center'}}>
                         <Icon icon={expand ? faAngleLeft : faAngleRight}/>

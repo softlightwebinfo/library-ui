@@ -13,7 +13,8 @@ export const Navbar = ({className, style, children, ...props}: INavbarProps) => 
         [styles[props.appearance ?? '']]: props.appearance,
     });
     const value = {
-        navbar: true
+        navbar: true,
+        appearance: props.appearance,
     };
     return (
         <ContextNavbar.Provider value={value}>
