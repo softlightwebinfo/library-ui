@@ -18,7 +18,14 @@ import {
 import {SidenavHeader} from "../components/Sidenav/SidenavHeader";
 import {Header} from "../components/Header/Header";
 import {SidebarPage} from "../components/Sidebar/SidebarPage";
-import {faAppleAlt, faLayerGroup, faLifeRing, faMagic, faTachometerAlt} from "@fortawesome/free-solid-svg-icons";
+import {
+    faAppleAlt, faCog,
+    faHome,
+    faLayerGroup,
+    faLifeRing,
+    faMagic,
+    faTachometerAlt
+} from "@fortawesome/free-solid-svg-icons";
 import {NavToggle} from "../components/Nav/NavToggle";
 import {Footer} from "../components/Footer/Footer";
 
@@ -103,7 +110,7 @@ const Template: ComponentStory<typeof Container> = (args) => {
                             </NavbarHeader>
                             <NavbarBody>
                                 <Nav>
-                                    <NavItem icon={<Icon icon="home" />}>Home</NavItem>
+                                    <NavItem icon={<Icon icon={faHome} />}>Home</NavItem>
                                     <NavItem>News</NavItem>
                                     <NavItem>Products</NavItem>
                                     <Dropdown title="About">
@@ -113,7 +120,7 @@ const Template: ComponentStory<typeof Container> = (args) => {
                                     </Dropdown>
                                 </Nav>
                                 <Nav pullRight>
-                                    <NavItem icon={<Icon icon="cog" />}>Settings</NavItem>
+                                    <NavItem icon={<Icon icon={faCog} />}>Settings</NavItem>
                                 </Nav>
                             </NavbarBody>
                         </Navbar>

@@ -1,0 +1,27 @@
+.Placeholder {
+  width: 100%;
+}
+
+.Paragraph {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  display: flex;
+}
+
+.Rows {
+  width: 100%;
+
+  p {
+    background-color: #3c3f43;
+    margin: 0;
+    height: 10px;
+
+    + p {
+      margin-top: 20px;
+    }
+  }
+}

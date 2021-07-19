@@ -1,0 +1,19 @@
+.Overlay {
+  position: fixed;
+  overflow: auto;
+  z-index: 1050;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #0f131a;
+  pointer-events: unset;
+  transition: opacity .3s ease-in;
+  opacity: 0;
+  display: none;
+}
+
+.Show {
+  opacity: .8;
+  display: block;
+}

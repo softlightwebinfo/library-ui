@@ -1,3 +1,4 @@
+export * from './useContextModal';
 export * from './useContextSidebarPage';
 export * from './useDropdown';
 export * from './useNav';
