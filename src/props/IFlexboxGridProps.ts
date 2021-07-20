@@ -4,4 +4,5 @@ import {TAlign, TJustify} from "../types/TAlign";
 export interface IFlexboxGridProps extends IProps {
     align?: TAlign;
     justify?: TJustify;
+    gap?: number;
 }

@@ -1,65 +1,74 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
-import {Container} from "../components/Container/Container";
-import {Header} from "../components/Header/Header";
-import {Content} from "../components/Content/Content";
-import {Sidebar} from "../components/Sidebar/Sidebar";
-import {Footer} from "../components/Footer/Footer";
+import {Panel} from "../components/Panel/Panel";
+import {FlexboxGrid, FlexboxGridItem, Placeholder} from "../components";
 
 export default {
-    title: 'Base/Container/Default',
-    component: Container,
+    title: 'Base/Panel/Default',
+    component: Panel,
     argTypes: {},
-    args: {
-        children: "Content"
-    }
-} as ComponentMeta<typeof Container>;
-
-const Template: ComponentStory<typeof Container> = (args) => <Container {...args} />;
-const TemplateLayout: ComponentStory<typeof Container> = (args) => (
-    <Container {...args}>
-        <Header preview>Header</Header>
-        <Content preview>Content</Content>
-        <Footer preview>Footer</Footer>
-    </Container>
+    args: {}
+} as ComponentMeta<typeof Panel>;
+const Card = (props: any) => (
+    <Panel {...props} bordered header="Card title">
+        <Placeholder/>
+    </Panel>
 );
-const TemplateLayoutSidebar: ComponentStory<typeof Container> = (args) => (
-    <Container {...args}>
-        <Sidebar preview>Sidebar</Sidebar>
-        <Container>
-            <Header preview>Header</Header>
-            <Content preview>Content</Content>
-            <Footer preview>Footer</Footer>
-        </Container>
-    </Container>
+const Template: ComponentStory<typeof Panel> = (args) => (
+    <Panel {...args}>
+        <Placeholder/>
+    </Panel>
 );
-const TemplateLayoutSidebarHeader: ComponentStory<typeof Container> = (args) => (
-    <Container {...args}>
-        <Header preview>Header</Header>
-        <Container hasSidebar>
-            <Sidebar preview>Sidebar</Sidebar>
-            <Content preview>Content</Content>
-        </Container>
-        <Footer preview>Footer</Footer>
-    </Container>
+const Template2: ComponentStory<typeof Panel> = (args) => (
+    <Panel {...args} style={{display: 'inline-block', width: 240}}>
+        <img src="https://via.placeholder.com/240x240" height="240"/>
+        <Panel header="RSUITE">
+            <p>
+                <small>A suite of React components, sensible UI design, and a friendly development experience.</small>
+            </p>
+        </Panel>
+    </Panel>
 );
-const TemplateLayoutSidebarHeader2: ComponentStory<typeof Container> = (args) => (
-    <Container {...args}>
-        <Header preview>Header</Header>
-        <Container hasSidebar>
-            <Content preview>Content</Content>
-            <Sidebar preview>Sidebar</Sidebar>
-        </Container>
-        <Footer preview>Footer</Footer>
-    </Container>
+const Template3: ComponentStory<typeof Panel> = (args) => (
+    <FlexboxGrid>
+        <FlexboxGridItem md={6} sm={12}>
+            <Card/>
+        </FlexboxGridItem>
+        <FlexboxGridItem md={6} sm={12}>
+            <Card/>
+        </FlexboxGridItem>
+        <FlexboxGridItem md={6} sm={12}>
+            <Card/>
+        </FlexboxGridItem>
+        <FlexboxGridItem md={6} sm={12}>
+            <Card/>
+        </FlexboxGridItem>
+    </FlexboxGrid>
 );
 
 export const Default = Template.bind({});
-export const Layout = TemplateLayout.bind({});
-export const LayoutSidebar = TemplateLayoutSidebar.bind({});
-LayoutSidebar.args = {
-    hasSidebar: true,
+Default.args = {
+    header: "Panel title"
 };
-export const LayoutSidebarHeader = TemplateLayoutSidebarHeader.bind({});
-LayoutSidebarHeader.args = {};
-export const LayoutSidebarHeaderRight = TemplateLayoutSidebarHeader2.bind({});
+export const Bordered = Template.bind({});
+Bordered.args = {
+    header: "Panel title",
+    bordered: true,
+}
+export const Shaded = Template.bind({});
+Shaded.args = {
+    header: "Panel title",
+    shaded: true,
+}
+export const WithoutHeader = Template.bind({});
+WithoutHeader.args = {
+    bordered: true,
+}
+export const CardDefault = Template2.bind({});
+CardDefault.args = {
+    shaded: true,
+    bordered: true,
+    bodyFill: true,
+}
+export const Group = Template3.bind({});
+Group.args = {}

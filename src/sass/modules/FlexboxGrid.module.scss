@@ -1,3 +1,5 @@
+@import "../../sass/vars";
+
 .FlexboxGrid {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -45,4 +47,8 @@
   &-space-between {
     justify-content: space-between;
   }
+}
+
+.Gap {
+  //gap: $gap;
 }

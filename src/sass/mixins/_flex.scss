@@ -15,7 +15,7 @@
   @if ($breakpoint == 0) {
     @content;
   } @else {
-    @media screen and (min-width: $breakpoint *1px) {
+    @media screen and (max-width: $breakpoint *1px) {
       @content;
     }
   }
@@ -26,6 +26,59 @@
     @for $i from 1 through $grid__cols {
       .col#{$modifier}-#{$i} {
         flex-basis: (100 / ($grid__cols / $i) ) * 1%;
+      }
+    }
+  }
+}
+
+@mixin xs {
+  @media (max-width: #{$screen-xs-max}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+@mixin gridGenerator($breakpoint, $offset: false) {
+  /*------------------------------------*\
+  # COLUMNS
+  \*------------------------------------*/
+  @for $column from 1 to $columns+1 {
+    .col-#{$breakpoint}-#{$column} {
+      // flex-basis: percentage($column / $columns-number);
+      width: (100% * $column) / $columns;
+    }
+  }
+
+  /*------------------------------------*\
+  # OFFSET COLUMNS
+  \*------------------------------------*/
+  @if $offset {
+    @for $column from 1 to $columns+1 {
+      .col-#{$breakpoint}-offset-#{$column} {
+        margin-left: (100% * $column) / $columns;
       }
     }
   }

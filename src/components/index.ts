@@ -17,6 +17,7 @@ export * from './Nav';
 export * from './Navbar';
 export * from './Overlay';
 export * from './Pagination';
+export * from './Panel';
 export * from './Placeholder';
 export * from './Sidebar';
 export * from './Sidenav';

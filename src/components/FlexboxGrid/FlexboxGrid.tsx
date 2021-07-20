@@ -6,7 +6,8 @@ import styles from '../../sass/modules/FlexboxGrid.module.scss';
 export const FlexboxGrid = ({align = "top", justify = "start", ...props}: IFlexboxGridProps) => {
     const cs = classNames(styles.FlexboxGrid, props.className, {
         [styles[`align-${align}`]]: !!align,
-        [styles[`justify-${justify}`]]: !!justify
+        [styles[`justify-${justify}`]]: !!justify,
+        [styles.Gap]: !props.gap,
     });
 
     return (

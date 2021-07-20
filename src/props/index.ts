@@ -33,6 +33,7 @@ export * from './INavToggleProps';
 export * from './INavbarBodyProps';
 export * from './INavbarHeaderProps';
 export * from './IOverlayProps';
+export * from './IPanelProps';
 export * from './IPlaceholderProps';
 export * from './ISidebarPageProps';
 export * from './ISidebarProps';

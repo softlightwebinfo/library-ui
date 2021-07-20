@@ -21,12 +21,25 @@ $grid__bp-lg: 992;
 $grid__bp-xl: 1200;
 $map-grid-props: (
         '': 0,
-        '-xs': $grid__bp-xs,
-        '-sm': $grid__bp-sm,
-        '-md': $grid__bp-md,
+        '-xl': $grid__bp-xl,
         '-lg': $grid__bp-lg,
-        '-xl': $grid__bp-xl
+        '-md': $grid__bp-md,
+        '-sm': $grid__bp-sm,
+        '-xs': $grid__bp-xs
 );
+// Small devices (landscape phones, etc)
+$screen-xs-max: 768px;
+
+// Medium devices (tablets, 768px and up)
+$screen-sm-min: 768px;
+
+// Large devices (desktops, 992px and up)
+$screen-md-min: 992px;
+
+// Extra large devices (large desktops, 1200px and up)
+$screen-lg-min: 1200px;
+
+$screen-xl-min: 1340px;
 
 $columns: 12;
 $column-gap: 2rem;
