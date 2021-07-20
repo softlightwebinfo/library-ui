@@ -1,6 +1,6 @@
 {
   "name": "@codeunic/library-react",
-  "version": "0.11.4",
+  "version": "0.11.6",
   "description": "The project was developer for anyone people need the  react components.",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",

@@ -24,12 +24,17 @@ export const NavItem = ({className, eventKey = "", style, ...props}: INavItemPro
         props.onSelect?.(eventKey, evt);
         ctx?.onSelect?.(eventKey, evt);
     }, [props.onSelect, ctx.activeKey]);
+
+    const component = (
+        <div className={styles.Content}>
+            {props.icon && <span className={styles.Icon}>{props.icon}</span>}
+            {ctxSidenav.expanded != false && props.children}
+        </div>
+    );
+
     return (
         <li className={cs} style={style} onClick={onChange}>
-            <div className={styles.Content}>
-                {props.icon && <span className={styles.Icon}>{props.icon}</span>}
-                {ctxSidenav.expanded != false && props.children}
-            </div>
+            {props.renderItem?.(component) ?? component}
         </li>
     )
 };
