@@ -1,0 +1,22 @@
+.InputGroup {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 6px;
+  -webkit-transition: border-color .3s ease-in-out;
+  transition: border-color .3s ease-in-out;
+  width: 100%;
+  border: 1px solid #e5e5ea;
+
+  input {
+    border: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &:hover {
+    outline: 0;
+    border: 1px solid #1675e0
+  }
+}

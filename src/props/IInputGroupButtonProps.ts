@@ -1,5 +1,5 @@
 import {IProps} from "../interfaces";
 
-export interface IInputGroupAddonProps extends IProps {
+export interface IInputGroupButtonProps extends IProps {
 
 }

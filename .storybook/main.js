@@ -13,7 +13,14 @@ module.exports = {
     webpackFinal: async (config, {configType}) => {
         config.module.rules.push({
             test: /\.scss$/,
-            use: ['style-loader', 'css-loader?modules&importLoaders', 'sass-loader'],
+            use: ['style-loader', {
+                loader: 'css-loader',
+                options: {
+                    modules: {
+                        localIdentName: '[local]-[hash:5]'
+                    }
+                }
+            }, 'sass-loader'],
             include: path.resolve(__dirname, '../'),
         });
 

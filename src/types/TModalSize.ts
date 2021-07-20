@@ -1,1 +1,3 @@
-export type TModalSize = 'lg' | 'md' | 'sm' | 'xs';
+import {TSize} from "./TSize";
+
+export type TModalSize = TSize;

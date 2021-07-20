@@ -7,6 +7,7 @@ export * from './Dropdown';
 export * from './Footer';
 export * from './Header';
 export * from './Icon';
+export * from './Input';
 export * from './Line';
 export * from './Message';
 export * from './Modal';

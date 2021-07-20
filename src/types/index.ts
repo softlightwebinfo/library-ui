@@ -1,6 +1,7 @@
 export * from './TAppearance';
 export * from './TDropdownPlacement';
 export * from './TDropdownTrigger';
+export * from './TInputType';
 export * from './TLineStatus';
 export * from './TModalSize';
 export * from './TNavAppearance';

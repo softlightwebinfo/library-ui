@@ -1,13 +1,14 @@
-import {IInputGroupAddonProps} from "../../props/IInputGroupAddonProps";
+import {IInputGroupButtonProps} from "../../props/IInputGroupButtonProps";
 import classNames from "classnames";
 import React from "react";
-import styles from '../../sass/modules/IInputGroupAddon.module.scss';
+import styles from '../../sass/modules/InputGroupButton.module.scss';
+import {Button} from "../Button";
 
-export const InputGroupAddon = (props: IInputGroupAddonProps) => {
-    const cs = classNames(styles.InputGroupAddon, props.className);
+export const InputGroupButton = (props: IInputGroupButtonProps) => {
+    const cs = classNames(styles.InputGroupButton, props.className);
     return (
-        <div className={cs} style={props.style}>
+        <Button className={cs} style={props.style}>
             {props.children}
-        </div>
+        </Button>
     )
 };
