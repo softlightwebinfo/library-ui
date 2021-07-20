@@ -1,0 +1,9 @@
+@import "../vars";
+
+%defaults { // % is used to create the placeholder
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: ($gap / 2);
+  padding-left: ($gap / 2);
+}

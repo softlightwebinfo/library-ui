@@ -1,22 +1,18 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
-import {FlexboxGrid} from "../components/FlexboxGrid/FlexboxGrid";
-import {FlexboxGridItem} from "../components/FlexboxGrid/FlexboxGridItem";
+import {ContainerGrid} from "../components/ContainerGrid/ContainerGrid";
 
 export default {
-    title: 'Base/FlexboxGrid/Default',
-    component: FlexboxGrid,
+    title: 'Base/ContainerGrid/Default',
+    component: ContainerGrid,
     argTypes: {},
     args: {}
-} as ComponentMeta<typeof FlexboxGrid>;
+} as ComponentMeta<typeof ContainerGrid>;
 
-const Template: ComponentStory<typeof FlexboxGrid> = (args) => (
-    <FlexboxGrid {...args}>
-        <FlexboxGridItem colspan={6}>colspan={6}</FlexboxGridItem>
-        <FlexboxGridItem colspan={6}>colspan={6}</FlexboxGridItem>
-        <FlexboxGridItem colspan={6}>colspan={6}</FlexboxGridItem>
-        <FlexboxGridItem colspan={6}>colspan={6}</FlexboxGridItem>
-    </FlexboxGrid>
+const Template: ComponentStory<typeof ContainerGrid> = (args) => (
+    <ContainerGrid {...args}>
+        Hola
+    </ContainerGrid>
 );
 
 export const Default = Template.bind({});

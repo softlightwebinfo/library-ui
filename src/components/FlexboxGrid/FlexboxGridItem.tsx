@@ -1,10 +1,18 @@
 import React from "react"
-import {IFlexboxGridProps} from "../../props/IFlexboxGridProps";
+import {IFlexboxGridItemProps} from "../../props/IFlexboxGridItemProps";
 import classNames from "classnames";
-import styles from '../../sass/modules/FlexboxGrid.module.scss';
+import styles from '../../sass/modules/FlexboxGridItem.module.scss';
 
-export const FlexboxGrid = (props: IFlexboxGridProps) => {
-    const cs = classNames(styles.FlexboxGrid, props.className);
+export const FlexboxGridItem = (props: IFlexboxGridItemProps) => {
+    const cs = classNames(styles.FlexboxGridItem, props.className, {
+        [styles[`order-${props.order}`]]: !!props.order,
+        [styles[`col-${props.colspan}`]]: !!props.colspan,
+        [styles[`col-xs-${props.xs}`]]: !!props.xs,
+        [styles[`col-sm-${props.sm}`]]: !!props.sm,
+        [styles[`col-md-${props.md}`]]: !!props.md,
+        [styles[`col-lg-${props.lg}`]]: !!props.lg,
+        [styles[`col-xl-${props.xl}`]]: !!props.xl,
+    });
     return (
         <div className={cs} style={props.style}>
             {props.children}

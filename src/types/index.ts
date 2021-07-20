@@ -1,3 +1,4 @@
+export * from './TAlign';
 export * from './TAppearance';
 export * from './TDropdownPlacement';
 export * from './TDropdownTrigger';
