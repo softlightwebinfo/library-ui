@@ -1,19 +1,21 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
-import {Header} from "../components/Header/Header";
+import {Pagination} from "../components/Pagination/Pagination";
 
 export default {
-    title: 'Base/Header/Default',
-    component: Header,
+    title: 'Base/Pagination/Default',
+    component: Pagination,
     argTypes: {},
-    args: {
-        children: "Header"
-    }
-} as ComponentMeta<typeof Header>;
+    args: {}
+} as ComponentMeta<typeof Pagination>;
 
-const Template: ComponentStory<typeof Header> = (args) => <Header {...args} />;
+const Template: ComponentStory<typeof Pagination> = (args) => <Pagination {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-    preview: true,
+    totalRecords: 200,
+    onPageChanged:(e, page) => {
+        e.preventDefault();
+        console.log(page)
+    }
 }

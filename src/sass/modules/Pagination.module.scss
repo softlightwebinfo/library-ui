@@ -1,0 +1,58 @@
+.Pagination {
+  position: relative;
+  .currentPage {
+    font-size: 1.5rem;
+    vertical-align: middle;
+  }
+
+  .pageItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .currentPage {
+    font-size: 1.5rem;
+    vertical-align: middle;
+  }
+
+  .paginationWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10 !important;
+  }
+
+  /* Override some Bootstrap pagination styles */
+  ul.pagination {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin: 40px;
+  }
+
+  ul.pagination li.pageItem.active a.pageLink {
+    color: #445565 !important;
+    background-color: #e3e7eb !important;
+    border-color: #ced4da !important;
+  }
+
+  ul.pagination a.pageLink {
+    padding: 0.75rem 1rem;
+    min-width: 3.5rem;
+    text-align: center;
+    box-shadow: none !important;
+    border-color: #ced4da !important;
+    color: #6b88a4;
+    font-weight: 900;
+    font-size: 1rem;
+  }
+
+  ul.pagination a.pageLink:hover {
+    background-color: #f4f4f4;
+  }
+}

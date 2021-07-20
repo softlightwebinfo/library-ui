@@ -13,6 +13,7 @@ export * from './Modal';
 export * from './Nav';
 export * from './Navbar';
 export * from './Overlay';
+export * from './Pagination';
 export * from './Placeholder';
 export * from './Sidebar';
 export * from './Sidenav';
