@@ -2,8 +2,10 @@ import React from "react"
 import {IFlexboxGridItemProps} from "../../props/IFlexboxGridItemProps";
 import classNames from "classnames";
 import styles from '../../sass/modules/FlexboxGridItem.module.scss';
+import {useFlexboxGrid} from "../../context/useFlexboxGrid";
 
 export const FlexboxGridItem = ({colspan = 3, ...props}: IFlexboxGridItemProps) => {
+    const ctx = useFlexboxGrid();
     const cs = classNames(styles.FlexboxGridItem, props.className, {
         [styles[`order-${props.order}`]]: props.order,
         [styles[`col-${colspan}`]]: colspan,
@@ -15,7 +17,10 @@ export const FlexboxGridItem = ({colspan = 3, ...props}: IFlexboxGridItemProps) 
     });
 
     return (
-        <div className={cs} style={props.style}>
+        <div className={cs} style={{
+            ...props.style,
+            padding: ctx.gap
+        }}>
             {props.children}
         </div>
     )

@@ -29,8 +29,8 @@ const Template2: ComponentStory<typeof Panel> = (args) => (
         </Panel>
     </Panel>
 );
-const Template3: ComponentStory<typeof Panel> = (args) => (
-    <FlexboxGrid>
+const Template3: ComponentStory<typeof FlexboxGrid> = (args) => (
+    <FlexboxGrid {...args}>
         <FlexboxGridItem md={6} sm={12}>
             <Card/>
         </FlexboxGridItem>
@@ -72,3 +72,7 @@ CardDefault.args = {
 }
 export const Group = Template3.bind({});
 Group.args = {}
+export const Gap = Template3.bind({});
+Gap.args = {
+    gap: 10
+}

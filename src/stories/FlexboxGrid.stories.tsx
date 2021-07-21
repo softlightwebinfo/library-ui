@@ -30,3 +30,7 @@ const TemplateResponsive: ComponentStory<typeof FlexboxGrid> = (args) => (
 export const Default = Template.bind({});
 Default.args = {};
 export const Responsive = TemplateResponsive.bind({});
+export const Gap = TemplateResponsive.bind({});
+Gap.args = {
+    gap: 10,
+}

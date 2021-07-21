@@ -1,8 +1,11 @@
 import {createContext, useContext} from "react";
 
-export interface IUseModal {
-    onHide?: (evt: any) => void;
+export interface IUseFlexboxGrid {
+    flexboxGrid: boolean;
+    gap?: number;
 }
 
-export const ContextModal = createContext<IUseModal>({})
-export const useModal = () => useContext(ContextModal);
+export const ContextFlexboxGrid = createContext<IUseFlexboxGrid>({
+    flexboxGrid: false,
+})
+export const useFlexboxGrid = () => useContext(ContextFlexboxGrid);
