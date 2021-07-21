@@ -13,16 +13,16 @@ $colors: red orange yellow green cyan blue violet;
 .TagCloseable {
   padding-right: 25px;
   position: relative;
-}
 
-svg {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  right: 8px;
-  cursor: pointer;
-  font-size: 12px;
+  svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 8px!important;
+    cursor: pointer;
+    font-size: 12px;
+  }
 }
 
 @each $color in $colors {
