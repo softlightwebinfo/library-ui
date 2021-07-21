@@ -8,6 +8,8 @@ export * from './IButtonGroupProps';
 export * from './IButtonProps';
 export * from './IButtonToolbarProps';
 export * from './ICarouselProps';
+export * from './ICheckboxGroupProps';
+export * from './ICheckboxProps';
 export * from './IContainerGridProps';
 export * from './IContainerProps';
 export * from './IContentProps';

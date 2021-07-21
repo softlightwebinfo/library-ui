@@ -1,7 +1,7 @@
 import {IProps} from "../interfaces";
 import {ChangeEvent} from "react";
 
-export interface IRadioProps extends IProps {
+export interface ICheckboxProps extends IProps {
     name?: string;
     readOnly?: boolean;
     disabled?: boolean;

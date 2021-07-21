@@ -3,6 +3,7 @@ export * from './Avatar';
 export * from './Badge';
 export * from './Button';
 export * from './Carousel';
+export * from './Checkbox';
 export * from './Container';
 export * from './ContainerGrid';
 export * from './Content';

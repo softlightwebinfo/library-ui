@@ -1,13 +1,15 @@
 import classNames from "classnames";
 import React, {useCallback} from "react";
-import {IRadioProps} from "../../props/IRadioProps";
-import styles from '../../sass/modules/Radio.module.scss';
-import {useRadio} from "../../context/useRadio";
+import styles from '../../sass/modules/Checkbox.module.scss';
+import {useCheckbox} from "../../context/useCheckbox";
+import {ICheckboxProps} from "../../props/ICheckboxProps";
+import {Icon} from "../Icon";
+import {faCheck} from "@fortawesome/free-solid-svg-icons";
 
-export const Radio = (props: IRadioProps) => {
-    const ctx = useRadio()
+export const Checkbox = (props: ICheckboxProps) => {
+    const ctx = useCheckbox()
     const name = ctx.name ?? props.name;
-    const cs = classNames(styles.Radio, props.className, {
+    const cs = classNames(styles.Checkbox, props.className, {
         [styles.Checked]: props.checked,
     });
     const onChange = useCallback((e) => {
@@ -19,13 +21,16 @@ export const Radio = (props: IRadioProps) => {
             <input
                 onChange={onChange}
                 className={styles.Input}
-                type="radio"
+                type="checkbox"
                 name={name}
                 disabled={props.disabled}
                 readOnly={props.readOnly}
                 checked={props.checked}
             />
-            <span>{props.children}</span>
+            <span>
+                <Icon icon={faCheck} className={styles.Icon}/>
+                {props.children}
+            </span>
         </label>
     )
 }

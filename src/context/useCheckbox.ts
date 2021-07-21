@@ -1,13 +1,13 @@
 import {ChangeEvent, createContext, useContext} from "react";
 
-export interface IUseRadio {
-    radio: boolean;
+export interface IUseCheckbox {
+    checkbox: boolean;
     name?: string;
-    onChange?: (checked: boolean, value?:any, e?: ChangeEvent<HTMLInputElement>) => void;
+    onChange?: (checked: boolean, value?: any, e?: ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const ContextRadio = createContext<IUseRadio>({
-    radio: false,
+export const ContextCheckbox = createContext<IUseCheckbox>({
+    checkbox: false,
 })
 
-export const useRadio = () => useContext(ContextRadio);
+export const useCheckbox = () => useContext(ContextCheckbox);

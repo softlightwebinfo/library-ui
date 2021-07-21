@@ -1,21 +1,20 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
-import {Radio} from "../components/Radio/Radio";
-import {RadioGroup} from "../components/Radio/RadioGroup";
 import {Divider} from "../components";
+import {Checkbox, CheckboxGroup} from "../components/Checkbox";
 
 export default {
-    title: 'Base/Radio/Default',
-    component: Radio,
+    title: 'Base/Checkbox/Default',
+    component: Checkbox,
     argTypes: {},
     args: {
-        children: "Radio"
+        children: "Checkbox"
     }
-} as ComponentMeta<typeof Radio>;
+} as ComponentMeta<typeof Checkbox>;
 
-const Template: ComponentStory<typeof Radio> = (args) => {
+const Template: ComponentStory<typeof Checkbox> = (args) => {
     return (
-        <Radio
+        <Checkbox
             {...args}
             name={"HOLA"}
             value={"Hola"}
@@ -23,36 +22,36 @@ const Template: ComponentStory<typeof Radio> = (args) => {
         />
     );
 }
-const TemplateGroup: ComponentStory<typeof Radio> = (args) => {
+const TemplateGroup: ComponentStory<typeof Checkbox> = (args) => {
     return (
         <>
-            <RadioGroup name={"hola"}>
-                <Radio value={"hola-Hola"}>Hola</Radio>
-                <Radio value={"hola-test"}>Test</Radio>
-                <Radio value={"hola-pepe"}>Pepe</Radio>
-                <Radio value={"hola-carlos"}>Carlos</Radio>
-            </RadioGroup>
+            <CheckboxGroup name={"hola"}>
+                <Checkbox value={"hola-Hola"}>Hola</Checkbox>
+                <Checkbox value={"hola-test"}>Test</Checkbox>
+                <Checkbox value={"hola-pepe"}>Pepe</Checkbox>
+                <Checkbox value={"hola-carlos"}>Carlos</Checkbox>
+            </CheckboxGroup>
             <Divider/>
-            <RadioGroup name={"pepe"}>
-                <Radio value={"pepe-Hola"}>Hola</Radio>
-                <Radio value={"pepe-test"}>Test</Radio>
-                <Radio value={"pepe-pepe"}>Pepe</Radio>
-                <Radio value={"pepe-carlos"}>Carlos</Radio>
-            </RadioGroup>
+            <CheckboxGroup name={"pepe"}>
+                <Checkbox value={"pepe-Hola"}>Hola</Checkbox>
+                <Checkbox value={"pepe-test"}>Test</Checkbox>
+                <Checkbox value={"pepe-pepe"}>Pepe</Checkbox>
+                <Checkbox value={"pepe-carlos"}>Carlos</Checkbox>
+            </CheckboxGroup>
             <Divider/>
-            <RadioGroup name={"prueba"}>
-                <Radio value={"prueba-Hola"}>Hola</Radio>
-                <Radio value={"prueba-test"}>Test</Radio>
-                <Radio value={"prueba-pepe"}>Pepe</Radio>
-                <Radio value={"prueba-carlos"}>Carlos</Radio>
-            </RadioGroup>
+            <CheckboxGroup name={"prueba"}>
+                <Checkbox value={"prueba-Hola"}>Hola</Checkbox>
+                <Checkbox value={"prueba-test"}>Test</Checkbox>
+                <Checkbox value={"prueba-pepe"}>Pepe</Checkbox>
+                <Checkbox value={"prueba-carlos"}>Carlos</Checkbox>
+            </CheckboxGroup>
             <Divider/>
-            <RadioGroup name={"prueba"} horizontal>
-                <Radio value={"prueba-Hola"}>Hola</Radio>
-                <Radio value={"prueba-test"}>Test</Radio>
-                <Radio value={"prueba-pepe"}>Pepe</Radio>
-                <Radio value={"prueba-carlos"}>Carlos</Radio>
-            </RadioGroup>
+            <CheckboxGroup name={"prueba"} horizontal>
+                <Checkbox value={"prueba-Hola"}>Hola</Checkbox>
+                <Checkbox value={"prueba-test"}>Test</Checkbox>
+                <Checkbox value={"prueba-pepe"}>Pepe</Checkbox>
+                <Checkbox value={"prueba-carlos"}>Carlos</Checkbox>
+            </CheckboxGroup>
         </>
     );
 }
