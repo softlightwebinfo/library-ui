@@ -9,4 +9,5 @@ export * from './TNavAppearance';
 export * from './TSimpleColor';
 export * from './TSize';
 export * from './TStepsItemStatus';
+export * from './TTimelineAlign';
 export * from './TTypeBasic';

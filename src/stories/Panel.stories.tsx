@@ -76,3 +76,10 @@ export const Gap = Template3.bind({});
 Gap.args = {
     gap: 10
 }
+export const Collapsible = Template.bind({});
+Collapsible.args = {
+    header: "Panel title",
+    shaded: true,
+    bordered: true,
+    collapsible: true,
+}

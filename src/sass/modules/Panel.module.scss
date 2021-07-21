@@ -8,6 +8,13 @@
   color: black;
   font-size: 16px;
   line-height: 1.25;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  span {
+    flex: 1;
+  }
 }
 
 .Body,
@@ -41,5 +48,29 @@
 .BodyFill {
   > .Body {
     padding: 0 !important;
+  }
+}
+
+.Hide {
+  .Header {
+    padding-bottom: 20px;
+  }
+
+  > .Body {
+    display: none;
+  }
+}
+
+.Show {
+  > .Body {
+    display: block;
+  }
+}
+
+.Collapsible {
+  .Header {
+    &:hover {
+      cursor: pointer;
+    }
   }
 }

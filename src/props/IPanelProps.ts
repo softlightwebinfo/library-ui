@@ -2,6 +2,7 @@ import {IProps} from "../interfaces";
 import {ReactNode} from "react";
 
 export interface IPanelProps extends IProps {
+    initialOpen?: boolean;
     header?: ReactNode;
     expanded?: boolean;
     eventKey?: string;

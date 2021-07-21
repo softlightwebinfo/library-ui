@@ -1,5 +1,7 @@
 import {IProps} from "../interfaces";
+import {TTimelineAlign} from "../types/TTimelineAlign";
 
-export interface ITimelineProps extends IProps {
-
+export interface ITimelineItemProps extends IProps {
+    align?: TTimelineAlign;
+    active?: boolean;
 }

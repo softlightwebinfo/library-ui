@@ -1,8 +1,12 @@
 import {createContext, useContext} from "react";
+import {TTimelineAlign} from "../types/TTimelineAlign";
 
-export interface IUseModal {
-    onHide?: (evt: any) => void;
+export interface IUseTimeline {
+    timeline: boolean;
+    align?: TTimelineAlign;
 }
 
-export const ContextModal = createContext<IUseModal>({})
-export const useModal = () => useContext(ContextModal);
+export const ContextTimeline = createContext<IUseTimeline>({
+    timeline: false,
+})
+export const useTimeline = () => useContext(ContextTimeline);

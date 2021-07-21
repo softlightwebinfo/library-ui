@@ -1,5 +1,5 @@
 import {IProps} from "../interfaces";
 
-export interface ITimelineProps extends IProps {
+export interface IDotProps extends IProps {
 
 }

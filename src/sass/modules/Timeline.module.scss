@@ -1,0 +1,15 @@
+.Timeline {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+  direction: ltr;
+}
+
+.left {
+
+}
+
+.right {
+  display: inline-flex;
+  flex-direction: column;
+}
