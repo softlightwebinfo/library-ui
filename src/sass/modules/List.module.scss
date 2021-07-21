@@ -1,0 +1,13 @@
+.List {
+  position: relative;
+  -webkit-box-shadow: 0 1px 0 #e5e5ea, 0 -1px 0 #e5e5ea;
+  box-shadow: 0 1px 0 #e5e5ea, 0 -1px 0 #e5e5ea;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.Bordered {
+  border-radius: 6px;
+  -webkit-box-shadow: 0 0 0 1px #e5e5ea;
+  box-shadow: 0 0 0 1px #e5e5ea;
+}

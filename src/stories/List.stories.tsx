@@ -1,19 +1,38 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
-import {Header} from "../components/Header/Header";
+import {List} from "../components/List/List";
+import {ListItem} from "../components/List/ListItem";
 
 export default {
-    title: 'Base/Header/Default',
-    component: Header,
+    title: 'Base/List/Default',
+    component: List,
     argTypes: {},
-    args: {
-        children: "Header"
-    }
-} as ComponentMeta<typeof Header>;
-
-const Template: ComponentStory<typeof Header> = (args) => <Header {...args} />;
+    args: {}
+} as ComponentMeta<typeof List>;
+const data = ['Roses are red', 'Violets are blue', 'Sugar is sweet', 'And so are you'];
+const Template: ComponentStory<typeof List> = (args) => (
+    <List {...args}>
+        {data.map((item, index) => (
+            <ListItem key={index} index={index}>
+                {item}
+            </ListItem>
+        ))}
+    </List>
+);
 
 export const Default = Template.bind({});
-Default.args = {
-    preview: true,
+Default.args = {}
+export const Size = Template.bind({});
+Size.args = {
+    size: "lg",
+}
+
+export const Bordered = Template.bind({});
+Bordered.args = {
+    bordered: true,
+}
+
+export const Hover = Template.bind({});
+Hover.args = {
+    hover: true,
 }

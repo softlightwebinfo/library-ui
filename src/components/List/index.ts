@@ -1,3 +1,2 @@
-export * from './Avatar';
-export * from './AvatarGroup';
-export * from './AvatarImage';
+export * from './List';
+export * from './ListItem';

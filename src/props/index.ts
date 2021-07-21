@@ -25,6 +25,8 @@ export * from './IInputGroupButtonProps';
 export * from './IInputGroupProps';
 export * from './IInputProps';
 export * from './ILineProps';
+export * from './IListItemProps';
+export * from './IListProps';
 export * from './IMessageProps';
 export * from './IModalBodyProps';
 export * from './IModalDialogProps';

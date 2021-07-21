@@ -1,5 +1,9 @@
 import {IProps} from "../interfaces";
+import {TSize} from "../types";
 
-export interface IListProps extends IProps {
-
+export interface IListItemProps extends IProps {
+    bordered?: boolean;
+    hover?: boolean;
+    index?: number;
+    size?: TSize;
 }
