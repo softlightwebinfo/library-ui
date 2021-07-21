@@ -1,0 +1,71 @@
+.Carousel {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  background: #8e8e93;
+}
+
+.Content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.Toolbar {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  display: flex;
+  left: 0;
+  width: 100%;
+  gap: var(--space-xs);
+}
+
+.bottom {
+  .Toolbar {
+    left: 0;
+    width: 100%;
+    bottom: 17px;
+  }
+}
+
+.top {
+  .Toolbar {
+    left: 0;
+    width: 100%;
+    top: 17px;
+  }
+}
+
+.left {
+  .Toolbar {
+    right: initial;
+    width: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    top: 0;
+    left: 17px;
+    bottom: 0;
+  }
+}
+
+.right {
+  .Toolbar {
+    left: initial;
+    width: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    top: 0;
+    right: 17px;
+    bottom: 0;
+  }
+}

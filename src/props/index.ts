@@ -7,6 +7,7 @@ export * from './IBadgeProps';
 export * from './IButtonGroupProps';
 export * from './IButtonProps';
 export * from './IButtonToolbarProps';
+export * from './ICarouselProps';
 export * from './IContainerGridProps';
 export * from './IContainerProps';
 export * from './IContentProps';

@@ -12,3 +12,40 @@
     border-radius: 50%;
   }
 }
+
+.Default {
+  position: relative;
+  top: 0;
+}
+
+.Active {
+  &::before {
+    background-color: var(--color-blue-light);
+  }
+}
+
+.Hover {
+  &:hover {
+    cursor: pointer;
+
+    &::before {
+      background-color: var(--color-blue-light);
+    }
+  }
+}
+
+.Bar {
+  &::before {
+    width: 18px;
+    height: 4px;
+    border-radius: 4px;
+  }
+}
+
+.Bar.Vertical {
+  &::before {
+    width: 4px;
+    height: 18px;
+    border-radius: 4px;
+  }
+}

@@ -2,6 +2,7 @@ export * from './Accordion';
 export * from './Avatar';
 export * from './Badge';
 export * from './Button';
+export * from './Carousel';
 export * from './Container';
 export * from './ContainerGrid';
 export * from './Content';
