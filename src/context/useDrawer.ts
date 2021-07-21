@@ -1,15 +1,14 @@
 import {createContext, useContext} from "react";
-import {TSize} from "../types";
+import {TPlacement} from "../types";
 
-export interface IUseList {
-    bordered?: boolean;
-    hover?: boolean;
-    size?: TSize;
-    list: boolean;
+export interface IUseDrawer {
+    onHide?: () => void;
+    drawer: boolean;
+    placement?: TPlacement;
 }
 
-export const ContextList = createContext<IUseList>({
-    list: false,
+export const ContextDrawer = createContext<IUseDrawer>({
+    drawer: false,
 })
 
-export const useList = () => useContext(ContextList);
+export const useDrawer = () => useContext(ContextDrawer);

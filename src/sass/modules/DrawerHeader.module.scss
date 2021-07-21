@@ -1,0 +1,19 @@
+.DrawerHeader {
+  padding-right: 20px;
+  position: relative;
+  margin: 20px 20px 10px;
+}
+
+.Close {
+  outline: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 12px;
+  line-height: 1.66666667;
+  color: #575757;
+  width: 20px;
+  padding: 0 8px/2;
+  background: none;
+  border-style: none;
+}

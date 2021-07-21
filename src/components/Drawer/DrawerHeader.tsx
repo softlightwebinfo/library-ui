@@ -1,31 +1,20 @@
-import React, {useEffect, useRef} from "react"
-import {IDrawerProps} from "../../props/IDrawerProps";
+import React from "react"
+import {IDrawerHeaderProps} from "../../props/IDrawerHeaderProps";
 import classNames from "classnames";
-import styles from '../../sass/modules/Drawer.module.scss';
-import {Overlay} from "../Overlay";
-import {useOnClickOutside} from "@codeunic/library-hooks";
+import styles from '../../sass/modules/DrawerHeader.module.scss';
+import {faTimes} from "@fortawesome/free-solid-svg-icons";
+import {Icon} from "../Icon";
+import {useDrawer} from "../../context/useDrawer";
 
-export const Drawer = ({placement = "right", size, ...props}: IDrawerProps) => {
-    const ref = useRef(null);
-    const cs = classNames(styles.Drawer, props.className, {
-        [styles.Show]: props.show,
-        [styles[placement]]: placement,
-        [styles[size]]: size,
-    });
-
-    useOnClickOutside(ref, () => {
-        props.onHide?.();
-    })
-
-    useEffect(() => {
-        props.onShow?.();
-    }, [])
-
+export const DrawerHeader = (props: IDrawerHeaderProps) => {
+    const ctx = useDrawer();
+    const cs = classNames(styles.DrawerHeader, props.className, {});
     return (
-        <Overlay show={props.show}>
-            <div ref={ref} className={cs} style={props.style}>
-                {props.children}
-            </div>
-        </Overlay>
+        <header className={cs} style={props.style}>
+            {props.children}
+            <button className={styles.Close} onClick={ctx.onHide}>
+                <Icon icon={faTimes}/>
+            </button>
+        </header>
     )
 }

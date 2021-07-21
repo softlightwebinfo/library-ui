@@ -1,5 +1,5 @@
 import {IProps} from "../interfaces";
 
-export interface IDrawerHeaderProps extends IProps {
+export interface IDrawerTitleProps extends IProps {
     
 }

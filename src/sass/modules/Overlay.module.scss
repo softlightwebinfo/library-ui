@@ -6,7 +6,6 @@
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: #0f131a;
   pointer-events: unset;
   transition: opacity .3s ease-in;
   opacity: 0;
@@ -14,6 +13,7 @@
 }
 
 .Show {
-  opacity: .8;
   display: block;
+  opacity: 1;
+  background-color: rgba(15, 19, 26, 0.5);
 }

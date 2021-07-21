@@ -1,3 +1,8 @@
-.DrawerTitle {
+.DrawerBody {
+  position: relative;
+  overflow: auto;
+}
 
+.Content {
+  margin: 0 20px 30px;
 }

@@ -1,13 +1,13 @@
 import React from "react"
-import {IDrawerHeaderProps} from "../../props/IDrawerHeaderProps";
 import classNames from "classnames";
-import styles from '../../sass/modules/DrawerHeader.module.scss';
+import styles from '../../sass/modules/DrawerFooter.module.scss';
+import {IDrawerFooterProps} from "../../props/IDrawerFooterProps";
 
-export const DrawerHeader = (props: IDrawerHeaderProps) => {
-    const cs = classNames(styles.DrawerHeader, props.className, {});
+export const DrawerFooter = (props: IDrawerFooterProps) => {
+    const cs = classNames(styles.DrawerFooter, props.className, {});
     return (
-        <header className={cs} style={props.style}>
-
-        </header>
+        <footer className={cs} style={props.style}>
+            {props.children}
+        </footer>
     )
 }
