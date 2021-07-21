@@ -1,0 +1,10 @@
+.RadioGroup {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.Horizontal {
+  gap: var(--space-xs);
+  flex-direction: row;
+}
