@@ -25,6 +25,7 @@ export * from './Overlay';
 export * from './Pagination';
 export * from './Panel';
 export * from './Placeholder';
+export * from './Radio';
 export * from './Sidebar';
 export * from './Sidenav';
 export * from './Spinner';

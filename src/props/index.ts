@@ -49,6 +49,8 @@ export * from './IOverlayProps';
 export * from './IPanelGroupProps';
 export * from './IPanelProps';
 export * from './IPlaceholderProps';
+export * from './IRadioGroupProps';
+export * from './IRadioProps';
 export * from './ISidebarPageProps';
 export * from './ISidebarProps';
 export * from './ISidenavBodyProps';

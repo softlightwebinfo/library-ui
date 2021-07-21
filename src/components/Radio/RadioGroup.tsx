@@ -1,21 +1,23 @@
 import classNames from "classnames";
 import React from "react";
-import {IRadioProps} from "../../props/IRadioProps";
-import styles from '../../sass/modules/Radio.module.scss';
+import styles from '../../sass/modules/RadioGroup.module.scss';
+import {IRadioGroupProps} from "../../props/IRadioGroupProps";
+import {ContextRadio} from "../../context/useRadio";
 
-export const Radio = (props: IRadioProps) => {
-    const cs = classNames(styles.Radio, props.className, {
-        [styles.Checked]: props.checked,
+export const RadioGroup = (props: IRadioGroupProps) => {
+    const cs = classNames(styles.RadioGroup, props.className, {
+        [styles.Horizontal]: props.horizontal,
     });
+    const value = {
+        name: props.name,
+        radio: true,
+        onChange: props.onChange,
+    }
     return (
-        <label className={cs} style={props.style}>
-            <input
-                onChange={e => props.onChange?.(e.target.checked, props.value, e)}
-                className={styles.Input}
-                type="radio"
-                checked={props.checked}
-            />
-            <span>{props.children}</span>
-        </label>
+        <ContextRadio.Provider value={value}>
+            <div className={cs} style={props.style}>
+                {props.children}
+            </div>
+        </ContextRadio.Provider>
     )
 }

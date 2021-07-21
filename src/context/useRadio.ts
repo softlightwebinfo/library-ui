@@ -1,15 +1,13 @@
-import {createContext, useContext} from "react";
-import {TSize} from "../types";
+import {ChangeEvent, createContext, useContext} from "react";
 
-export interface IUseList {
-    bordered?: boolean;
-    hover?: boolean;
-    size?: TSize;
-    list: boolean;
+export interface IUseRadio {
+    radio: boolean;
+    name?: string;
+    onChange?: (checked: boolean, value?:any, e?: ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const ContextList = createContext<IUseList>({
-    list: false,
+export const ContextRadio = createContext<IUseRadio>({
+    radio: false,
 })
 
-export const useList = () => useContext(ContextList);
+export const useRadio = () => useContext(ContextRadio);

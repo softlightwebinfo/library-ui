@@ -7,4 +7,5 @@ export * from './useDropdown';
 export * from './useFlexboxGrid';
 export * from './useNav';
 export * from './useNavbar';
+export * from './useRadio';
 export * from './useSidenav';
