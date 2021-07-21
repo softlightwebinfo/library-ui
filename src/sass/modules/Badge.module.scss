@@ -1,0 +1,26 @@
+.Badge {
+  position: relative;
+  display: inline-block;
+}
+
+.Content {
+  background-color: #f44336;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 0 5px;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(50%, -50%);
+  transform: translate(50%, -50%);
+  z-index: 1;
+
+  &:empty {
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    padding: 0;
+  }
+}

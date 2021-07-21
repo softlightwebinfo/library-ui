@@ -1,5 +1,5 @@
 import {IProps} from "../interfaces";
 
-export interface IAvatarProps extends IProps {
+export interface IAvatarGroupProps extends IProps {
 
 }

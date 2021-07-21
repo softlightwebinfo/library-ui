@@ -5,3 +5,4 @@ storybook-static
 src
 .storybook
 rollup.config.js
+bin

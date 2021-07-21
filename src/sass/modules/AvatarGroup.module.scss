@@ -1,3 +1,5 @@
-.Avatar {
-
+.AvatarGroup {
+  display: flex;
+  align-items: flex-end;
+  grid-gap: var(--space-s);
 }
