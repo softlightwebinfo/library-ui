@@ -13,7 +13,7 @@ export const Button = forwardRef((
         size,
         circle,
         block,
-        type = "submit",
+        type = "button",
         ...props
     }: IButtonProps,
     ref: ForwardedRef<HTMLButtonElement>
