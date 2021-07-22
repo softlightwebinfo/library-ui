@@ -9,6 +9,7 @@ export const Input = ({type = "text", ...props}: IInputProps) => {
     });
     const onChange = useCallback((evt) => {
         props?.onChange?.(evt.target.value, evt);
+        props?.onChangeEvent?.(evt)
     }, [props.value, props.onChange]);
     return (
         <input

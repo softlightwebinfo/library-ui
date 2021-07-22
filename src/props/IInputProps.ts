@@ -14,6 +14,7 @@ export interface IInputProps extends IProps {
     required?: boolean;
     readonly?: boolean;
     onChange?: (value: any, event: any) => void;
+    onChangeEvent?: (event: any) => void;
     type?: TInputType;
     value?: any;
     min?: number;
