@@ -97,3 +97,14 @@ $colors: info success warning error;
     color: #575757;
   }
 }
+
+.IsAlert {
+  .Container {
+    padding: 8px;
+  }
+}
+
+.Separate {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
