@@ -1,5 +1,6 @@
 export * from './TAlign';
 export * from './TAppearance';
+export * from './TButtonType';
 export * from './TDropdownPlacement';
 export * from './TDropdownTrigger';
 export * from './TInputType';

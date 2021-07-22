@@ -13,6 +13,7 @@ export const Button = forwardRef((
         size,
         circle,
         block,
+        type = "submit",
         ...props
     }: IButtonProps,
     ref: ForwardedRef<HTMLButtonElement>
@@ -30,6 +31,7 @@ export const Button = forwardRef((
 
     return (
         <button
+            type={type}
             title={props.title}
             ref={ref}
             disabled={disabled || loading}
