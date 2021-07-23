@@ -1,33 +1,5 @@
-.Stat {
-  width: 100%;
-}
-
-.Title {
-  font-size: var(--font-size-s);
-}
-
-.Description {
-  font-size: var(--font-size-xs);
-  color: var(--color-neutral-6);
-  margin-bottom: var(--space-m);
-}
-
-.Group {
-  display: flex;
-  justify-content: space-between;
-
-  span:first-child {
-    font-size: var(--font-size-xs);
-    color: var(--color-neutral-6);
-  }
-
-  span:last-child {
-    font-size: var(--font-size-xs);
-    color: var(--color-blue-dark);
-  }
-}
-
-.Line {
-  padding: 0;
-  margin: 5px 0;
+.Price {
+  font-size: var(--font-size-h2);
+  font-weight: bold;
+  color: black;
 }

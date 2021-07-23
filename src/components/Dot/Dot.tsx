@@ -12,6 +12,6 @@ export const Dot = ({className, style, ...props}: IDotProps) => {
         [styles.Bar]: props.bar,
     });
     return (
-        <div onClick={props.onClick} className={cs} style={style}/>
+        <span onClick={props.onClick} className={cs} style={style}/>
     )
 };
