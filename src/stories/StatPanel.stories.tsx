@@ -1,15 +1,20 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Panel } from "../components";
 import { Stat } from "../widget/Stat/Stat";
 
 export default {
-  title: 'Widgets/Stat/Default',
+  title: 'Widgets/Stat/Panel',
   component: Stat,
   argTypes: {},
   args: {},
 } as ComponentMeta<typeof Stat>;
 
-const Template: ComponentStory<typeof Stat> = (args) => <Stat { ...args } />;
+const Template: ComponentStory<typeof Stat> = (args) => (
+  <Panel card>
+    <Stat { ...args } />
+  </Panel>
+);
 
 export const Default = Template.bind({});
 Default.args = {
@@ -20,13 +25,4 @@ Default.args = {
   topRightText: "0.00€ - 0.00€ (0%)",
   title: "Cuentas de venta",
   subTitle: "Año actual",
-};
-export const Price = Template.bind({});
-Price.args = {
-  percent: 10,
-  topLeftText: "Compras de venta",
-  topRightText: "0.00€ - 0.00€ (0%)",
-  title: "Cuentas de venta",
-  subTitle: "Año actual",
-  price: "99.00€",
 };

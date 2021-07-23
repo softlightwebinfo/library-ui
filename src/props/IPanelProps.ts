@@ -3,6 +3,7 @@ import {ReactNode} from "react";
 
 export interface IPanelProps extends IProps {
     initialOpen?: boolean;
+    card?: boolean;
     header?: ReactNode;
     expanded?: boolean;
     eventKey?: string;

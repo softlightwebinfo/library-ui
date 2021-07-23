@@ -16,6 +16,7 @@ export const Panel = (props: IPanelProps) => {
         [styles.Show]: show && props.collapsible,
         [styles.Hide]: !show && props.collapsible,
         [styles.Collapsible]:  props.collapsible,
+        [styles.Card]:  props.card,
     });
     const onClick = useCallback(() => {
         props.collapsible && toggle();
