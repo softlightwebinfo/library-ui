@@ -1,0 +1,44 @@
+.Stat {
+  width: 100%;
+}
+
+.Group {
+  display: flex;
+  justify-content: space-between;
+
+  span:first-child {
+    font-size: var(--font-size-xs);
+    color: var(--color-neutral-6);
+  }
+
+  span:last-child {
+    font-size: var(--font-size-xs);
+    color: var(--color-blue-dark);
+  }
+}
+
+.Line {
+  padding: 0;
+  margin: 5px 0;
+}
+
+.Price {
+  text-align: right;
+  margin-bottom: var(--space-xs);
+}
+
+.Center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+
+  .Title {
+    color: var(--color-primary)
+  }
+
+  .Description {
+    margin: 0;
+  }
+}
