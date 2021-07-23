@@ -1,0 +1,32 @@
+.Recommend {
+  display: inline-flex;
+  flex-direction: column;
+
+  p {
+    margin-bottom: var(--space-xs);
+  }
+
+  .Footer {
+    background-color: #efefef;
+    padding: 10px;
+    text-align: center;
+    margin-top: var(--space-s);
+    font-size: var(--font-size-xs);
+    color: var(--color-blue-light);
+
+    &:hover {
+      cursor: pointer;
+      background-color: darken(#efefef, 2%);
+    }
+  }
+}
+
+.Toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Buttons {
+  margin-top: var(--space-s);
+  margin-bottom: var(--space-s);
+}

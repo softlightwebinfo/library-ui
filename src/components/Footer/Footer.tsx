@@ -9,7 +9,7 @@ export const Footer = ({className, style, ...props}: IFooterProps) => {
         [styles.Page]: props.page,
     });
     return (
-        <div className={cs} style={style}>
+        <div className={cs} style={style} onClick={props.onClick}>
             {props.children}
         </div>
     )

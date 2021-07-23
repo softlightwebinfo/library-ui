@@ -1,6 +1,7 @@
-import {IProps} from "../interfaces";
+import { IProps } from "../interfaces";
 
 export interface IFooterProps extends IProps {
-    preview?: boolean;
-    page?: boolean;
+  onClick?: (evt: any) => void;
+  preview?: boolean;
+  page?: boolean;
 }

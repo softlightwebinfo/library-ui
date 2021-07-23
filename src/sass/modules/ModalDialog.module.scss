@@ -2,9 +2,9 @@
   display: none;
   overflow: visible;
   outline: 0;
-  margin: 30px auto 0;
   position: relative;
   width: auto;
+  margin: 30px auto 0;
   z-index: 1050;
 }
 
@@ -12,8 +12,17 @@
   width: 600px;
 }
 
+.initial {
+  .Content {
+    display: inline-flex;
+    flex-direction: column;
+  }
+}
+
 .Show {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .Content {
@@ -24,4 +33,8 @@
   -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12), 0 0 10px rgba(0, 0, 0, .6);
   box-shadow: 0 4px 4px rgba(0, 0, 0, .12), 0 0 10px rgba(0, 0, 0, .6);
   padding: 20px;
+
+  p, div {
+    color: white;
+  }
 }
