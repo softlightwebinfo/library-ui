@@ -1,0 +1,23 @@
+.LineStat {
+
+}
+
+.Group {
+  display: flex;
+  justify-content: space-between;
+
+  span:first-child {
+    font-size: var(--font-size-xs);
+    color: var(--color-neutral-6);
+  }
+
+  span:last-child {
+    font-size: var(--font-size-xs);
+    color: var(--color-blue-dark);
+  }
+}
+
+.Line {
+  padding: 0;
+  margin: 5px 0;
+}

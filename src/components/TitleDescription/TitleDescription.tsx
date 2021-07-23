@@ -1,16 +1,22 @@
 import classNames from "classnames";
 import React from "react";
-import { ITitleProps } from "../../props/ITitleProps";
-import styles from '../../sass/modules/Title.module.scss';
+import { ITitleDescriptionProps } from "../../props/ITitleDescriptionProps";
+import styles from '../../sass/modules/TitleDescription.module.scss';
+import { Description } from "../Description";
+import { Dot } from "../Dot";
+import { Title } from "../Title";
 
-export const Title = (props: ITitleProps) => {
-  const cs = classNames(styles.Title, props.className, {
-    [styles.White]: props.white,
+export const TitleDescription = (props: ITitleDescriptionProps) => {
+  const cs = classNames(styles.TitleDescription, props.className, {
+    [styles.Center]: props.center,
   });
-  const Component = "div";
   return (
-    <Component className={ cs } style={ props.style }>
-      { props.children }
-    </Component>
+    <div className={ cs }>
+      <Title className={ styles.Title }>
+        { props.dot && (<Dot default/>) }
+        <span>{ props.title }</span>
+      </Title>
+      <Description className={ styles.Description }>{ props.description }</Description>
+    </div>
   );
 };

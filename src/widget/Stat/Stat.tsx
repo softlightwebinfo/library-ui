@@ -1,7 +1,8 @@
 import classNames from "classnames";
 import React from "react";
-import { Description, Dot, Line, Title } from "../../components";
+import { LineStat } from "../../components/LineStat/LineStat";
 import { Price } from "../../components/Price/Price";
+import { TitleDescription } from "../../components/TitleDescription/TitleDescription";
 import { IStatProps } from "../../props/IStatProps";
 import styles from '../../sass/modules/Stat.module.scss';
 
@@ -11,29 +12,22 @@ export const Stat = (props: IStatProps) => {
   });
   return (
     <div className={ cs } style={ props.style }>
-      <Title className={ styles.Title }>
-        { props.dot && (<Dot default/>) }
-        { props.title }
-      </Title>
-      <Description className={ styles.Description }>{ props.subTitle }</Description>
+      <TitleDescription
+        center={ props.center }
+        description={ props.subTitle }
+        title={ props.title }
+        dot={ props.dot }
+      />
       { props.price && (
         <Price className={ styles.Price }>{ props.price }</Price>
       ) }
-      { (props.topLeftText || props.topRightText) && (
-        <div className={ styles.Group }>
-          <span>{ props.topLeftText }</span>
-          <span>{ props.topRightText }</span>
-        </div>
-      ) }
-      { props.percent !== undefined && (
-        <Line showInfo={ false } className={ styles.Line } percent={ props.percent }/>
-      ) }
-      { (props.bottomLeftText || props.bottomRightText) && (
-        <div className={ styles.Group }>
-          <span>{ props.bottomLeftText }</span>
-          <span>{ props.bottomRightText }</span>
-        </div>
-      ) }
+      <LineStat
+        topLeftText={ props.topLeftText }
+        topRightText={ props.topRightText }
+        bottomLeftText={ props.bottomLeftText }
+        bottomRightText={ props.bottomRightText }
+        percent={ props.percent }
+      />
     </div>
   );
 };
