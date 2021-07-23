@@ -4,6 +4,7 @@ import { TTypeBasic } from "../types/TTypeBasic";
 
 export interface IMessageProps extends IProps {
   closable?: boolean;
+  hover?: boolean;
   separate?: boolean;
   isAlert?: boolean;
   show?: boolean;

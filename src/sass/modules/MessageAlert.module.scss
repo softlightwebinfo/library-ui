@@ -1,0 +1,23 @@
+.MessageContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Content {
+
+}
+
+.Label {
+  margin-left: var(--space-s);
+}
+
+.Success {
+
+  opacity: .3;
+
+  &,
+  .Button {
+    color: var(--color-success-2);
+  }
+}

@@ -108,3 +108,11 @@ $colors: info success warning error;
   margin-top: 8px;
   margin-bottom: 8px;
 }
+
+.Hover {
+  &:hover {
+    background-color: darken(#e9f5fe, 2%);
+    color: #575757;
+    cursor: pointer;
+  }
+}
