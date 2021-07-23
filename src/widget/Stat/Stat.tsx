@@ -6,7 +6,9 @@ import { IStatProps } from "../../props/IStatProps";
 import styles from '../../sass/modules/Stat.module.scss';
 
 export const Stat = (props: IStatProps) => {
-  const cs = classNames(styles.Stat, props.className, {});
+  const cs = classNames(styles.Stat, props.className, {
+    [styles.Center]: props.center,
+  });
   return (
     <div className={ cs } style={ props.style }>
       <Title className={ styles.Title }>
@@ -23,7 +25,9 @@ export const Stat = (props: IStatProps) => {
           <span>{ props.topRightText }</span>
         </div>
       ) }
-      <Line showInfo={ false } className={ styles.Line } percent={ props.percent }/>
+      { props.percent !== undefined && (
+        <Line showInfo={ false } className={ styles.Line } percent={ props.percent }/>
+      ) }
       { (props.bottomLeftText || props.bottomRightText) && (
         <div className={ styles.Group }>
           <span>{ props.bottomLeftText }</span>

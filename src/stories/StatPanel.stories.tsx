@@ -1,6 +1,7 @@
+import { faBan } from "@fortawesome/free-solid-svg-icons";
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Panel } from "../components";
+import { Icon, Panel } from "../components";
 import { Stat } from "../widget/Stat/Stat";
 
 export default {
@@ -25,4 +26,11 @@ Default.args = {
   topRightText: "0.00€ - 0.00€ (0%)",
   title: "Cuentas de venta",
   subTitle: "Año actual",
+};
+export const Vertical = Template.bind({});
+Vertical.args = {
+  title: "Cuentas de venta",
+  subTitle: "Año actual",
+  icon: <Icon icon={ faBan }/>,
+  center: true,
 };

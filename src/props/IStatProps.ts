@@ -1,6 +1,9 @@
+import { ReactNode } from "react";
 import { IProps } from "../interfaces";
 
 export interface IStatProps extends IProps {
+  center?: boolean;
+  icon?: ReactNode;
   topLeftText?: string;
   topRightText?: string;
   bottomLeftText?: string;

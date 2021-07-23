@@ -36,3 +36,19 @@
   text-align: right;
   margin-bottom: var(--space-xs);
 }
+
+.Center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+
+  .Title {
+    color: var(--color-primary)
+  }
+
+  .Description {
+    margin: 0;
+  }
+}
