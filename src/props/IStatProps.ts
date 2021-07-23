@@ -8,9 +8,9 @@ export interface IStatProps extends IProps {
   topRightText?: string;
   bottomLeftText?: string;
   bottomRightText?: string;
-  percent: number;
-  title: string;
+  percent?: number;
   dot?: boolean;
-  subTitle: string;
   price?: string | number;
+  title: string;
+  subTitle: string;
 }
