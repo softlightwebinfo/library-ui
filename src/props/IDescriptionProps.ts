@@ -1,3 +1,5 @@
 import { IProps } from "../interfaces";
 
-export interface ITitleProps extends IProps {}
+export interface IDescriptionProps extends IProps {
+  white?: boolean;
+}

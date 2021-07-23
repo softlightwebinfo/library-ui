@@ -4,7 +4,9 @@ import { IDescriptionProps } from "../../props/IDescriptionProps";
 import styles from '../../sass/modules/Description.module.scss';
 
 export const Description = (props: IDescriptionProps) => {
-  const cs = classNames(styles.Title, {});
+  const cs = classNames(styles.Description, {
+    [styles.White]: props.white,
+  });
 
   return (
     <p className={ cs } style={ props.style }>

@@ -1,53 +1,22 @@
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
-import {ComponentMeta, ComponentStory} from '@storybook/react';
-import {Message} from "../components/Message/Message";
+import { PrivacyPolicy } from "../widget/PrivacyPolicy/PrivacyPolicy";
 
 export default {
-    title: 'Base/Message/Default',
-    component: Message,
-    argTypes: {},
-    args: {
-        description: "Informational"
-    }
-} as ComponentMeta<typeof Message>;
+  title: 'Widgets/PrivacyPolicy/Default',
+  component: PrivacyPolicy,
+  argTypes: {},
+  args: {},
+} as ComponentMeta<typeof PrivacyPolicy>;
 
-const Template: ComponentStory<typeof Message> = (args) => <Message {...args} />;
+const Template: ComponentStory<typeof PrivacyPolicy> = (args) => <PrivacyPolicy { ...args } />;
 
 export const Default = Template.bind({});
-export const Description = Template.bind({});
-Description.args = {
-    type: "success",
-    title: "Success",
-    description: (
-        <p>
-            Additional description and informations about copywriting.
-            <br/>
-            <a href="#">This is a Link.</a>
-        </p>
-    )
-};
-
-export const Icon = Template.bind({});
-Icon.args = {
-    showIcon: true,
-};
-export const Full = Template.bind({});
-Full.args = {
-    showIcon: true,
-    full: true,
-};
-export const Closable = Template.bind({});
-Closable.args = {
-    showIcon: true,
-    closable: true,
-    type: "success",
-    show: true,
-    title: "Success",
-    description: (
-        <p>
-            Additional description and informations about copywriting.
-            <br/>
-            <a href="#">This is a Link.</a>
-        </p>
-    )
+Default.args = {
+  title: "Nueva política de privacidad",
+  description: "Debido a la nueva normativa de protección de datos(GDPR) es necesario que aceptes nuestra política" +
+    " de privacidad para que podamos seguir prestando el servicio con normalidad",
+  buttonText: "Acepto la politica de privacidad",
+  linkText: "Consultar politica de privacidad",
+  white: true,
 };

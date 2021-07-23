@@ -1,45 +1,22 @@
 import classNames from "classnames";
-import React, { useEffect, useState } from "react";
-import { Button, ButtonToolbar, Footer } from "../../components";
-import { IRecommendProps } from "../../props/IRecommendProps";
-import styles from '../../sass/modules/Recommend.module.scss';
+import React from "react";
+import { Button, ContainerGrid } from "../../components";
+import { Description } from "../../components/Description/Description";
+import { Title } from "../../components/Title/Title";
+import { IPrivacyPolicyProps } from "../../props/IPrivacyPolicyProps";
+import styles from '../../sass/modules/PrivacyPolicy.module.scss';
 
-export const Recommend = ({ maxNumbers = 10, ...props }: IRecommendProps) => {
-  const [active, setActive] = useState(props.defaultValue);
-  const cs = classNames(styles.Recommend, props.className);
-
-  useEffect(() => {
-    setActive(props.defaultValue);
-  }, [props.defaultValue]);
+export const PrivacyPolicy = ({ ...props }: IPrivacyPolicyProps) => {
+  const cs = classNames(styles.PrivacyPolicy, props.className);
 
   return (
     <div className={ cs } style={ props.style }>
-      <p>{ props.title }</p>
-      <p>{ props.description }</p>
-
-      <ButtonToolbar className={ styles.Buttons }>
-        { [...new Array(maxNumbers + 1)].map((_, index) => (
-          <Button
-            appearance={ active === index ? "primary" : undefined }
-            circle={ props.circle }
-            key={ index }
-            onClick={ (e) => {
-              props?.onClick?.(index, e);
-              setActive(index);
-            } }
-          >
-            { index }
-          </Button>
-        )) }
-      </ButtonToolbar>
-
-      <div className={ styles.Toolbar }>
-        <div>{ props.left }</div>
-        <div>{ props.right }</div>
-      </div>
-      <Footer className={ styles.Footer } onClick={ props.onClickFooter }>
-        { props.footer }
-      </Footer>
+      <ContainerGrid className={ styles.Container }>
+        <Title white={ props.white }>{ props.title }</Title>
+        <Description white={ props.white }>{ props.description }</Description>
+        <Button { ...props.button }>{ props.buttonText }</Button>
+        <a className={ styles.Link } href={ props.link }>{ props.linkText }</a>
+      </ContainerGrid>
     </div>
   );
 };

@@ -1,0 +1,25 @@
+.PrivacyPolicy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background: #4b71a3;
+  padding: 40px;
+}
+
+.Container {
+  > * {
+    margin-bottom: var(--space-base);
+  }
+}
+
+.Link {
+  display: block;
+  color: white;
+
+  &:hover {
+    color: white;
+    cursor: pointer;
+  }
+}
