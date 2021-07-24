@@ -78,4 +78,8 @@
 .Card {
   background: white;
   box-shadow: 0 2px 10px -13px rgba(0, 0, 0, .7);
+
+  div, p {
+    color: var(--color-dark);
+  }
 }

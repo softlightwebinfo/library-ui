@@ -7,7 +7,7 @@ import {Button} from "../Button";
 export const InputGroupButton = (props: IInputGroupButtonProps) => {
     const cs = classNames(styles.InputGroupButton, props.className);
     return (
-        <Button className={cs} style={props.style}>
+        <Button onClick={props.onClick} className={cs} style={props.style}>
             {props.children}
         </Button>
     )

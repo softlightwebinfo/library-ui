@@ -49,3 +49,9 @@
 .initial {
   width: fit-content;
 }
+
+.NoPadding {
+  .Content {
+    padding: 0;
+  }
+}

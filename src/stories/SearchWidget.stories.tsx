@@ -1,20 +1,73 @@
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
-import {ComponentMeta, ComponentStory} from '@storybook/react';
-import {Content} from "../components/Content/Content";
+import { SearchWidget } from "../widget/SearchWidget/SearchWidget";
 
 export default {
-    title: 'Base/Content/Default',
-    component: Content,
-    argTypes: {},
-    args: {
-        children: "Content"
-    }
-} as ComponentMeta<typeof Content>;
+  title: 'Widgets/Search/Default',
+  component: SearchWidget,
+  argTypes: {},
+  args: {},
+} as ComponentMeta<typeof SearchWidget>;
 
-const Template: ComponentStory<typeof Content> = (args) => <Content {...args} />;
+const Template: ComponentStory<typeof SearchWidget> = (args) => <SearchWidget { ...args } />;
 
 export const Default = Template.bind({});
 Default.args = {
-    children: "Content",
-    preview: true,
-}
+  show: true,
+  input: {
+    placeholder: "Buscar",
+  },
+  results: [
+    {
+      title: "Ejemplo de busqueda"
+    ,
+      description: "Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final. Wikipedia"
+    ,
+    },  {
+      title: "Ejemplo de busqueda"
+    ,
+      description: "Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final. Wikipedia"
+    ,
+    },  {
+      title: "Ejemplo de busqueda"
+    ,
+      description: "Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final. Wikipedia"
+    ,
+    },  {
+      title: "Ejemplo de busqueda"
+    ,
+      description: "Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final. Wikipedia"
+    ,
+    },  {
+      title: "Ejemplo de busqueda"
+    ,
+      description: "Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final. Wikipedia"
+    ,
+    },  {
+      title: "Ejemplo de busqueda"
+    ,
+      description: "Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final. Wikipedia"
+    ,
+    },  {
+      title: "Ejemplo de busqueda"
+    ,
+      description: "Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final. Wikipedia"
+    ,
+    },  {
+      title: "Ejemplo de busqueda"
+    ,
+      description: "Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final. Wikipedia"
+    ,
+    },  {
+      title: "Ejemplo de busqueda"
+    ,
+      description: "Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final. Wikipedia"
+    ,
+    },  {
+      title: "Ejemplo de busqueda"
+    ,
+      description: "Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final. Wikipedia"
+    ,
+    },
+  ],
+};

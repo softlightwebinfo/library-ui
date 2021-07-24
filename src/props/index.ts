@@ -61,6 +61,7 @@ export * from './IPrivacyPolicyProps';
 export * from './IRadioGroupProps';
 export * from './IRadioProps';
 export * from './IRecommendProps';
+export * from './ISearchWidgetProps';
 export * from './ISidebarPageProps';
 export * from './ISidebarProps';
 export * from './ISidenavBodyProps';

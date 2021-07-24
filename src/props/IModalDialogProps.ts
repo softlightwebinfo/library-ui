@@ -1,7 +1,8 @@
-import {IProps} from "../interfaces";
-import {TModalSize} from "../types/TModalSize";
+import { IProps } from "../interfaces";
+import { TModalSize } from "../types/TModalSize";
 
 export interface IModalDialogProps extends IProps {
-    size?: TModalSize;
-    show?: boolean;
+  paddingBody?: boolean;
+  size?: TModalSize;
+  show?: boolean;
 }
