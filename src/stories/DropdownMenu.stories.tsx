@@ -1,61 +1,55 @@
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
-import {ComponentMeta, ComponentStory} from '@storybook/react';
 
-import {ButtonToolbar, Dropdown, DropdownItem, DropdownMenu} from '../components';
+import { ButtonToolbar, Divider, Dropdown, DropdownItem, DropdownMenu, TitleDescription } from '../components';
+import { AvatarUser } from "../components/Avatar/AvatarUser";
 
 export default {
-    title: 'Base/Dropdown/Default',
-    component: Dropdown,
-    argTypes: {},
-    args: {
-        title: "Default"
-    }
+  title: 'Base/Dropdown/Menu',
+  component: Dropdown,
+  argTypes: {},
+  args: {},
 } as ComponentMeta<typeof Dropdown>;
 
 const Template: ComponentStory<typeof Dropdown> = (args) => (
-    <Dropdown {...args} >
-        <DropdownItem>New File</DropdownItem>
-        <DropdownItem>New File with Current Profile</DropdownItem>
-        <DropdownItem>Download As...</DropdownItem>
-        <DropdownItem>Export PDF</DropdownItem>
-        <DropdownItem>Export HTML</DropdownItem>
-        <DropdownItem>Settings</DropdownItem>
-        <DropdownItem>About</DropdownItem>
+  <ButtonToolbar>
+    <Dropdown
+      styleMenu={ { width: 250 } }
+      activeKey="e-1"
+      title={ <AvatarUser align={ "right" } title={ "Rafa" } subTitle={ "Perfil de empresa" } name={ "RG" }/> }
+      { ...args }
+    >
+      <DropdownItem
+        eventKey="a"
+        styleContent={ { display: "flex", alignItems: "center", justifyContent: "space-between" } }
+      >
+        <AvatarUser title={ "Rafa" } subTitle={ "Perfil de empresa" } name={ "RG" }/>
+        <a href="">Editar</a>
+      </DropdownItem>
+      <Divider zero component={ "li" }/>
+      <DropdownMenu title={ (
+        <TitleDescription title={ "Softlightweb" } description={ "Cambia o gestiona tus cuentas" }/>
+      ) } placement={ "top-right" }>
+        <DropdownItem eventKey="e-1">Softligthweb</DropdownItem>
+        <DropdownItem eventKey="e-2">Codeunic</DropdownItem>
+        <DropdownItem eventKey="e-3">Emprendimos</DropdownItem>
+      </DropdownMenu>
+      <Divider zero component={ "li" }/>
+      <DropdownItem eventKey="a">Configuración</DropdownItem>
+      <DropdownItem eventKey="b">Usuarios</DropdownItem>
+      <DropdownItem eventKey="c">Subscripcion</DropdownItem>
+      <DropdownItem eventKey="d">Afiliados</DropdownItem>
+      <Divider zero component={ "li" }/>
+      <DropdownItem eventKey="d">Calendario</DropdownItem>
+      <DropdownItem eventKey="d">Importar</DropdownItem>
+      <DropdownItem eventKey="d">Holded store</DropdownItem>
+      <DropdownItem eventKey="d">Mejoras de producto</DropdownItem>
+      <DropdownItem eventKey="d">Ayuda</DropdownItem>
+      <Divider zero component={ "li" }/>
+      <DropdownItem eventKey="d">Desconectar</DropdownItem>
     </Dropdown>
-);
-
-const Template2: ComponentStory<typeof Dropdown> = (args) => (
-    <ButtonToolbar>
-        <Dropdown activeKey="a" {...args}>
-            <DropdownItem eventKey="a">Active Item</DropdownItem>
-            <DropdownItem eventKey="b">Item B</DropdownItem>
-            <DropdownItem eventKey="c">Item C</DropdownItem>
-            <DropdownItem eventKey="d">Item D</DropdownItem>
-        </Dropdown>
-
-        <Dropdown activeKey="e-2" {...args}>
-            <DropdownItem eventKey="a">Item A</DropdownItem>
-            <DropdownItem eventKey="b">Item B</DropdownItem>
-            <DropdownItem eventKey="c">Item C</DropdownItem>
-            <DropdownItem eventKey="d">Item D</DropdownItem>
-            <DropdownMenu title="Active Menu">
-                <DropdownItem eventKey="e-1">Item E-1</DropdownItem>
-                <DropdownItem eventKey="e-2">Active Item</DropdownItem>
-            </DropdownMenu>
-        </Dropdown>
-    </ButtonToolbar>
+  </ButtonToolbar>
 );
 
 export const Default = Template.bind({});
-Default.args = {}
-export const Trigger = Template.bind({});
-Trigger.args = {
-    trigger: "hover"
-}
-
-export const ActiveState = Template2.bind({});
-ActiveState.args = {}
-export const Disabled = Template2.bind({});
-Disabled.args = {
-    isDisabled: true
-}
+Default.args = {};

@@ -15,6 +15,9 @@
   min-height: 36px;
   border: 0;
   border-radius: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .Disabled {

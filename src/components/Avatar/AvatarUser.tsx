@@ -1,24 +1,26 @@
 import classNames from "classnames";
 import React from "react";
-import {IAvatarProps} from "../../props/IAvatarProps";
-import styles from '../../sass/modules/Avatar.module.scss';
-import {AvatarImage} from "./AvatarImage";
+import { IAvatarUserProps } from "../../props/IAvatarUserProps";
+import styles from '../../sass/modules/AvatarUser.module.scss';
+import { TitleDescription } from "../TitleDescription";
+import { Avatar } from "./Avatar";
 
-export const Avatar = ({size = "md", ...props}: IAvatarProps) => {
-    const cs = classNames(styles.Avatar, props.className, {
-        [styles.Circle]: props.circle,
-        [styles[size]]: size,
-    });
-    return (
-        <div className={cs} style={props.style}>
-            {props.children}
-            {props.src && (
-                <AvatarImage
-                    src={props.src}
-                    alt={props.alt}
-                    title={props.title}
-                />
-            )}
-        </div>
-    );
-}
+export const AvatarUser = ({ align = "left", size = "sm", circle = true, ...props }: IAvatarUserProps) => {
+  const cs = classNames(styles.AvatarUser, props.className, {
+    [styles[align]]: align,
+  });
+  return (
+    <div className={ cs } style={ props.style }>
+      <Avatar
+        size={ size }
+        title={ props.title }
+        circle={ circle }
+        alt={ props.title }
+        src={ props.avatar }
+      >
+        { props.name }
+      </Avatar>
+      <TitleDescription className={styles.TitleDescription} title={ props.title } description={ props.subTitle }/>
+    </div>
+  );
+};

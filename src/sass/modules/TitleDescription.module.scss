@@ -1,4 +1,5 @@
 .TitleDescription {
+  text-align: left;
 }
 
 .Title {
@@ -8,7 +9,6 @@
 .Description {
   font-size: var(--font-size-xs);
   color: var(--color-neutral-6);
-  margin-bottom: var(--space-s);
 }
 
 .Center {

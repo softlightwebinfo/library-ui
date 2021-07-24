@@ -15,7 +15,7 @@ export const DropdownItem = ({className, style, ...props}: IDropdownItemProps) =
     });
     return (
         <li className={cs} style={style}>
-            <div className={styles.Content}>
+            <div className={styles.Content} style={props.styleContent}>
                 {props.children}
             </div>
         </li>

@@ -3,6 +3,7 @@ export * from './IAccordionProps';
 export * from './IAvatarGroupProps';
 export * from './IAvatarImageProps';
 export * from './IAvatarProps';
+export * from './IAvatarUserProps';
 export * from './IBadgeProps';
 export * from './IButtonGroupProps';
 export * from './IButtonProps';

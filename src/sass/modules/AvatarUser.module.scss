@@ -1,0 +1,23 @@
+.AvatarUser {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-s);
+}
+
+.left {
+  .TitleDescription {
+    text-align: left;
+  }
+}
+
+.right {
+  flex-direction: row-reverse;
+
+  .TitleDescription {
+    text-align: right;
+  }
+}
+
+.TitleDescription {
+
+}
