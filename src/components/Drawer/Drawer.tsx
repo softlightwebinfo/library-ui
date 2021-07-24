@@ -11,6 +11,7 @@ export const Drawer = ({placement = "right", size = "sm", ...props}: IDrawerProp
     const cs = classNames(styles.Drawer, props.className, {
         [styles.Show]: props.show,
         [styles.Hide]: !props.show,
+        [styles.Gray]: props.gray,
         [styles.Full]: props.full,
         [styles[placement]]: placement,
         [styles[size]]: size,

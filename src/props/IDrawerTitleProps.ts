@@ -1,5 +1,5 @@
-import {IProps} from "../interfaces";
+import { IProps } from "../interfaces";
 
 export interface IDrawerTitleProps extends IProps {
-    
+  white?: boolean;
 }

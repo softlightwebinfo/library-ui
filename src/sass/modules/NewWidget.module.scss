@@ -1,0 +1,18 @@
+.NewWidget {
+
+}
+
+.Panel {
+  + .Panel {
+    margin-top: var(--space-s);
+  }
+}
+
+.Title {
+  margin-top: var(--space-s);
+  margin-bottom: var(--space-s);
+}
+
+.Image {
+  margin-bottom: var(--space-s);
+}

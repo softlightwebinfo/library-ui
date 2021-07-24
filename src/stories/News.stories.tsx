@@ -1,50 +1,55 @@
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
-import {ComponentMeta, ComponentStory} from '@storybook/react';
-import {Timeline} from "../components/Timeline/Timeline";
-import {TimelineItem} from "../components/Timeline/TimelineItem";
+import { NewWidget } from "../widget/NewWidget/NewWidget";
 
 export default {
-    title: 'Base/Timeline/Default',
-    component: Timeline,
-    argTypes: {},
-    args: {}
-} as ComponentMeta<typeof Timeline>;
+  title: 'Widgets/NewWidget/Default',
+  component: NewWidget,
+  argTypes: {},
+  args: {},
+} as ComponentMeta<typeof NewWidget>;
 
-const Template: ComponentStory<typeof Timeline> = (args) => (
-    <Timeline {...args}>
-        <TimelineItem>16:27:41 Your order starts processing</TimelineItem>
-        <TimelineItem>16:28:43 Your order to be ready for delivery</TimelineItem>
-        <TimelineItem>16:28:45 Your parcel has been out of the library</TimelineItem>
-        <TimelineItem>02:34:41 Send to Shanghai Hongkou Company</TimelineItem>
-        <TimelineItem active>15:05:29 Sending you a piece</TimelineItem>
-    </Timeline>
-);
-const TemplateAlign: ComponentStory<typeof Timeline> = (args) => (
-    <Timeline {...args}>
-        <TimelineItem>
-            <p>2018-03-01</p>
-            <p>Your order starts processing</p>
-        </TimelineItem>
-        <TimelineItem>
-            <p>2018-03-02</p>
-            <p>Order out of stock</p>
-        </TimelineItem>
-        <TimelineItem>
-            <p>2018-03-10</p>
-            <p>Arrival</p>
-        </TimelineItem>
-        <TimelineItem>
-            <p>2018-03-12</p>
-            <p>Order out of the library</p>
-        </TimelineItem>
-        <TimelineItem>
-            <p>2018-03-15</p>
-            <p>Sending you a piece</p>
-        </TimelineItem>
-    </Timeline>
+const Template: ComponentStory<typeof NewWidget> = (args) => (
+  <NewWidget { ...args }>
+
+  </NewWidget>
 );
 export const Default = Template.bind({});
-export const Align = TemplateAlign.bind({});
-Align.args = {
-    align: "left"
-}
+Default.args = {
+  show: true,
+  title: "Novedades del ERP",
+  data: [
+    {
+      date: "Julio 13, 2021"
+    , title: "Tus proyectos más agiles que nunca!"
+    , description: "Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final. Wikipedia"
+    , badge: "Proyectos",
+    }, {
+      date: "Julio 13, 2021"
+    , title: "Tus proyectos más agiles que nunca!"
+    , description: "Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final. Wikipedia"
+    , badge: "Proyectos",
+      image: "https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=5",
+    }, {
+      date: "Julio 13, 2021"
+    , title: "Tus proyectos más agiles que nunca!"
+    , description: "Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final. Wikipedia"
+    , badge: "Proyectos",
+    }, {
+      date: "Julio 13, 2021"
+    , title: "Tus proyectos más agiles que nunca!"
+    , description: "Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final. Wikipedia"
+    , badge: "Proyectos",
+    }, {
+      date: "Julio 13, 2021"
+    , title: "Tus proyectos más agiles que nunca!"
+    , description: "Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final. Wikipedia"
+    , badge: "Proyectos",
+    }, {
+      date: "Julio 13, 2021"
+    , title: "Tus proyectos más agiles que nunca!"
+    , description: "Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final. Wikipedia"
+    , badge: "Proyectos",
+    },
+  ],
+};

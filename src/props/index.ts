@@ -51,6 +51,7 @@ export * from './INavProps';
 export * from './INavToggleProps';
 export * from './INavbarBodyProps';
 export * from './INavbarHeaderProps';
+export * from './INewWidgetProps';
 export * from './IOverlayProps';
 export * from './IPanelGroupProps';
 export * from './IPanelProps';

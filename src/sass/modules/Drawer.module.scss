@@ -83,6 +83,16 @@
   left: 0;
 }
 
+.xs {
+  width: 400px;
+
+  &.top,
+  &.bottom {
+    width: 100%;
+    height: 300px;
+  }
+}
+
 .sm {
   width: 600px;
 
@@ -142,5 +152,11 @@
   &.top {
     align-items: flex-start;
     justify-content: flex-start;
+  }
+}
+
+.Gray {
+  .Content {
+    background-color: var(--color-background-body);
   }
 }

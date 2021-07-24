@@ -12,6 +12,7 @@ export interface IDrawerProps extends IProps {
     onShow?: () => void;//Callback fired when Drawer display
     show?: boolean;
     full?: boolean;
+    gray?: boolean;
     placement?: TPlacement;
     size?: TSize;
 }
