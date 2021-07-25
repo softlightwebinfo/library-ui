@@ -1,0 +1,26 @@
+.DatatableFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  font-weight: 500;
+  background: var(--color-background);
+  z-index: 1;
+  border-top: var(--border);
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.Information {
+  padding: 12px 20px;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+}
+
+.Right {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 20px;
+  white-space: nowrap;
+}

@@ -13,6 +13,7 @@
   }
 
   > span {
+    width: 100%;
     position: relative;
     padding-left: 27px;
     cursor: pointer;
@@ -80,4 +81,32 @@
 
 .Checked {
   position: relative;
+}
+
+.sm {
+  > span {
+    font-size: .8rem;
+
+    &::before,
+    &::after {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  .Icon {
+    font-size: 10px;
+  }
+}
+
+.xs {
+  > span {
+    font-size: .68rem;
+
+    &::before,
+    &::after {
+      width: 10px;
+      height: 10px;
+    }
+  }
 }

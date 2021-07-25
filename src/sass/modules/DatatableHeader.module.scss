@@ -1,0 +1,12 @@
+.DatatableHeader {
+  display: flex;
+  width: 100%;
+  background: var(--color-background);
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: var(--border);
+}
+
+.IconLabel {
+  margin-left: var(--space-xs);
+}

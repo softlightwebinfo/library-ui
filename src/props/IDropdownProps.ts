@@ -1,10 +1,12 @@
+import { CSSProperties, ReactNode } from "react";
 import { IProps } from "../interfaces/IProps";
 import { TAppearance } from "../types/TAppearance";
-import { TDropdownTrigger } from "../types/TDropdownTrigger";
 import { TDropdownPlacement } from "../types/TDropdownPlacement";
-import { CSSProperties, ReactNode } from "react";
+import { TDropdownTrigger } from "../types/TDropdownTrigger";
 
 export interface IDropdownProps extends IProps {
+  initial?: boolean;
+  noArrow?: boolean;
   styleMenu?: CSSProperties;
   classNameMenu?: string;
   icon?: ReactNode;
@@ -17,4 +19,5 @@ export interface IDropdownProps extends IProps {
   appearance?: TAppearance;
   trigger?: TDropdownTrigger | TDropdownTrigger[];
   renderTitle?: (children: ReactNode, props: IDropdownProps) => ReactNode;
+  onClick?: (eventKey: string | undefined, evt: any) => void;
 }

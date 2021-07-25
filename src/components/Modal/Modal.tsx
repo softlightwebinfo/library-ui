@@ -1,8 +1,8 @@
 import React from "react";
-import { Overlay } from "../Overlay/Overlay";
-import { IModalProps } from "../../props/IModalProps";
-import { ModalDialog } from "./ModalDialog";
 import { ContextModal } from "../../context/useContextModal";
+import { IModalProps } from "../../props/IModalProps";
+import { Overlay } from "../Overlay/Overlay";
+import { ModalDialog } from "./ModalDialog";
 
 export const Modal = (props: IModalProps) => {
   const value = {
@@ -11,7 +11,12 @@ export const Modal = (props: IModalProps) => {
   return (
     <ContextModal.Provider value={ value }>
       <Overlay show={ props.show }>
-        <ModalDialog paddingBody={ props.paddingBody } size={ props.size } show={ props.show }>
+        <ModalDialog
+          className={ props.className }
+          style={ props.style }
+          paddingBody={ props.paddingBody }
+          size={ props.size } show={ props.show }
+        >
           { props.children }
         </ModalDialog>
       </Overlay>

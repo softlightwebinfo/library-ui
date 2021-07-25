@@ -1,0 +1,10 @@
+.Table {
+  height: 100%;
+  padding: 20px;
+  overflow: auto;
+  flex: 1;
+  margin: 0;
+  @media (min-width: 1025px) {
+    padding: 40px;
+  }
+}

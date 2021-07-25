@@ -10,7 +10,11 @@ import { Button } from "../Button/Button";
 import { Icon } from "../Icon/Icon";
 import { DropdownMenu } from "./DropdownMenu";
 
-export const Dropdown = ({ className, trigger = "click", appearance = "subtle", style, ...props }: IDropdownProps) => {
+export const Dropdown = (
+  {
+    className, noArrow = false, trigger = "click", appearance = "subtle", initial = false, style, ...props
+  }: IDropdownProps,
+) => {
   const ctxNav = useNav();
   const ctx = useSidenav();
   const ref = useRef(null);
@@ -24,6 +28,7 @@ export const Dropdown = ({ className, trigger = "click", appearance = "subtle", 
     [styles.Disabled]: props.isDisabled,
     [styles.NavVertical]: ctxNav.vertical,
     [styles.Navbar]: ctxNav.navbar && !ctxNav.vertical,
+    [styles.Initial]: initial,
     [styles.NoExpanded]: noExpanded,
   });
 
@@ -41,13 +46,14 @@ export const Dropdown = ({ className, trigger = "click", appearance = "subtle", 
   const value: IUseDropdown = {
     activeKey: props.activeKey,
     vertical: ctxNav.vertical,
+    onClick: props.onClick,
   };
   const Component = props.isItem ? "li" : "div";
   const childrenComponentTitle = (
     <>
       { props.icon }
       <span>{ props.title }</span>
-      <Icon className={ styles.Icon } icon={ show ? faChevronUp : faChevronDown }/>
+      { !noArrow && <Icon className={ styles.Icon } icon={ show ? faChevronUp : faChevronDown }/> }
     </>
   );
   return (
@@ -69,7 +75,7 @@ export const Dropdown = ({ className, trigger = "click", appearance = "subtle", 
           <DropdownMenu
             style={ props.styleMenu }
             placement={ props.placementMenu }
-            className={ classNames({ [styles.Show]: show }, props.classNameMenu) }
+            className={ classNames({ [styles.Show]: show }, styles.ClassMenu, props.classNameMenu) }
             isMenu
             expandedMobile={ noExpanded }
           >
