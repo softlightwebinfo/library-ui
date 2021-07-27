@@ -1,0 +1,66 @@
+.DatatableCellHeader {
+  display: flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+  z-index: 1;
+  min-height: 48px;
+  max-height: 48px;
+  border-bottom: var(--border);
+}
+
+.Sticky {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+}
+
+.Inner {
+  padding: 0 20px;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  background: var(--color-background);
+  overflow: hidden;
+}
+
+.NotPinned {
+  border-right: var(--border);
+}
+
+.Label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Resizable {
+  height: 100%;
+  width: 10px;
+  z-index: 1;
+  cursor: w-resize;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.Checkbox {
+  border-right: var(--border);
+
+  .Inner {
+    padding: 0;
+    justify-content: center;
+  }
+}
+
+.Pinned {
+  right: 0;
+}
+
+.LatestPinned {
+  border-right: 0;
+}

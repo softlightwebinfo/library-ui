@@ -4,9 +4,25 @@
   background: var(--color-background);
   align-items: center;
   justify-content: space-between;
-  border-bottom: var(--border);
+  border: var(--border);
 }
 
 .IconLabel {
   margin-left: var(--space-xs);
+}
+
+.InputAddon {
+  border: var(--border-size-none);
+  border-radius: var(--border-radius-none);
+  outline: none;
+  background: none;
+}
+
+.InputGroup {
+  border: 0;
+
+  &:hover {
+    outline: none;
+    border: 0;
+  }
 }

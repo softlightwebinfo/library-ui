@@ -6,4 +6,4 @@ export interface IUseTable {
 
 export const ContextTable = createContext<IUseTable>({});
 
-export const useCheckbox = () => useContext(ContextTable);
+export const useTable = () => useContext(ContextTable);

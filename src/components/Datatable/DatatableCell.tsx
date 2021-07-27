@@ -1,16 +1,21 @@
 import classNames from "classnames";
 import React from "react";
-import { IDatatableCellHeaderProps } from "../../props/IDatatableCellHeaderProps";
-import styles from '../../sass/modules/DatatableCellHeader.module.scss';
+import { IDatatableCellProps } from "../../props/IDatatableCellProps";
+import styles from '../../sass/modules/DatatableCell.module.scss';
 
-export const DatatableCellHeader = (props: IDatatableCellHeaderProps) => {
-  const cs = classNames(styles.DatatableCellHeader, props.className, {});
+export const DatatableCell = (props: IDatatableCellProps) => {
+  const cs = classNames(styles.DatatableCell, props.className, {});
   return (
-    <DatatableCell
+    <div
+      data-column-id={ props.columnId }
+      data-row-id={ props.rowId }
+      data-row-index={ props.rowIndex }
+      data-column-index={ props.columnIndex }
       className={ cs }
       style={ props.style }
+      onClick={props.onClick}
     >
-
-    </DatatableCell>
+      { props.children }
+    </div>
   );
 };

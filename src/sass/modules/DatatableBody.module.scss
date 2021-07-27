@@ -9,6 +9,8 @@
   display: grid;
   overflow: auto;
   flex: 1 1 0%;
-  grid-template-columns: 54px 200px 200px 200px 200px 200px 200px 200px auto max-content;
-  grid-template-rows: repeat(22, max-content);
+}
+
+.Clickable {
+  cursor: pointer;
 }
