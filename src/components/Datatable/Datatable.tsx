@@ -57,7 +57,6 @@ export const Datatable = (
           const data = rw?.[value1.field];
           return data.toLowerCase().indexOf(searchValue.trim().toLowerCase()) != -1;
         });
-
         return filter.includes(true);
       });
     };
@@ -77,7 +76,7 @@ export const Datatable = (
     }
 
     return filter();
-  }, [searchValue, sort]);
+  }, [searchValue, sort, props.rows]);
 
   const paginatorObj = paginator(rows, page, rowsPage);
 
