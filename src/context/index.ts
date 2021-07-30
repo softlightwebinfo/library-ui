@@ -10,5 +10,6 @@ export * from './useFlexboxGrid';
 export * from './useNav';
 export * from './useNavbar';
 export * from './useRadio';
+export * from './useSelectPicker';
 export * from './useSidenav';
 export * from './useTable';

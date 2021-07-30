@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelectPicker } from "../../context/useSelectPicker";
+import { ISelectPickerData } from "../../props";
 import { ISelectMenuItemProps } from "../../props/ISelectMenuItemProps";
 import { SelectItem } from "./SelectItem";
 
@@ -8,10 +9,10 @@ export const SelectMenuItems = (props: ISelectMenuItemProps) => {
   if (cx.groupBy) {
     return null;
   }
-  const data = props.data ?? cx.data;
+  const data: any = props.data ?? cx.data;
   return (
     <>
-      { data.map((item, index) => {
+      { data.map((item: ISelectPickerData, index: number) => {
         return (
           <SelectItem { ...item } item={ item } key={ index }/>
         );
