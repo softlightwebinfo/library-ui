@@ -1,17 +1,19 @@
 import React from "react";
 import classNames from "classnames";
 import styles from '../../sass/modules/InputGroup.module.scss';
-import {IInputGroupProps} from "../../props/IInputGroupProps";
+import { IInputGroupProps } from "../../props/IInputGroupProps";
 
-export const InputGroup = ({...props}: IInputGroupProps) => {
-    const cs = classNames(styles.InputGroup, props.className, {});
+export const InputGroup = ({ ...props }: IInputGroupProps) => {
+  const cs = classNames(styles.InputGroup, props.className, {
+    [styles.Dark]: props.dark,
+  });
 
-    return (
-        <div
-            className={cs}
-            style={props.style}
-        >
-            {props.children}
-        </div>
-    );
+  return (
+    <div
+      className={ cs }
+      style={ props.style }
+    >
+      { props.children }
+    </div>
+  );
 };

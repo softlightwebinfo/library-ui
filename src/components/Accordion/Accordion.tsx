@@ -23,6 +23,7 @@ export const Accordion = (props: IAccordionProps) => {
             return [index];
         });
     }, []);
+
     return (
         <div className={st.Accordion}>
             {props.data.map((item, index) => (
