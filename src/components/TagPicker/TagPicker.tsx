@@ -54,8 +54,12 @@ export const TagPicker = ({ placeholder = "Select", ...props }: ITagPickerProps)
   return (
     <ContextTagPicker.Provider value={ value }>
       <div ref={ ref } className={ cs } style={ props.style }>
-        <ItemBox className={ styles.ItemBox } appearance={ props.appearanceButton } onClick={ toggle }
-                 style={ props.styleButton }>
+        <ItemBox
+          className={ styles.ItemBox }
+          appearance={ props.appearanceButton }
+          onClick={ toggle }
+          style={ props.styleButton }
+        >
           <div className={ styles.Button }>
             { !!tags.length && <Tags onClose={ onClose } tags={ tags }/> }
             { !tags.length && placeholder }

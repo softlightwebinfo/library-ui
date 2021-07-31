@@ -15,4 +15,5 @@ export interface IButtonProps extends IProps {
   disabled?: boolean;
   icon?: ReactNode;
   type?: TButtonType;
+  form?: string;
 }
