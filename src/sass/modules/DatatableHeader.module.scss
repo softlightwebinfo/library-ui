@@ -5,6 +5,15 @@
   align-items: center;
   justify-content: space-between;
   border: var(--border);
+
+  .InputGroup {
+    border: 0;
+
+    &:hover {
+      outline: none;
+      border: 0;
+    }
+  }
 }
 
 .IconLabel {
@@ -16,13 +25,4 @@
   border-radius: var(--border-radius-none);
   outline: none;
   background: none;
-}
-
-.InputGroup {
-  border: 0;
-
-  &:hover {
-    outline: none;
-    border: 0;
-  }
 }
