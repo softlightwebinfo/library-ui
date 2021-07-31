@@ -1,0 +1,25 @@
+.TagPicker {
+  position: relative;
+  display: inline-flex;
+
+  &.Block {
+    display: flex;
+    width: 100%;
+  }
+}
+
+.Button {
+  user-select: none;
+}
+
+.Icons {
+  margin-left: 20px;
+
+  svg {
+    margin-left: 10px;
+  }
+}
+
+.ItemBox {
+  align-items: flex-start;
+}

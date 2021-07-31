@@ -1,13 +1,21 @@
-import {ChangeEvent, createContext, useContext} from "react";
+import { createContext, useContext } from "react";
+import { ITagPickerData } from "../props/ITagPickerMenuItemsProps";
+import { ITagData } from "../props/ITagsProps";
+import { TSize } from "../types";
 
-export interface IUseCheckbox {
-    checkbox: boolean;
-    name?: string;
-    onChange?: (checked: boolean, value?: any, e?: ChangeEvent<HTMLInputElement>) => void;
+export interface IUseTagPicker {
+  name?: string;
+  size?: TSize;
+  data?: ITagPickerData[];
+  tags?: ITagData[];
+  tagPicker?: boolean;
+  selectTags?: string[];
+  block?: boolean;
+  onChange?: (value: boolean, item: ITagPickerData) => void;
 }
 
-export const ContextCheckbox = createContext<IUseCheckbox>({
-    checkbox: false,
-})
+export const ContextTagPicker = createContext<IUseTagPicker>({
+  tagPicker: false,
+});
 
-export const useCheckbox = () => useContext(ContextCheckbox);
+export const useTagPicker = () => useContext(ContextTagPicker);

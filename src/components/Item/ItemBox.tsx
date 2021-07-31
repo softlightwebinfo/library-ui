@@ -1,10 +1,12 @@
 import classNames from "classnames";
 import React from "react";
-import { IItemProps } from "../../props/IItemProps";
-import styles from '../../sass/modules/Item.module.scss';
+import { IItemBoxProps } from "../../props/IItemBoxProps";
+import styles from '../../sass/modules/ItemBox.module.scss';
 
-export const Item = (props: IItemProps) => {
-  const cs = classNames(styles.Item, props.className, {});
+export const ItemBox = ({ appearance = "default", ...props }: IItemBoxProps) => {
+  const cs = classNames(styles.ItemBox, props.className, {
+    [styles[appearance]]: appearance,
+  });
   return (
     <div onClick={ props.onClick } className={ cs } style={ props.style }>
       { props.children }

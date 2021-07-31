@@ -1,6 +1,6 @@
 @import "../mixins/text";
 
-.Item {
+.ItemBox {
   display: flex;
   align-items: center;
   padding: 8px 12px;
@@ -14,10 +14,24 @@
   text-decoration: none;
   width: 100%;
   @include TextEllipsis;
+  border-radius: var(--border-radius-soft);
+  justify-content: space-between;
 
   &:hover {
     color: #fff;
     background-color: #3c3f43;
     text-decoration: none;
+  }
+
+  &.default {
+    background-color: #fff;
+    border: 1px solid #e5e5ea;
+    color: #575757;
+  }
+
+  &.dark {
+    border: 1px solid #3c3f43;
+    background: #1a1d24;
+    color: #fff;
   }
 }

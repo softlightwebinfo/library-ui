@@ -19,9 +19,18 @@ $colors: red orange yellow green cyan blue violet;
     top: 0;
     bottom: 0;
     margin: auto;
-    right: 8px!important;
+    right: 8px !important;
     cursor: pointer;
     font-size: 12px;
+  }
+
+  &.default {
+
+  }
+
+  &.dark {
+    background-color: #3c3f43;
+    color: #e9ebf0;
   }
 }
 
