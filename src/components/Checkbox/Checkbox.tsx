@@ -9,14 +9,17 @@ import { Icon } from "../Icon";
 export const Checkbox = ({ size = "md", ...props }: ICheckboxProps) => {
   const ctx = useCheckbox();
   const name = ctx.name ?? props.name;
+
   const cs = classNames(styles.Checkbox, props.className, {
     [styles.Checked]: props.checked,
     [styles[size]]: size,
   });
+
   const onChange = useCallback((e) => {
     props.onChange?.(e.target.checked, props.value, e);
     ctx.onChange?.(e.target.checked, props.value, e);
   }, [props.value]);
+
   return (
     <label className={ cs } style={ props.style }>
       <input
