@@ -4,9 +4,7 @@
   position: relative;
 
   .Button {
-    background: #1a1d24;
-    color: #a4a9b3;
-    border: 1px solid #3c3f43;
+
   }
 
   .Icon {
@@ -16,5 +14,17 @@
   .SearchBar {
     position: relative;
     margin: 6px 12px 12px;
+  }
+
+  .RightIcon {
+    margin-left: var(--space-l);
+  }
+
+  &.Block {
+    display: flex;
+
+    .Button {
+      justify-content: space-between;
+    }
   }
 }

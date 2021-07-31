@@ -12,7 +12,9 @@ export const SelectMenu = (props: ISelectMenuProps) => {
   const onChange = (evt: any) => {
     cx?.setSearch?.(evt.target.value);
   };
-  const cs = classNames(styles.SelectMenu, props.className, {});
+  const cs = classNames(styles.SelectMenu, props.className, {
+    [styles.Block]: cx.block,
+  });
   return (
     <div className={ cs } style={ props.style }>
       { cx.showSearch && (

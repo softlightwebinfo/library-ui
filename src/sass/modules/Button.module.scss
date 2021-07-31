@@ -115,6 +115,12 @@
     border-radius: var(--border-radius-rounded);
   }
 
+  &--dark {
+    background: #1a1d24;
+    color: #a4a9b3;
+    border: 1px solid #3c3f43;
+  }
+
   &--block {
     width: 100%;
     justify-content: center;

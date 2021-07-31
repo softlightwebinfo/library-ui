@@ -1,5 +1,5 @@
-import { useOnClickOutside, useToggle } from "@codeunic/library-hooks";
-import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { useOnClickOutside } from "@codeunic/library-hooks";
+import { faChevronDown, faChevronUp, faTimes } from "@fortawesome/free-solid-svg-icons";
 import classNames from "classnames";
 import React, { useMemo, useRef, useState } from "react";
 import { ContextSelectPicker } from "../../context/useSelectPicker";
@@ -14,12 +14,14 @@ import { SelectNoResults } from "./SelectNoResults";
 
 export const SelectPicker = ({ showSearch = true, ...props }: ISelectPickerProps) => {
   const ref = useRef(null);
-  const [show, { toggle, off }] = useToggle(props.initialOpen);
+  const [show, setToggle] = useState(props.initialOpen);
   const [search, setSearch] = useState("");
-  const cs = classNames(styles.SelectPicker, props.className, {});
+  const cs = classNames(styles.SelectPicker, props.className, {
+    [styles.Block]: props.block,
+  });
   const [select, setSelect] = useState<ISelectPickerData>();
 
-  useOnClickOutside(ref, off);
+  useOnClickOutside(ref, () => setToggle(false));
 
   const data = useMemo(() => {
     const group = () => {
@@ -57,26 +59,44 @@ export const SelectPicker = ({ showSearch = true, ...props }: ISelectPickerProps
     renderMenuItem: props.renderMenuItem,
     renderMenuGroup: props.renderMenuGroup,
     renderValue: props.renderValue,
+    block: props.block,
     onSelect: (value: string, item: any) => {
       props?.onSelect?.(value, item);
-      off();
+      setToggle(false);
       setSelect(item);
     },
   };
-
+  const toggle = () => setToggle(prv => !prv);
   const Content = () => {
     return (
       <>
-        <span>{ props.placeholder ?? "Select" }</span>
-        <Icon className={ styles.Icon } icon={ show ? faChevronUp : faChevronDown }/>
+        <span>{ select ? select.label : props.placeholder ?? "Select" }</span>
       </>
     );
   };
+
+  const onDelete = (evt: { stopPropagation: () => void; }) => {
+    evt.stopPropagation();
+    setSelect(undefined);
+    props?.onSelect?.("", null);
+  };
+
+  const valueSelect = select ? props.renderValue?.(select?.label, select, Content) ?? <Content/> : <Content/>;
   return (
     <ContextSelectPicker.Provider value={ value }>
       <div ref={ ref } className={ cs } style={ props.style }>
-        <Button { ...props.button } onClick={ toggle } className={ styles.Button } style={ props.styleButton }>
-          { (select && props.renderValue) ? props.renderValue?.(select?.label, select, Content) : <Content/> }
+        <Button
+          { ...props.button }
+          block={ props.block }
+          onClick={ toggle }
+          className={ styles.Button }
+          style={ props.styleButton }
+        >
+          { valueSelect }
+          <div className={ styles.RightIcon }>
+            { select && <Icon onClick={ onDelete } icon={ faTimes }/> }
+            <Icon className={ styles.Icon } icon={ show ? faChevronUp : faChevronDown }/>
+          </div>
         </Button>
         { show && (
           <SelectMenu>

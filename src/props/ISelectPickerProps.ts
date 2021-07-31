@@ -12,6 +12,7 @@ export interface ISelectPickerProps extends IProps, ISelectMethod {
   onSelect?: (value: string, item: any) => void;
   groupBy?: string;
   placeholder?: string;
+  block?: boolean;
 }
 
 export interface ISelectPickerData {

@@ -117,3 +117,12 @@ Functions.args = {
     );
   },
 };
+export const Block = Template.bind({});
+Block.args = {
+  groupBy: "role",
+  placeholder: "Select user",
+  block: true,
+  button: {
+    appearance: "ghost",
+  },
+};

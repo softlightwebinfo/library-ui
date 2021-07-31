@@ -10,6 +10,7 @@ export interface IUseSelectPicker extends ISelectMethod {
   onSelect?: (value: string, item: any) => void;
   groupBy?: string;
   select?: ISelectPickerData;
+  block?: boolean;
 }
 
 export const ContextSelectPicker = createContext<IUseSelectPicker>({
