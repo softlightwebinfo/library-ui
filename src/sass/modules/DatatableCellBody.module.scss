@@ -8,12 +8,10 @@
 }
 
 .Checkbox {
+  padding: 0 16px;
   box-sizing: border-box;
   justify-content: center;
   background: var(--color-background);
-  display: flex;
-  align-items: center;
-  margin: auto;
 }
 
 .Inner {
