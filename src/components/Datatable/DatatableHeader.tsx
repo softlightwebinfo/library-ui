@@ -15,10 +15,10 @@ export const DatatableHeader = (props: IDatatableHeaderProps) => {
   if (!cx.showSearch && !cx.showColumnVisibilityManager) return null;
   return (
     <header className={ cs } style={ props.style }>
-      <InputGroup className={styles.InputGroup}>
+      <InputGroup className={ styles.InputGroup }>
         { cx.showSearch && (
           <>
-            <InputGroupAddon className={styles.InputAddon}>
+            <InputGroupAddon className={ styles.InputAddon }>
               <Icon icon={ faSearch }/>
               <span className={ styles.IconLabel }>Search:</span>
             </InputGroupAddon>

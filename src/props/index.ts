@@ -98,6 +98,7 @@ export * from './ITagPickerMenuItemsProps';
 export * from './ITagPickerProps';
 export * from './ITagProps';
 export * from './ITagsProps';
+export * from './ITextareaProps';
 export * from './ITimelineItemProps';
 export * from './ITimelineProps';
 export * from './ITitleDescriptionProps';

@@ -23,7 +23,7 @@ export const Input = ({ type = "text", ...props }: IInputProps) => {
       value={ props.value }
       type={ type }
       onChange={ onChange }
-      placeholder={ props.placeholder }
+      placeholder={ `${ props.placeholder }${ props.required ? "*" : "" }` }
       checked={ props.checked }
       required={ props.required }
       min={ props.min }

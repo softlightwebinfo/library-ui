@@ -41,6 +41,7 @@ export * from './Steps';
 export * from './Table';
 export * from './Tag';
 export * from './TagPicker';
+export * from './Textarea';
 export * from './Timeline';
 export * from './Title';
 export * from './TitleDescription';
