@@ -12,6 +12,8 @@ export const AvatarUser = ({ align = "left", size = "sm", circle = true, ...prop
   return (
     <div className={ cs } style={ props.style }>
       <Avatar
+        style={props.styleAvatar}
+        className={props.classNameAvatar}
         size={ size }
         title={ props.title }
         circle={ circle }
