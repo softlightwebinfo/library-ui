@@ -1,18 +1,32 @@
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
-import {ComponentMeta, ComponentStory} from '@storybook/react';
-
-import {AccordionItem} from '../components';
+import { ChartNumbersLine } from "../components/ChartNumbersLine/ChartNumbersLine";
 
 export default {
-    title: 'Base/Accordion/Item',
-    component: AccordionItem,
-    argTypes: {},
-    args: {
-        title: "I noticed some erratic behavior from screen",
-        content: "Screens are great assets for anyone working in an office set up. They allow you to have more programs open, multitask and be more productive. Hopefully"
-    }
-} as ComponentMeta<typeof AccordionItem>;
+  title: 'Charts/ChartNumbersLine/Default',
+  component: ChartNumbersLine,
+  argTypes: {},
+  args: {
+    days: 30,
+  },
+} as ComponentMeta<typeof ChartNumbersLine>;
 
-const Template: ComponentStory<typeof AccordionItem> = (args) => <AccordionItem {...args} />;
+const Template: ComponentStory<typeof ChartNumbersLine> = (args) => <ChartNumbersLine { ...args } />;
 
 export const Default = Template.bind({});
+Default.args = {
+  data: {
+    1: {
+      value: 20,
+      label: "0:30",
+    },
+    3: {
+      value: 50,
+      label: "1:30",
+    },
+    7: {
+      value: 100,
+      label: "2:20",
+    },
+  },
+};

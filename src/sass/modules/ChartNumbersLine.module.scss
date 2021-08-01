@@ -1,0 +1,44 @@
+.ChartNumbersLine {
+  display: flex;
+  padding-top: 20px;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  overflow: auto;
+
+  .Column {
+    flex: 1;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-flow: wrap-reverse;
+    padding: 0 10px 20px 10px;
+  }
+
+  .Line {
+    background: #4180f3;
+    width: 20px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    position: relative;
+  }
+
+  .Legend {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .Value {
+    display: inline;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    font-weight: bold;
+    color: #4180f3;
+  }
+}
