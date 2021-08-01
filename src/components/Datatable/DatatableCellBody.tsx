@@ -20,6 +20,7 @@ export const DatatableCellBody = ({ ...props }: IDatatableCellBodyProps) => {
   const indexIdSelected = cx.selectedRows;
   return (
     <DatatableCell
+      onClick={props.onClick}
       columnId={ props.columnId }
       columnIndex={ props.columnIndex }
       rowIndex={ props.rowIndex }

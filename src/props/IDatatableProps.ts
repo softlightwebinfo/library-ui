@@ -1,3 +1,4 @@
+import { TUseDatabaseOnClickRow } from "../context";
 import { IProps } from "../interfaces";
 import { ITableColumn } from "../interfaces/ITableColumn";
 import { ITableRow } from "../interfaces/ITableRow";
@@ -14,4 +15,5 @@ export interface IDatatableProps extends IProps {
   isPaginated?: boolean;
   isVirtualScroll?: boolean;
   isHeaderSticky?: boolean;
+  onClickRow?: TUseDatabaseOnClickRow;
 }

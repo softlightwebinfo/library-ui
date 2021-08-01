@@ -31,8 +31,10 @@ export interface IUseDatatable {
   totalRows: number;
   offset: { start: number; end: number; }
   setOrder?: (field: string, columnId: string) => void;
+  onClickRow?: TUseDatabaseOnClickRow;
 }
 
+export type TUseDatabaseOnClickRow = (value: ITableRow, col: ITableColumn, index: number, indexCol: number) => (evt: any) => void;
 export const ContextDatatable = createContext<IUseDatatable>({
   selectedRows: [],
   columns: [],

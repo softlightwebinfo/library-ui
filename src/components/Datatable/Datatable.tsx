@@ -120,6 +120,7 @@ export const Datatable = (
         };
       });
     },
+    onClickRow: props.onClickRow,
     toggleCheckAll: check => {
       setSelectedRows(check ? rows.map(i => i.id) : []);
     },

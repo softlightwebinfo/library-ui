@@ -48,6 +48,7 @@ export const DatatableBody = (props: IDatatableBodyProps) => {
           if (!col.visible) return null;
           return (
             <DatatableCellBody
+              onClick={ ctx?.onClickRow?.(value, col, index, indexCol) }
               key={ `${ value.id }-${ col.id }` }
               row={ value }
               rowId={ value.id }
