@@ -3,6 +3,8 @@ import { TSize } from "../types";
 import { TInputType } from "../types/TInputType";
 
 export interface IInputProps extends IProps {
+  onFocus?: (event: any) => void;
+  onBlur?: (event: any) => void;
   dark?: boolean;
   id?: string;
   size?: TSize;

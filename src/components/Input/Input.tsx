@@ -14,6 +14,8 @@ export const Input = ({ type = "text", ...props }: IInputProps) => {
   }, [props.value, props.onChange]);
   return (
     <input
+      onFocus={props.onFocus}
+      onBlur={props.onBlur}
       id={ props.id }
       className={ cs }
       style={ props.style }
