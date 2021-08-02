@@ -2,6 +2,7 @@ import { IProps } from "../interfaces";
 import { ReactNode } from "react";
 
 export interface IPanelProps extends IProps {
+  classNameBody?: string;
   onClick?: (evt: any) => void;
   initialOpen?: boolean;
   card?: boolean;

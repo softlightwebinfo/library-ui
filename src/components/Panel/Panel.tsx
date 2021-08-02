@@ -27,7 +27,7 @@ export const Panel = (props: IPanelProps) => {
         <span>{ props.header }</span>
         { props.collapsible && <Icon icon={ show ? faChevronUp : faChevronDown }/> }
       </header>) }
-      <div className={ styles.Body }>
+      <div className={ classNames(styles.Body, props.classNameBody) }>
         { props.children }
       </div>
     </div>
