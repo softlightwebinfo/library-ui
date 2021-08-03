@@ -46,7 +46,7 @@ export const SelectPicker = ({ showSearch = true, ...props }: ISelectPickerProps
       return previousValue;
     }, {});
 
-  }, [search, props.groupBy]);
+  }, [search, props.groupBy, props.data]);
 
   const value = {
     groupBy: props.groupBy,
