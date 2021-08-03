@@ -16,6 +16,7 @@ export * from './Drawer';
 export * from './Dropdown';
 export * from './FlexboxGrid';
 export * from './Footer';
+export * from './FormGroup';
 export * from './Header';
 export * from './Icon';
 export * from './Input';
