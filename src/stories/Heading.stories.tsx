@@ -1,18 +1,21 @@
 import React from 'react';
-import {ComponentMeta, ComponentStory} from '@storybook/react';
-
-import {AccordionItem} from '../components';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Heading } from "../components/Heading/Heading";
 
 export default {
-    title: 'Base/Accordion/Item',
-    component: AccordionItem,
-    argTypes: {},
-    args: {
-        title: "I noticed some erratic behavior from screen",
-        content: "Screens are great assets for anyone working in an office set up. They allow you to have more programs open, multitask and be more productive. Hopefully"
-    }
-} as ComponentMeta<typeof AccordionItem>;
+  title: 'Base/Heading/Default',
+  component: Heading,
+  argTypes: {},
+  args: {
+    children: "Hello",
+  },
+} as ComponentMeta<typeof Heading>;
 
-const Template: ComponentStory<typeof AccordionItem> = (args) => <AccordionItem {...args} />;
+const Template: ComponentStory<typeof Heading> = (args) => <Heading { ...args } />;
 
 export const Default = Template.bind({});
+export const As = Template.bind({});
+As.args = {
+  children: "Subhead",
+  as: "h3",
+};

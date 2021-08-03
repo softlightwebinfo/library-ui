@@ -17,6 +17,7 @@ export const Message = ({ style, type, show = true, closable, isAlert, className
     [styles.IsAlert]: isAlert,
     [styles.Separate]: props.separate,
     [styles.Hover]: props.hover,
+    [styles.Dark]: props.dark,
   });
 
   const onClick = useCallback((evt) => {

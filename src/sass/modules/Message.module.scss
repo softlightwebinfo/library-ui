@@ -116,3 +116,24 @@ $colors: info success warning error;
     cursor: pointer;
   }
 }
+
+.Dark {
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  padding: 0;
+  border-left-width: 4px;
+  border-left-style: solid;
+  border-left-color: #33ccff;
+  border-radius: 4px;
+  background-color: #29112c;
+  color: white;
+
+  .Container {
+    padding: 10px 10px 10px 35px;
+  }
+
+  .IconWrapper {
+    left: 5px;
+  }
+}

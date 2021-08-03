@@ -1,14 +1,21 @@
 import classNames from "classnames";
 import React from "react";
-import { IHeadingProps } from "../../props/IHeadingProps";
-import styles from '../../sass/modules/Paragraph.module.scss';
+import { ISliderProps } from "../../props/ISliderProps";
+import styles from '../../sass/modules/Slider.module.scss';
 
-export const Paragraph = (props: IHeadingProps) => {
-  const cs = classNames(styles.Paragraph, props.className, {});
-
+export const Slider = (props: ISliderProps) => {
+  const cs = classNames(styles.Slider, props.className, {});
+  const onChange = (evt: any) => {
+    props?.onChange?.(evt.targe.value, evt);
+    props?.onChangeEvent?.(evt);
+  };
   return (
-    <p className={ cs } style={ props.style }>
-      { props.children }
-    </p>
+    <input
+      onChange={ onChange }
+      type={ "range" }
+      className={ cs }
+      style={ props.style }
+      defaultValue={ props.defaultValue }
+    />
   );
 };
