@@ -1,7 +1,8 @@
-import {IProps} from "../interfaces";
+import { IProps } from "../interfaces";
 
 export interface ISidebarProps extends IProps {
-    width?: number;
-    preview?: boolean;
-    collapsible?: boolean;
+  width?: number;
+  preview?: boolean;
+  collapsible?: boolean;
+  default?: boolean;
 }

@@ -10,6 +10,7 @@ export const Sidebar = ({className, style, ...props}: ISidebarProps) => {
         [styles.Preview]: props.preview,
         [styles.Collapsible]: props.collapsible,
         [styles.SidebarPage]: ctx.sidebarPage,
+        [styles.Default]: props.default,
     });
     return (
         <div className={cs} style={{
