@@ -53,9 +53,22 @@
       visibility: visible;
     }
   }
+
+  &.isDisabled {
+    opacity: .3;
+    cursor: not-allowed;
+  }
+
+  &.Default {
+    position: relative;
+    background: none;
+    border: 0;
+    border-bottom: var(--border-size-s) solid var(--color-neutral-4);
+    padding-bottom: 10px;
+
+    #{$then}__header {
+      padding: 10px;
+    }
+  }
 }
 
-.isDisabled {
-  opacity: .3;
-  cursor: not-allowed;
-}

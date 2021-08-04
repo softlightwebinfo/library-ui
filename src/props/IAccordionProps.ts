@@ -1,6 +1,8 @@
-import {IAccordionData} from "../interfaces/IAccordionData";
+import { IAccordionData } from "../interfaces/IAccordionData";
 
 export interface IAccordionProps {
-    isMultipleItems?: boolean;
-    data: IAccordionData[];
+  initialOpen?: number[];
+  default?: boolean;
+  isMultipleItems?: boolean;
+  data: IAccordionData[];
 }

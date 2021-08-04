@@ -1,34 +1,74 @@
+import { faBook } from "@fortawesome/free-solid-svg-icons";
 import React from 'react';
-import {ComponentMeta, ComponentStory} from '@storybook/react';
-
-import {Accordion} from '../components';
+import { Accordion, Badge, FlexboxGrid, FlexboxGridItem, Icon, Panel, Paragraph, Title } from "../components";
 
 export default {
-    title: 'Base/Accordion/Multiple',
-    component: Accordion,
-    argTypes: {},
-    args: {
-        data: [
-            {
-                title: "I noticed some erratic behavior from screen",
-                content: "Screens are great assets for anyone working in an office set up. They allow you to have more programs open, multitask and be more productive. Hopefully"
-            },
-            {
-                title: "Some of my keyboard keys are not working properly",
-                content: "After a while, it’s common for keyboards to start malfunctioning. We have the habit of pressing the same keys which causes stress on their mechanics leading to problems."
-            },
-            {
-                title: "I need a new mouse, the left-click is not working",
-                content: "Mice are incredible accelerators that ease navigation and access. They easily become overused, with all the clicking, dragging and scrolling, which means their life can be short."
-            }
-        ]
-    }
-} as ComponentMeta<typeof Accordion>;
+  title: 'Layouts/Budgets/List',
+};
 
-const Template: ComponentStory<typeof Accordion> = (args) => <Accordion {...args} />;
+const Template = () => {
+  const data = [
+    {
+      name: "Perfumado", list: [
+        { num: "1000", date: "2020-10-10", client: "Formacasa", total: 2000, state: "Pendiente" },
+        { num: "1001", date: "2020-10-10", client: "Formacasa", total: 2000, state: "Pagado" },
+        { num: "1002", date: "2020-10-10", client: "Formacasa", total: 1000, state: "Pagado" },
+        { num: "1003", date: "2020-10-10", client: "Formacasa", total: 2000, state: "Pagado" },
+      ],
+    },
+    {
+      name: "casasenocasion", list: [
+        { num: "1004", date: "2020-10-10", client: "casasenocasion", total: 2000, state: "Pendiente" },
+        { num: "1005", date: "2020-10-10", client: "casasenocasion", total: 200, state: "Pagado" },
+        { num: "1006", date: "2020-10-10", client: "casasenocasion", total: 1000, state: "Pendiente" },
+        { num: "1007", date: "2020-10-10", client: "casasenocasion", total: 49, state: "Pagado" },
+      ],
+    },
+    {
+      name: "Perfumado",
+      list: [
+        { num: "1000", date: "2020-10-10", client: "Formacasa", total: 2000, state: "Pendiente" },
+        { num: "1001", date: "2020-10-10", client: "Formacasa", total: 2000, state: "Pagado" },
+        { num: "1002", date: "2020-10-10", client: "Formacasa", total: 1000, state: "Pagado" },
+        { num: "1003", date: "2020-10-10", client: "Formacasa", total: 2000, state: "Pagado" },
+      ],
+    },
+    {
+      name: "casasenocasion", list: [
+        { num: "1004", date: "2020-10-10", client: "casasenocasion", total: 2000, state: "Pendiente" },
+        { num: "1005", date: "2020-10-10", client: "casasenocasion", total: 200, state: "Pagado" },
+        { num: "1006", date: "2020-10-10", client: "casasenocasion", total: 1000, state: "Pendiente" },
+        { num: "1007", date: "2020-10-10", client: "casasenocasion", total: 49, state: "Pagado" },
+      ],
+    },
+  ];
+  return (
+    <Accordion
+      initialOpen={ [...Array(data.length)].map((_, index) => index) }
+      default
+      isMultipleItems
+      data={ data.map((item, index) => ({
+        title: item.name,
+        content: (
+          <FlexboxGrid gap={ 10 }>
+            { item.list.map((itemList, indexList) => (
+              <FlexboxGridItem colspan={ 3 }>
+                <Panel card>
+                  <Title>
+                    <Icon style={ { marginRight: 10 } } icon={ faBook }/>
+                    { itemList.num }
+                  </Title>
+                  <Paragraph><b>Client: </b>{ itemList.client }</Paragraph>
+                  <Paragraph><b>Date:</b> { itemList.date }</Paragraph>
+                  <Paragraph><b>Total:</b> { itemList.total }€</Paragraph>
+                  <Paragraph absoluteRight><Badge content={ itemList.state }/></Paragraph>
+                </Panel>
+              </FlexboxGridItem>
+            )) }
+          </FlexboxGrid>
+        ),
+      })) }/>
+  );
+};
 
 export const Default = Template.bind({});
-export const IsMultipleItems = Template.bind({});
-IsMultipleItems.args = {
-    isMultipleItems: true,
-}
