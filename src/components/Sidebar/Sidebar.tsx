@@ -15,7 +15,7 @@ export const Sidebar = ({className, style, ...props}: ISidebarProps) => {
     return (
         <div className={cs} style={{
             ...style,
-            flex: props.width && (`0 0 ${props.width}`),
+            flex: props.width && (`0 0 ${props.width}px`),
             width: props.width,
         }}>
             {props.children}
