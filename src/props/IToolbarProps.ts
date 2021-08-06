@@ -1,7 +1,9 @@
 import { IProps } from "../interfaces";
 import { TAlign, TJustify } from "../types";
+import { TFixed } from "../types/TFixed";
 
-export interface IFlexProps extends IProps {
+export interface IToolbarProps extends IProps {
+  align?: TAlign;
   justify?: TJustify;
-  align?: TAlign
+  fixed?: TFixed;
 }

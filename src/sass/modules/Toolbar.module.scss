@@ -1,3 +1,96 @@
-.ToolbarSection{
+.Toolbar {
+  position: fixed;
+  padding: 5px 20px 10px 10px;
+  background-color: #fff;
+  z-index: 100;
+  -webkit-box-shadow: 0 -1px 7px 0 rgba(46, 57, 76, .15);
+  -moz-box-shadow: 0 -1px 7px 0 rgba(46, 57, 76, 0.15);
+  box-shadow: 0 -1px 7px 0 rgba(46, 57, 76, .15);
+  display: flex;
+  gap: var(--space-default);
 
+  &.bottom, &.top {
+    left: 0;
+    right: 0;
+  }
+
+  &.bottom {
+    bottom: 0;
+  }
+
+  &.top {
+    top: 0;
+  }
+}
+
+.align {
+  &-top {
+    align-items: flex-start;
+  }
+
+  &-middle {
+    align-items: center;
+  }
+
+  &-bottom {
+    align-items: flex-end;
+  }
+}
+
+.justify {
+  &-start {
+    justify-content: flex-start;
+  }
+
+  &-end {
+    justify-content: flex-end;
+  }
+
+  &-center {
+    justify-content: center;
+  }
+
+  &-space-around {
+    justify-content: space-around;
+  }
+
+  &-space-between {
+    justify-content: space-between;
+  }
+}
+
+.align {
+  &-top {
+    align-items: flex-start;
+  }
+
+  &-middle {
+    align-items: center;
+  }
+
+  &-bottom {
+    align-items: flex-end;
+  }
+}
+
+.justify {
+  &-start {
+    justify-content: flex-start;
+  }
+
+  &-end {
+    justify-content: flex-end;
+  }
+
+  &-center {
+    justify-content: center;
+  }
+
+  &-space-around {
+    justify-content: space-around;
+  }
+
+  &-space-between {
+    justify-content: space-between;
+  }
 }

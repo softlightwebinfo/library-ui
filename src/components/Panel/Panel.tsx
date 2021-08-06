@@ -17,10 +17,13 @@ export const Panel = (props: IPanelProps) => {
     [styles.Hide]: !show && props.collapsible,
     [styles.Collapsible]: props.collapsible,
     [styles.Card]: props.card,
+    [styles.SpacingTop]: props.spacingTop,
   });
+
   const onClick = useCallback(() => {
     props.collapsible && toggle();
   }, [props.collapsible]);
+
   return (
     <div className={ cs } style={ props.style } onClick={ props.onClick }>
       { props.header && (<header onClick={ onClick } className={ styles.Header }>

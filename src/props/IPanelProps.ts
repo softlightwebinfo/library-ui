@@ -5,6 +5,7 @@ export interface IPanelProps extends IProps {
   classNameBody?: string;
   onClick?: (evt: any) => void;
   initialOpen?: boolean;
+  spacingTop?: boolean;
   card?: boolean;
   header?: ReactNode;
   expanded?: boolean;

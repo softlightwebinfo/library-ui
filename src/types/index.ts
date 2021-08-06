@@ -3,6 +3,7 @@ export * from './TAppearance';
 export * from './TButtonType';
 export * from './TDropdownPlacement';
 export * from './TDropdownTrigger';
+export * from './TFixed';
 export * from './TInputType';
 export * from './TLineStatus';
 export * from './TModalSize';

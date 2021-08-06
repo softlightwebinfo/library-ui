@@ -1,12 +1,18 @@
 import { faBook } from "@fortawesome/free-solid-svg-icons";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 import React from 'react';
 import { Accordion, Badge, FlexboxGrid, FlexboxGridItem, Icon, Panel, Paragraph, Title } from "../components";
 
 export default {
   title: 'Layouts/Budgets/List',
-};
+  component: Accordion,
+  argTypes: {},
+  args: {
+    default: true,
+  },
+} as ComponentMeta<typeof Accordion>;
 
-const Template = () => {
+const Template: ComponentStory<typeof Accordion> = (args) => {
   const data = [
     {
       name: "Perfumado", list: [
@@ -44,8 +50,8 @@ const Template = () => {
   ];
   return (
     <Accordion
+      { ...args }
       initialOpen={ [...Array(data.length)].map((_, index) => index) }
-      default
       isMultipleItems
       data={ data.map((item, index) => ({
         title: item.name,
@@ -53,7 +59,10 @@ const Template = () => {
           <FlexboxGrid gap={ 10 }>
             { item.list.map((itemList, indexList) => (
               <FlexboxGridItem colspan={ 3 }>
-                <Panel card>
+                <Panel
+                  card={ args.default } shaded={ !args.default }
+                  style={ !args.default ? { background: "gainsboro" } : {} }
+                >
                   <Title>
                     <Icon style={ { marginRight: 10 } } icon={ faBook }/>
                     { itemList.num }
@@ -67,8 +76,12 @@ const Template = () => {
             )) }
           </FlexboxGrid>
         ),
-      })) }/>
-  );
+      })) }
+    />);
 };
 
 export const Default = Template.bind({});
+export const Other = Template.bind({});
+Other.args = {
+  default: false,
+};

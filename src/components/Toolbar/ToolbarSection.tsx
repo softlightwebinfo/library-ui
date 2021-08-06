@@ -1,13 +1,10 @@
 import classNames from "classnames";
 import React from "react";
-import { IFlexProps } from "../../props/IFlexProps";
-import styles from '../../sass/modules/Flex.module.scss';
+import { IToolbarSectionProps } from "../../props/IToolbarSectionProps";
+import styles from '../../sass/modules/ToolbarSection.module.scss';
 
-export const Toolbar = ({ align = "top", justify = "start", ...props }: IFlexProps) => {
-  const cs = classNames(styles.Flex, props.className, {
-    [styles[`align-${ align }`]]: !!align,
-    [styles[`justify-${ justify }`]]: !!justify,
-  });
+export const ToolbarSection = ({ ...props }: IToolbarSectionProps) => {
+  const cs = classNames(styles.ToolbarSection, props.className, {});
 
   return (
     <div className={ cs } style={ props.style }>

@@ -1,6 +1,6 @@
 .Panel {
   border-radius: 6px;
-  overflow: hidden;
+  //overflow: hidden;
   color: #e9ebf0;
   position: relative;
 }
@@ -83,4 +83,12 @@
   div, p {
     color: var(--color-dark);
   }
+
+  [class *="SelectMenu"] {
+    background-color: white;
+  }
+}
+
+.SpacingTop {
+  margin-top: var(--space-default);
 }

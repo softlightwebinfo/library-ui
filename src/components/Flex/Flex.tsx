@@ -1,16 +1,17 @@
 import classNames from "classnames";
 import React from "react";
-import { IDescriptionProps } from "../../props/IDescriptionProps";
-import styles from '../../sass/modules/Description.module.scss';
+import { IFlexProps } from "../../props/IFlexProps";
+import styles from '../../sass/modules/Flex.module.scss';
 
-export const Description = (props: IDescriptionProps) => {
-  const cs = classNames(styles.Description, props.className, {
-    [styles.White]: props.white,
+export const Flex = ({ align = "top", justify = "start", ...props }: IFlexProps) => {
+  const cs = classNames(styles.Flex, props.className, {
+    [styles[`align-${ align }`]]: !!align,
+    [styles[`justify-${ justify }`]]: !!justify,
   });
 
   return (
-    <p className={ cs } style={ props.style }>
+    <div className={ cs } style={ props.style }>
       { props.children }
-    </p>
+    </div>
   );
 };

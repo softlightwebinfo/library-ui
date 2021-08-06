@@ -1,4 +1,4 @@
 import { IProps } from "../interfaces";
 
-export interface IToolbarProps extends IProps {
+export interface IToolbarSectionProps extends IProps {
 }

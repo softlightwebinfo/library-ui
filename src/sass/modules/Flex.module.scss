@@ -1,34 +1,41 @@
 @import "../mixins/flex";
 
-.Avatar {
-  background-color: #d9d9d9;
-  color: #fff;
-  @include flex(true);
-  border-radius: var(--border-radius-soft);
-  overflow: hidden;
-  width: 40px;
-  height: 40px;
-  font-size: var(--font-size-h6);
+.Flex {
+  display: flex;
 }
 
-.Circle {
-  border-radius: var(--border-radius-circle);
+.align {
+  &-top {
+    align-items: flex-start;
+  }
+
+  &-middle {
+    align-items: center;
+  }
+
+  &-bottom {
+    align-items: flex-end;
+  }
 }
 
-.lg {
-  width: 60px;
-  height: 60px;
-  font-size: 26px;
-}
+.justify {
+  &-start {
+    justify-content: flex-start;
+  }
 
-.sm {
-  width: 30px;
-  height: 30px;
-  font-size: 14px;
-}
+  &-end {
+    justify-content: flex-end;
+  }
 
-.xs {
-  width: 20px;
-  height: 20px;
-  font-size: 12px;
+  &-center {
+    justify-content: center;
+  }
+
+  &-space-around {
+    justify-content: space-around;
+  }
+
+  &-space-between {
+    justify-content: space-between;
+  }
 }

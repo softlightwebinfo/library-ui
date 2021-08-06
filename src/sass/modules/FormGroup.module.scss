@@ -1,6 +1,14 @@
 .FormGroup {
-  margin-bottom: var(--space-s);
+  margin-bottom: var(--space-sm);
   display: flex;
   flex-direction: column;
   width: 100%;
+
+  .Label {
+    margin-bottom: 5px;
+  }
+
+  &.NoMargin {
+    margin-bottom: 0;
+  }
 }

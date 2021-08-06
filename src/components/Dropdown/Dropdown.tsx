@@ -20,10 +20,12 @@ export const Dropdown = (
   const ref = useRef(null);
   const [show, { toggle, off, on }] = useToggle(ctx?.defaultOpenKeys?.includes(props?.eventKey ?? ''));
   const noExpanded = ctx.sidenav && ctx.expanded === false;
+
   useOnClickOutside(ref, () => {
     if (ctx.sidenav && ctx.expanded) return;
     off();
   });
+
   const cs = classNames(styles.Dropdown, className, {
     [styles.Disabled]: props.isDisabled,
     [styles.NavVertical]: ctxNav.vertical,
@@ -48,14 +50,17 @@ export const Dropdown = (
     vertical: ctxNav.vertical,
     onClick: props.onClick,
   };
+
   const Component = props.isItem ? "li" : "div";
+
   const childrenComponentTitle = (
     <>
-      { props.icon }
+      <span className={ styles.IconHeader }>{ props.icon }</span>
       <span>{ props.title }</span>
       { !noArrow && <Icon className={ styles.Icon } icon={ show ? faChevronUp : faChevronDown }/> }
     </>
   );
+
   return (
     <ContextDropdown.Provider value={ value }>
       <Component className={ cs } style={ style }>
