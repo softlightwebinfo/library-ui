@@ -1,12 +1,13 @@
 import { range } from "@codeunic/library-hooks";
 import classNames from "classnames";
 import React, { useEffect, useState } from "react";
+import { IProps } from "../../interfaces";
 import styles from '../../sass/modules/Pagination.module.scss';
 
 export const LEFT_PAGE = "LEFT";
 export const RIGHT_PAGE = "RIGHT";
 
-export interface IPagination {
+export interface IPagination extends IProps {
   totalRecords: number,
   pageLimit?: number,
   pageNeighbours?: number,
@@ -63,9 +64,13 @@ export const Pagination = (props: IPagination) => {
   const pages = fetchPageNumbers() || [];
 
   return (
-    <nav aria-label="Countries Pagination" className={ classNames(styles.Pagination, {
-      [styles.Initial]: initial,
-    }) }>
+    <nav
+      aria-label="Countries Pagination"
+      className={ classNames(styles.Pagination, props.className, {
+        [styles.Initial]: initial,
+      }) }
+      style={ props.style }
+    >
       <ul className={ styles.pagination }>
         { pages.map((page: any, index: number) => {
           if (page === LEFT_PAGE)
