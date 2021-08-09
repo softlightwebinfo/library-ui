@@ -19,7 +19,8 @@ export const SelectPicker = ({ showSearch = true, ...props }: ISelectPickerProps
   const cs = classNames(styles.SelectPicker, props.className, {
     [styles.Block]: props.block,
   });
-  const [select, setSelect] = useState<ISelectPickerData>();
+
+  const [select, setSelect] = useState<ISelectPickerData>(props.initialSelect);
 
   useOnClickOutside(ref, () => setToggle(false));
 
@@ -77,6 +78,7 @@ export const SelectPicker = ({ showSearch = true, ...props }: ISelectPickerProps
 
   const onDelete = (evt: { stopPropagation: () => void; }) => {
     evt.stopPropagation();
+    // @ts-ignore
     setSelect(undefined);
     props?.onSelect?.("", null);
   };

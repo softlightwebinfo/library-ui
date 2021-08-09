@@ -13,6 +13,7 @@ export interface ISelectPickerProps extends IProps, ISelectMethod {
   groupBy?: string;
   placeholder?: string;
   block?: boolean;
+  initialSelect?: ISelectPickerData | any | undefined;
 }
 
 export interface ISelectPickerData {
